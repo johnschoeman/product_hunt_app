@@ -16,6 +16,7 @@
 node_modules/
 bundle.js
 bundle.js.map
+bundle.js*
 .byebug_history
 .DS_Store
 npm-debug.log
