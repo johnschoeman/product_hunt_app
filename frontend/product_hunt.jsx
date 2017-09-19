@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store'
+import Root from './components/root'
 
 
 //Start Testing
@@ -20,5 +21,5 @@ document.addEventListener("DOMContentLoaded", () => {
     window.getState = store.getState;
     //End Testing
 
-    ReactDOM.render(<h1>Product Hunt App</h1>, root);
+    ReactDOM.render(<Root store={ store } />, root);
 });
