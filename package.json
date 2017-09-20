@@ -41,5 +41,8 @@
   "bugs": {
     "url": "https://github.com/johnschoeman/product_hunt_app/issues"
   },
-  "homepage": "https://github.com/johnschoeman/product_hunt_app#readme"
+  "homepage": "https://github.com/johnschoeman/product_hunt_app#readme",
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.2"
+  }
 }

@@ -1,8 +1,11 @@
 import React from 'react';
+import NavBarContainer from './nav_bar/nav_bar_container';
 
 const App = () => (
     <div>
-        <h1>Product Hunt</h1>
+        <header>
+            <NavBarContainer />
+        </header>
     </div>
 )
 
