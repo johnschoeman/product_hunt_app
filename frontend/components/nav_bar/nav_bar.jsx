@@ -1,40 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Logo from './logo';
+import SearchBarContainer from '../search_bar/search_bar_container';
+import SiteNav from './site_nav';
+import SessionNav from './session_nav';
+import UserNav from './user_nav';
+
 
 class NavBar extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
     
-    sessionLinks() {
-        return (<nav className="login-signup"> 
-            <Link to='/login'>LOG IN</Link>
-            
-            <Link to='/signup'>SIGN UP</Link>
-        </nav>);
-    }
-    
-    userNav(currentUser, logout) {
-
-       return ( <hgroup className="header-group">
-            <h2 className="header-name">Hi, {currentUser.username}!</h2>
-            <button className="header-button" onClick={logout}>Log Out</button>
-                 </hgroup> );
-    }
-
-    render() {
-        let currentUser = this.props.currentUser;
-        let logout = this.props.logout;
-        let navBarContent = undefined;
-        navBarContent = this.props.currentUser ? this.userNav(currentUser, logout) : this.sessionLinks();
-        return (
-        <div>
-            <h1>ProductHunt</h1>
-            {navBarContent}
-        </div>)
-        ;
-    }
+  render() {
+    let currentUser = this.props.currentUser;
+    let logout = this.props.logout;
+    let userSessionNav = this.props.currentUser ? (
+      <UserNav currentUser={currentUser} logout={logout}/>
+      ) : (
+      <SessionNav /> );
+    return (
+      <div>
+        <Logo />
+        <SearchBarContainer />
+        <SiteNav />
+        { userSessionNav }
+      </div>
+    );
+  }
 }
 
 export default NavBar;
