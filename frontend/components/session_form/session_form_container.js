@@ -5,9 +5,10 @@ import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
     let formType = (ownProps.match.path === '/login') ? 'login' : 'signup';
+    let errors = Object.values(state.errors.session);
     return {
         loggedIn: Boolean(state.session.currentUser),
-        errors: state.errors.session,
+        errors,
         formType
     };
 };
