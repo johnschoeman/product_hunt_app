@@ -1,1 +1,10 @@
-<div id="root">react is broken</div>
+<script type="text/javascript">
+  <% if logged_in? %>
+    window.currentUser = <%= render(
+      "api/users/user.json.jbuilder",
+      user: current_user
+    ).html_safe %>
+  <% end %>
+</script>
+
+<div id="root">react is foobar</div>

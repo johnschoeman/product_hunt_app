@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import SessionForm from './session_form';
 import { login, signup } from '../../actions/session_actions';
+import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
     let formType = (ownProps.match.path === '/login') ? 'login' : 'signup';
@@ -18,4 +19,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SessionForm));

@@ -7,14 +7,21 @@ import Root from './components/root'
 //Start Testing
 import {signup, login, logout} from './actions/session_actions';
 
-window.signup = signup
-window.login = login
-window.logout = logout
+window.signup = signup;
+window.login = login;
+window.logout = logout;
 //End Testing
 
 document.addEventListener("DOMContentLoaded", () => {
     let root = document.getElementById("root");
-    let store = configureStore();
+    let store = undefined;
+
+    if (window.currentUser) {
+        const preloadedState = { session: { currentUser: window.currentUser } };
+        store = configureStore(preloadedState);
+    } else {
+        store = configureStore();
+    }
 
     //Start Testing
     window.dispatch = store.dispatch;
