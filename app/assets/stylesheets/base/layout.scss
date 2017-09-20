@@ -1,0 +1,129 @@
+html {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	width: 80%;
+	margin: 0 auto;
+	font-family: $serif;
+	font-size: 12px;
+}
+
+button {
+	background-color: $light-blue;
+	border-color: $dark-blue;
+	color: white;
+	font-weight: bold;
+	padding: 7px 9px;
+	border-radius: 3px;
+	transition: background-color 0.3s;
+	font-family: $sans-serif;
+	text-transform: uppercase;
+	font-size: 11px;
+	text-align: center;
+}
+
+button:hover {
+	background-color: $blue;
+  border-color: $darkest-blue;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.hidden {
+	display: none;
+}
+
+/*
+	Font Elements
+*/
+
+h1 {
+	font-size: 24px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+p {
+	line-height: 16px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+small {
+	font-size: 9px;
+	color: $gray;
+	font-family: $sans-serif;
+}
+
+/*
+	Header Rules
+*/
+
+hr {
+	border: 0;
+	height: 1px;
+	background-color: $light-gray;
+}
+
+.hr-top, .hr-bottom {
+	width: 100%;
+	margin: 0;
+}
+
+.hr-top {
+	height: 2px;
+	margin-bottom: 1px;
+}
+
+/*
+	Images
+*/
+
+.thumbnail {
+	height: 100px;
+}
+
+.thumbnail img {
+	object-fit: cover;
+}
+
+/*
+	Inputs
+*/
+
+.input-wrapper {
+	display: flex;
+	margin: 5px 0;
+}
+
+.input-wrapper input {
+	flex: 1;
+	font-family: $sans-serif;
+	padding: 0 10px;
+	border: 1px solid $gray;
+	border-right: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.input-wrapper button {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+input[type="search"] {
+	padding: 5px;
+}
