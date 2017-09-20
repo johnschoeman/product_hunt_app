@@ -6,6 +6,7 @@ class SessionForm extends React.Component {
     super(props);
     this.state = { username: "", password: "" };
     this.handleSubmit =  this.handleSubmit.bind(this);
+    this.loginDemoUser = this.loginDemoUser.bind(this);
   }
 
   handleSubmit(e) {
@@ -20,17 +21,24 @@ class SessionForm extends React.Component {
     };
   }
 
+  loginDemoUser() {
+    this.setState( {username: "product_hunt_demo", password: "password"} );
+    const user = Object.assign({}, this.state);
+    this.props.processForm(user).then(this.props.closeModal);
+  }
+
   render() {
     let header = "log in";
-
+    let demoUserBtn = null;
     if (this.props.formType === 'login') {
       header = "Log In";
+      demoUserBtn = <button onClick={this.loginDemoUser} >Demo Log In</button>
     } else {
       header = "Sign Up";
     }
 
     return(
-      <div>
+      <div className="session-form form">
         <h1>{header}</h1>
 
         <ul>
@@ -54,6 +62,7 @@ class SessionForm extends React.Component {
           <br/>
           <input type="submit" value={header}></input>
         </form>
+          {demoUserBtn}
       </div>
 
     );

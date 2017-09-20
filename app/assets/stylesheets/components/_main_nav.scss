@@ -71,6 +71,25 @@
 	background-color: $light-orange;
 }
 
+.logo-img {
+	background-image: asset_url("product-hunt-logo-orange-960.png");
+	background-size: 100%;
+	width: 32px;
+	height: 32px;
+}
+
+.logo {
+	display: flex;
+}
+
+.logo p {
+	margin-left: 5px;
+}
+
+.logo:hover {
+	cursor: pointer;
+}
+
 @media all and (max-width: 1000px) {
   .right-nav button {
   	display: none;

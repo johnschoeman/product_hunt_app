@@ -1,27 +1,19 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class Logo extends React.Component {
+  constructor() {
+    super();
+    this.handleClick = this.handleClick.bind(this);
+  }
 
+  handleClick() {
+    this.props.history.push("/");
+  }
   
   render () {
-
     const styleLogo = {
       display: 'flex'
-    };
-
-    const styleLogoImg = {
-      width: '32px',
-      height: '32px',
-      fontSize: '16px',
-      color: 'white',
-      textAlign: 'center',
-      verticalAlign: 'bottom',  
-      padding: 'auto',
-      border: '1px solid $orange',
-      borderRadius: '20px',
-      backgroundColor: '#DA552F',
-      fontWeight: '600',
-      lineHeight: '32px'
     };
 
     const styleText = {
@@ -29,8 +21,8 @@ class Logo extends React.Component {
     };
     
     return (
-      <div style={styleLogo}>
-        <div style={styleLogoImg}>P</div>
+      <div className="logo" onClick={this.handleClick}>
+        <div className="logo-img"></div>
         <div style={styleText}>
           <p>Product Hunt</p>
           <p>The best new products, every day</p>
@@ -40,7 +32,7 @@ class Logo extends React.Component {
   }
 }
 
-export default Logo;
+export default withRouter(Logo);
 
 // font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
 
