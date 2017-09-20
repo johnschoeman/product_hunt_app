@@ -5,21 +5,22 @@ import { AuthRoute } from '../util/route_util';
 
 import ReactModal from 'react-modal';
 
+
 class App extends React.Component {
   constructor() {
     super();
-
+    
     this.state = {
       modalIsOpen: false,
       modalFormType: "login"
     };
-
+    
     this.openModal = this.openModal.bind(this);
     this.afterModalOpen = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
-  openModal(formType){
+  openModal(formType) {
     return () => {
       this.setState({
         modalFormType: formType,
@@ -36,6 +37,8 @@ class App extends React.Component {
   closeModal() {
     this.setState({modalIsOpen: false});
   }
+
+
 
   render() {
     return (
