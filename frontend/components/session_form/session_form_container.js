@@ -3,8 +3,9 @@ import SessionForm from './session_form';
 import { login, signup } from '../../actions/session_actions';
 import { withRouter } from 'react-router';
 
-const mapStateToProps = (state, ownProps) => {
-    let formType = (ownProps.match.path === '/login') ? 'login' : 'signup';
+const mapStateToProps = (state, {formType}) => {
+    // let formType = (ownProps.match.path === '/login') ? 'login' : 'signup';
+    console.log(formType)
     let errors = Object.values(state.errors.session);
     return {
         loggedIn: Boolean(state.session.currentUser),
@@ -13,10 +14,11 @@ const mapStateToProps = (state, ownProps) => {
     };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-    let processForm = (ownProps.match.path === '/login') ? login : signup;
+const mapDispatchToProps = (dispatch, {formType, closeModal}) => {
+    let processForm = (formType === 'login') ? login : signup;
     return {
-        processForm: (user) => dispatch(processForm(user))
+        processForm: (user) => dispatch(processForm(user)),
+        closeModal
     };
 };
 

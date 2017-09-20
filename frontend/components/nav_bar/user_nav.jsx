@@ -5,6 +5,7 @@ class UserNav extends React.Component {
   render()  {
     let currentUser = this.props.currentUser;
     let logout = this.props.logout;
+    
     return ( 
       <hgroup className="header-group">
         <h2 className="header-name">Hi, {currentUser.username}!</h2>

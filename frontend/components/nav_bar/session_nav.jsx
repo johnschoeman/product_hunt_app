@@ -22,8 +22,8 @@ class SessionNav extends React.Component {
 
         <Link to='/signup'>SIGN UP</Link>
 
-        <button className="login-button mediumSize" onClick={this.renderLogin} >LOG IN</button>
-        <button className="signup-button mediumSize" onClick={this.renderSignup} >SIGN UP</button>
+        <button className="login-button mediumSize" onClick={this.props.openModal('login')} >LOG IN</button>
+        <button className="signup-button mediumSize" onClick={this.props.openModal('signup')} >SIGN UP</button>
     </nav>);
   }
 }
