@@ -43,7 +43,6 @@ a:hover {
 
 h1 {
 	font-size: 24px;
-	font-style: italic;
 	font-weight: bold;
 }
 
@@ -64,7 +63,7 @@ img {
 
 small {
 	font-size: 9px;
-	color: $text-gray;
+	color: $gray;
 	font-family: $sans-serif;
 }
 
@@ -75,7 +74,7 @@ small {
 hr {
 	border: 0;
 	height: 1px;
-	background-color: $background-gray;
+	background-color: $gray;
 }
 
 .hr-top, .hr-bottom {
@@ -122,6 +121,11 @@ hr {
 .input-wrapper button {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
+}
+
+input {
+	border: 1px solid $gray;
+	border-radius: 5px;
 }
 
 input[type="search"] {
