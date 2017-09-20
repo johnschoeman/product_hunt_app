@@ -21,7 +21,7 @@ class NavBar extends React.Component {
       ) : (
       <SessionNav /> );
     return (
-      <div>
+      <div className="main-nav">
         <Logo />
         <SearchBarContainer />
         <SiteNav />

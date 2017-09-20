@@ -22,17 +22,11 @@ class SessionForm extends React.Component {
 
   render() {
     let header = "log in";
-    let linkUrl = "";
-    let linkName = "";
 
     if (this.props.formType === 'login') {
       header = "Log In";
-      linkUrl = "/signup";
-      linkName = "SIGN UP";
     } else {
       header = "Sign Up";
-      linkUrl = "/login";
-      linkName = "LOG IN";
     }
 
     return(
@@ -60,8 +54,6 @@ class SessionForm extends React.Component {
           <br/>
           <input type="submit" value={header}></input>
         </form>
-        <br/>
-        <Link to={linkUrl}>{linkName}</Link>
       </div>
 
     );

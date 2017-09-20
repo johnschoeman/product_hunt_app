@@ -2,7 +2,7 @@
 	display:flex;
 	justify-content: space-between;
 	padding: 10px 0;
-	border-bottom: 1px solid $light-gray;
+	border-bottom: 1px solid $background-gray;
 }
 
 .left-nav > ul,
@@ -35,7 +35,7 @@
 
 .left-nav > ul > li:hover,
 .right-nav > ul > li:last-of-type:hover {
-	background-color: $lightest-gray;
+	background-color: $background-gray;
 }
 
 .left-nav span {
@@ -44,6 +44,31 @@
 
 .right-nav i {
 	font-size: 16px;
+}
+
+
+
+.login-button {
+	background-color: $white;
+	border: 1px solid $gray;
+	color: $black;
+	font-weight: bold;
+}
+
+.login-button:hover {
+	background-color: $gray;
+
+}
+
+.signup-button {
+	background-color: $orange;
+	border-color: $orange;
+	color: white;
+	font-weight: bold;
+}
+
+.signup-button:hover {
+	background-color: $light-orange;
 }
 
 @media all and (max-width: 1000px) {
