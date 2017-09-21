@@ -18,8 +18,8 @@ class SessionNav extends React.Component {
 
   render() {
     return (<nav className="login-signup"> 
-        <button className="login-button mediumSize" onClick={this.props.openModal('login')} >LOG IN</button>
-        <button className="signup-button mediumSize" onClick={this.props.openModal('signup')} >SIGN UP</button>
+        <button className="login-button medium-size" onClick={this.props.openModal('login')} >LOG IN</button>
+        <button className="signup-button medium-size" onClick={this.props.openModal('signup')} >SIGN UP</button>
     </nav>);
   }
 }

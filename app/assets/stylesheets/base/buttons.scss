@@ -1,0 +1,41 @@
+button {
+  font-weight: bold;
+  margin-left: 5px;
+	padding: 7px 9px;
+	border-radius: 3px;
+	transition: background-color 0.3s;
+	font-family: $sans-serif;
+	text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600px;
+	text-align: center;
+}
+
+.medium-size {
+  width: 48px;
+  height: 28px;
+  padding: 0 13px
+}
+
+.login-button {
+	background-color: $white;
+	border: 1px solid $gray;
+	color: $black;
+	font-weight: bold;
+}
+
+.login-button:hover {
+	background-color: $gray;
+
+}
+
+.signup-button {
+	background-color: $orange;
+	border-color: $orange;
+	color: white;
+	font-weight: bold;
+}
+
+.signup-button:hover {
+	background-color: $light-orange;
+}

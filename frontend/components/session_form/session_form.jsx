@@ -32,16 +32,18 @@ class SessionForm extends React.Component {
     let demoUserBtn = null;
     if (this.props.formType === 'login') {
       header = "Log In";
-      demoUserBtn = <button onClick={this.loginDemoUser} >Demo Log In</button>
+      demoUserBtn = <button className="signup-button" onClick={this.loginDemoUser} >Demo Log In</button>
     } else {
       header = "Sign Up";
     }
 
     return(
-      <div className="form" id="session-form">
-        <h1>{header}</h1>
+      <div className="session-form">
+        <div className="session-form-img"></div>
+        <h2>Login to Join The Community</h2>
+        <h2>Product Hunt is a community to share and geek out about the latest products, books and games. Join us :)</h2>
 
-        <ul>
+        <ul className="session-errors">
           {this.props.errors.map((error, idx) => (<li key={idx}>{error}</li>))}
         </ul>
 
@@ -60,7 +62,7 @@ class SessionForm extends React.Component {
             </input>
           </label>
           <br/>
-          <input type="submit" value={header}></input>
+          <input type="submit" className="signup-button medium-size" value={header}></input>
         </form>
           {demoUserBtn}
       </div>

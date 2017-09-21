@@ -1,9 +1,26 @@
-.form {
+.session-form {
+  border: 1px solid grey;
+  width: 95%;
+  margin: 0 auto;
   display: flex;
-  border: 1px solid red;
-  background-color: blue;
+  flex-direction: column;
+  align-items: center; 
 }
 
-#session-form {
-  border: 1px solid red;
+.session-form * {
+  margin-bottom: 10px;
 }
+.session-errors {
+  padding-top: 10px;
+  color: $orange;
+}
+
+.session-form-img {
+  min-width: 180px;
+  min-height: 180px;
+  background-image: asset_url("ph_kitty_nobg.png");
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: 100%;
+}
+

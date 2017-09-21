@@ -1,12 +1,3 @@
-.modal-overlay {
-  position: 'fixed';
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(200, 200, 200, 0.50);
-}
-
 .modal {
   position: absolute;
   top: 40px;
@@ -14,32 +5,21 @@
   right: 40px;
   bottom: 40px;
   border: 1px solid #ccc;
-  background: #fff;
+  background: rgba(128,128,128,0);
   overflow: auto;
   webkit-overflow-scrolling: touch;
   border-radius: 4px;
   outline: none;
-  padding: 20p;
+  padding: 20px;
+
+  //test
+  border: 1px solid red;
+  width: 40%;
+  margin: 0 auto; 
+  height: 80%;
+  min-height: 250px;
 }
 
-#modal {
-  background-color: rgba(128,128,128,0.75);
-}
-
-.modal {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-  border: 1px solid #ccc;
-  background: #fff;
-  overflow: auto;
-  webkit-overflow-scrolling: touch;
-  border-radius: 4px;
-  outline: none;
-  padding: 20p;
-}
 .modal_after-open {
   position: absolute;
   top: 40px;
@@ -52,8 +32,11 @@
   webkit-overflow-scrolling: touch;
   border-radius: 4px;
   outline: none;
-  padding: 20p;
+  padding: 20px;
+
+  display: block;
 }
+
 .modal_before-close {
   position: absolute;
   top: 40px;
@@ -66,5 +49,7 @@
   webkit-overflow-scrolling: touch;
   border-radius: 4px;
   outline: none;
-  padding: 20p;
+  padding: 20px;
+
+  display: block;
 }
