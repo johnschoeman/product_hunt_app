@@ -35,7 +35,6 @@ class SessionForm extends React.Component {
       demoUserBtn = <button className="signup-button medium-size" onClick={this.loginDemoUser} >Demo Log In</button>
     } else {
       btnText = "SIGN UP";
-      demoUserBtn = <button className="signup-button medium-size" onClick={this.loginDemoUser} >Demo Log In</button>
     }
 
     return(
