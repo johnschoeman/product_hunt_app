@@ -1,10 +1,38 @@
 import React from 'react';
-import NavBarContainer from './nav_bar/nav_bar_container';
-import SessionFormContainer from './session_form/session_form_container';
-import { AuthRoute } from '../util/route_util';
-
 import ReactModal from 'react-modal';
 
+import NavBarContainer from './nav_bar/nav_bar_container';
+import SessionFormContainer from './session_form/session_form_container';
+import PopoverContainer from './popover/popover_container';
+
+
+// import { AuthRoute } from '../util/route_util';
+
+const customStyles = {
+  overlay : {
+    position          : 'fixed',
+    top               : 0,
+    left              : 0,
+    right             : 0,
+    bottom            : 0,
+    backgroundColor   : 'rgba(128, 128, 128, 0.75)'
+  },
+  content : {
+    position                   : 'absolute',
+    top                        : '40px',
+    left                       : '40px',
+    right                      : '40px',
+    bottom                     : '40px',
+    border                     : '1px solid #ccc',
+    background                 : '#fff',
+    overflow                   : 'auto',
+    WebkitOverflowScrolling    : 'touch',
+    borderRadius               : '4px',
+    outline                    : 'none',
+    padding                    : '20px'
+
+  }
+}
 
 class App extends React.Component {
   constructor() {
@@ -12,7 +40,7 @@ class App extends React.Component {
     
     this.state = {
       modalIsOpen: false,
-      modalFormType: "login"
+      modalFormType: "login",
     };
     
     this.openModal = this.openModal.bind(this);
@@ -38,6 +66,10 @@ class App extends React.Component {
     this.setState({modalIsOpen: false});
   }
 
+  setDropDownTarget() {
+
+  }
+
 
 
   render() {
@@ -47,12 +79,14 @@ class App extends React.Component {
           <NavBarContainer openModal={this.openModal} />
         </header>
 
+        <PopoverContainer />
 
         <ReactModal
+          id="modal"
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterModalOpen}
           onRequestClose={this.closeModal}
-          sytle=""
+          sytle={customStyles}
           contentLabel="Example Modal">
 
           <SessionFormContainer formType={this.state.modalFormType} closeModal={this.closeModal} />

@@ -7,7 +7,6 @@ import SiteNav from './site_nav';
 import SessionNav from './session_nav';
 import UserNav from './user_nav';
 
-
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
