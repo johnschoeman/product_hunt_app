@@ -44,7 +44,7 @@ class App extends React.Component {
     };
     
     this.openModal = this.openModal.bind(this);
-    this.afterModalOpen = this.openModal.bind(this);
+    this.afterModalOpen = this.afterModalOpen.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
@@ -57,9 +57,11 @@ class App extends React.Component {
     };
   }
 
-  afterOpenModal() {
+  afterModalOpen() {
     // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00';
+    // this.subtitle.style.color = '#f00';
+    console.log(ReactModal.defaultStyles);
+    ReactModal.defaultStyles.overlay.backgroundColor = 'rgba(128,128,128,0.75)';
   }
 
   closeModal() {
