@@ -1,26 +1,63 @@
 .session-form {
-  border: 1px solid grey;
   width: 95%;
+  height: 95%;
   margin: 0 auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center; 
+
+  //test
+  // border: 1px solid red;
 }
 
 .session-form * {
   margin-bottom: 10px;
 }
+
+.session-form p {
+  text-align: center;
+}
+
+.session-form h2 {
+  text-align: center;
+}
+
 .session-errors {
   padding-top: 10px;
   color: $orange;
 }
 
 .session-form-img {
-  min-width: 180px;
-  min-height: 180px;
+  min-width: 160px;
+  min-height: 160px;
   background-image: asset_url("ph_kitty_nobg.png");
   background-repeat: no-repeat;
   background-position: center; 
   background-size: 100%;
 }
 
+.form-input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+  //test
+  // border: 1px solid red;
+}
+
+.form-input {
+  display: flex;
+  justify-content: space-between;
+
+  //test
+  // border: 1px solid red;
+}
+
+.session-btn-nav {
+  display: flex;
+  justify-content: space-between;
+
+  //test
+  // border: 1px solid red;
+}

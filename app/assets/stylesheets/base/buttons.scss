@@ -1,7 +1,7 @@
 button {
   font-weight: bold;
   margin-left: 5px;
-	padding: 7px 9px;
+	padding: 0 9px;
 	border-radius: 3px;
 	transition: background-color 0.3s;
 	font-family: $sans-serif;
@@ -11,7 +11,28 @@ button {
 	text-align: center;
 }
 
+input[type=submit] {
+  font-weight: bold;
+  padding: 0 9px;
+  margin-left: 0;
+	border-radius: 3px;
+	transition: background-color 0.3s;
+	font-family: $sans-serif;
+	text-transform: uppercase;
+  font-size: 11px;
+  border: 0;
+  font-weight: 600px;
+	text-align: center;
+}
+
 .medium-size {
+  min-width: 48px;
+  height: 28px;
+  padding: 0 13px
+}
+
+.small-size {
+  font-size: 14px;
   width: 48px;
   height: 28px;
   padding: 0 13px

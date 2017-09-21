@@ -28,43 +28,50 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    let header = "log in";
+    let btnText = undefined;
     let demoUserBtn = null;
     if (this.props.formType === 'login') {
-      header = "Log In";
-      demoUserBtn = <button className="signup-button" onClick={this.loginDemoUser} >Demo Log In</button>
+      btnText = "LOG IN";
+      demoUserBtn = <button className="signup-button medium-size" onClick={this.loginDemoUser} >Demo Log In</button>
     } else {
-      header = "Sign Up";
+      btnText = "SIGN UP";
+      demoUserBtn = <button className="signup-button medium-size" onClick={this.loginDemoUser} >Demo Log In</button>
     }
 
     return(
       <div className="session-form">
         <div className="session-form-img"></div>
         <h2>Login to Join The Community</h2>
-        <h2>Product Hunt is a community to share and geek out about the latest products, books and games. Join us :)</h2>
+        <p className="intro">Product Hunt is a community to share and geek out about the latest products, books and games. Join us :)</p>
 
         <ul className="session-errors">
           {this.props.errors.map((error, idx) => (<li key={idx}>{error}</li>))}
         </ul>
 
         <form onSubmit={this.handleSubmit} >
-          <label>Username
-            <input type="text"
-                   onChange={this.update('username')}
-                   value={this.state.username}>
-            </input>
-          </label>
-          <br/>
-          <label>Password
-            <input type="password"
-                   onChange={this.update('password')}
-                   value={this.state.password}>
-            </input>
-          </label>
-          <br/>
-          <input type="submit" className="signup-button medium-size" value={header}></input>
+          <div className="form-input-container">
+            <div className="form-input">
+              <label>Username</label>
+                <input type="text"
+                      onChange={this.update('username')}
+                      value={this.state.username}>
+                </input>
+            </div>
+
+            <div className="form-input">
+              <label>Password</label>
+                <input type="password"
+                      onChange={this.update('password')}
+                      value={this.state.password}>
+                </input>
+            </div>
+
+            <div className="session-btn-nav">
+              <input type="submit" className="signup-button medium-size" value={btnText}></input>
+              {demoUserBtn}
+            </div>
+          </div>
         </form>
-          {demoUserBtn}
       </div>
 
     );

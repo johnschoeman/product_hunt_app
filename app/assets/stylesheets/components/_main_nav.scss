@@ -46,31 +46,6 @@
 	font-size: 16px;
 }
 
-
-
-.login-button {
-	background-color: $white;
-	border: 1px solid $gray;
-	color: $black;
-	font-weight: bold;
-}
-
-.login-button:hover {
-	background-color: $gray;
-
-}
-
-.signup-button {
-	background-color: $orange;
-	border-color: $orange;
-	color: white;
-	font-weight: bold;
-}
-
-.signup-button:hover {
-	background-color: $light-orange;
-}
-
 .logo-img {
 	background-image: asset_url("product-hunt-logo-orange-960.png");
 	background-size: 100%;

@@ -10,25 +10,6 @@ body {
 	font-size: 12px;
 }
 
-button {
-  font-weight: bold;
-  margin-left: 5px;
-	padding: 7px 9px;
-	border-radius: 3px;
-	transition: background-color 0.3s;
-	font-family: $sans-serif;
-	text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 600px;
-	text-align: center;
-}
-
-.medium-size {
-  width: 48px;
-  height: 28px;
-  padding: 0 13px
-}
-
 a:hover {
 	text-decoration: underline;
 }
@@ -47,13 +28,19 @@ h1 {
 }
 
 h2 {
+	font-size: 22px;
 	text-align: center;
 	margin-bottom: 10px;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 p {
 	line-height: 16px;
+}
+
+.intro { 
+	color: $gray;
+	font-size: 16px;
 }
 
 img {
@@ -126,6 +113,8 @@ hr {
 input {
 	border: 1px solid $gray;
 	border-radius: 5px;
+	margin-left: 5px;
+	padding-left: 5px;
 }
 
 input[type="search"] {
