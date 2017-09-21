@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
   loginDemoUser() {
     this.setState( {username: "product_hunt_demo", password: "password"} );
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal);
+    this.props.processForm({username: "product_hunt_demo", password: "password"}).then(this.props.closeModal);
   }
 
   render() {
