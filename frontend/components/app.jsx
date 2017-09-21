@@ -79,20 +79,12 @@ class App extends React.Component {
           <NavBarContainer openModal={this.openModal} />
         </header>
 
-        <PopoverContainer />
-
         <ReactModal
           id="modal"
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterModalOpen}
           onRequestClose={this.closeModal}
           contentLabel="Example Modal">
-
-          className={{
-            base: 'modal',
-            afterOpen: 'modal_after-open',
-            beforeClose: 'modal_before-close'
-          }}
 
 
           <SessionFormContainer formType={this.state.modalFormType} closeModal={this.closeModal} />
