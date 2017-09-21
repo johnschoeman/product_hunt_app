@@ -25,3 +25,46 @@
 #modal {
   background-color: rgba(128,128,128,0.75);
 }
+
+.modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  outline: none;
+  padding: 20p;
+}
+.modal_after-open {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  outline: none;
+  padding: 20p;
+}
+.modal_before-close {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  outline: none;
+  padding: 20p;
+}

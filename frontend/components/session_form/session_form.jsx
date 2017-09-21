@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
     }
 
     return(
-      <div className="session-form form">
+      <div className="form" id="session-form">
         <h1>{header}</h1>
 
         <ul>

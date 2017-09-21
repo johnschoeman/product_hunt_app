@@ -58,10 +58,8 @@ class App extends React.Component {
   }
 
   afterModalOpen() {
-    // references are now sync'd and can be accessed.
-    // this.subtitle.style.color = '#f00';
-    console.log(ReactModal.defaultStyles);
     ReactModal.defaultStyles.overlay.backgroundColor = 'rgba(128,128,128,0.75)';
+    ReactModal.defaultStyles.content.display = 'flex';
   }
 
   closeModal() {
@@ -88,8 +86,14 @@ class App extends React.Component {
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterModalOpen}
           onRequestClose={this.closeModal}
-          sytle={customStyles}
           contentLabel="Example Modal">
+
+          className={{
+            base: 'modal',
+            afterOpen: 'modal_after-open',
+            beforeClose: 'modal_before-close'
+          }}
+
 
           <SessionFormContainer formType={this.state.modalFormType} closeModal={this.closeModal} />
         </ReactModal>
