@@ -6,6 +6,7 @@ class UserNav extends React.Component {
     this.addProduct = this.addProduct.bind(this);
     this.showNotificaitons = this.showNotificaitons.bind(this);
     this.showUserMenu = this.showUserMenu.bind(this);
+    this.showDropdown = this.showDropdown.bind(this);
   }
 
   addProduct() {
@@ -19,6 +20,10 @@ class UserNav extends React.Component {
   showUserMenu() {
     console.log('clicked Show User Menu');
   }
+
+  showDropdown() {
+    console.log('showing dropdown');
+  }
     
   render()  {
     let currentUser = this.props.currentUser;
@@ -28,7 +33,14 @@ class UserNav extends React.Component {
       <hgroup className="header-group user-nav">
         <button className="add-product-button" onClick={this.addProduct}>+</button>
         <button className="notification-seed-button" onClick={this.showNotificaitons}>notifications</button>
-        <button className="user-menu-button" onClick={logout}>User Menu</button>
+        <div className="dropdown">
+          <button className="user-menu-button" onClick={this.showDropdown}>User Menu</button>
+          <ul className="dropdown-content">
+            <li>Profile</li>
+            <li>Hunt Product</li>
+            <li>Log Out</li>
+          </ul>
+        </div>
       </hgroup> 
       );
     }
