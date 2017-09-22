@@ -3,6 +3,7 @@ import ReactModal from 'react-modal';
 
 import NavBarContainer from './nav_bar/nav_bar_container';
 import SessionFormContainer from './session_form/session_form_container';
+import ProductIndexContainer from './products_index/products_index_container';
 
 // import { AuthRoute } from '../util/route_util';
 
@@ -71,7 +72,8 @@ class App extends React.Component {
 
           <SessionFormContainer formType={this.state.modalFormType} closeModal={this.closeModal} />
         </ReactModal>
-        
+      
+        <ProductIndexContainer />
       </div>
     );
   }
