@@ -20,3 +20,6 @@ bundle.js*
 .byebug_history
 .DS_Store
 npm-debug.log
+
+# Ignore application configuration
+/config/application.yml
