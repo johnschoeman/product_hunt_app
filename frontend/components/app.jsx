@@ -5,6 +5,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import SessionFormContainer from './session_form/session_form_container';
 import PopoverContainer from './popover/popover_container';
 
+
 // import { AuthRoute } from '../util/route_util';
 
 class App extends React.Component {

@@ -18,7 +18,7 @@ class NavBar extends React.Component {
     let userSessionNav = this.props.currentUser ? (
       <UserNav currentUser={currentUser} logout={logout}/>
       ) : (
-      <SessionNav openModal={this.props.openModal}/> );
+      <SessionNav openModal={this.props.openModal} clearErrors={this.props.clearErrors}/> );
     return (
       <div className="main-nav">
         <Logo />

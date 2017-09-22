@@ -4,23 +4,22 @@ import { Link } from 'react-router-dom';
 class SessionNav extends React.Component {
   constructor(props) {
     super(props);
-    this.renderLogin = this.renderLogin.bind(this);
-    this.renderSignup = this.renderSignup.bind(this);
   }
 
-  renderLogin() {
-    console.log('clicked login');
-  }
-
-  renderSignup() {
-    console.log('clicked signup');
+  handleClick(formType) {
+    return () => {
+      console.log('in handle click: ', this.props);
+      this.props.clearErrors();
+      this.props.openModal(formType)();
+    };
   }
 
   render() {
     return (<nav className="login-signup"> 
-        <button className="login-button medium-size" onClick={this.props.openModal('login')} >LOG IN</button>
-        <button className="signup-button medium-size" onClick={this.props.openModal('signup')} >SIGN UP</button>
-    </nav>);
+        <button className="login-button medium-size" onClick={this.handleClick('login')} >LOG IN</button>
+        <button className="signup-button medium-size" onClick={this.handleClick('signup')} >SIGN UP</button>
+            </nav>
+    );
   }
 }
 
