@@ -1,3 +1,11 @@
-json.array! @products do |product|
-  json.partial! "api/products/product", product: product
+json.by_id do
+  @products.each do |product|
+    json.set! product.id do 
+      json.partial! "api/products/product", product: product
+    end
+  end
+end
+
+json.all_ids do
+  json.array! @products.map { |product| product.id }
 end
