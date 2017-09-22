@@ -28,8 +28,8 @@ class Dropdown extends React.Component {
         <div className={dropdownClassName} >
           <ul>
             <li className="dropdown-item">Profile</li>
-            <li className="dropown-item">Hunt Product</li>
-            <li className="dropown-item" onClick={this.props.logout}>Log Out</li>
+            <li className="dropdown-item">Hunt Product</li>
+            <li className="dropdown-item" onClick={this.props.logout}>Log Out</li>
           </ul>
         </div>
       </div>
