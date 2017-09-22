@@ -1,0 +1,29 @@
+.product-index-container {
+  width: 40%;
+  margin: 0 auto;
+  border: 1px solid $gray;
+  border-radius: 1px;
+  margin-top: 20px;
+}
+
+.product-index {
+
+}
+
+.product-index-item {
+  display: flex;
+  padding: 5px;
+  border-top: 1px solid $gray;
+}
+
+.product-index-item-img {
+  height: 64px;
+  width: 64px;
+}
+
+.product-index-item-text {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
