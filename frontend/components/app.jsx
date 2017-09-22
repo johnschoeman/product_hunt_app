@@ -18,6 +18,17 @@ class App extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.afterModalOpen = this.afterModalOpen.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.hideDropdown = this.hideDropdown.bind(this);
+  }
+
+  hideDropdown(e) {
+    e.preventDefault();
+    let dropDownArray = document.getElementsByClassName("dropdown-content");
+    console.log("hide dropdowns", dropDownArray);
+    Array.prototype.forEach.call(dropDownArray, (dropdown) => {
+      dropdown.classList.add("hide");
+    });
+    
   }
 
   openModal(formType) {
@@ -44,7 +55,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div onClick={this.hideDropdown}>
         <header>
           <NavBarContainer openModal={this.openModal} />
         </header>

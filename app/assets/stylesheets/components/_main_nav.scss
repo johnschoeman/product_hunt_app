@@ -1,8 +1,18 @@
 .main-nav {
 	display:flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 10px 0;
-	border-bottom: 1px solid $background-gray;
+	min-height: 50px;
+	height: 10%;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.user-nav {
+	width: 15%;
+	display: flex;
+	justify-content: space-around;
 }
 
 .left-nav > ul,
@@ -20,30 +30,6 @@
 	font-size: 11px;
 	padding: 7px 9px;
 	transition: background-color 0.3s;
-}
-
-.right-nav > ul > li {
-	margin-left: 5px;
-	cursor: pointer;
-}
-
-.right-nav > ul > li:last-of-type {
-	position: relative;
-	padding: 7px 9px;
-	transition: background-color 0.3s;
-}
-
-.left-nav > ul > li:hover,
-.right-nav > ul > li:last-of-type:hover {
-	background-color: $background-gray;
-}
-
-.left-nav span {
-	margin-left: 10px;
-}
-
-.right-nav i {
-	font-size: 16px;
 }
 
 .logo-img {

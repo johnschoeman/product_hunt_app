@@ -1,4 +1,5 @@
 import React from 'react';
+import Dropdown from '../dropdown/dropdown';
 
 class UserNav extends React.Component {
   constructor(props) {
@@ -32,15 +33,8 @@ class UserNav extends React.Component {
     return ( 
       <hgroup className="header-group user-nav">
         <button className="add-product-button" onClick={this.addProduct}>+</button>
-        <button className="notification-seed-button" onClick={this.showNotificaitons}>notifications</button>
-        <div className="dropdown">
-          <button className="user-menu-button" onClick={this.showDropdown}>User Menu</button>
-          <ul className="dropdown-content">
-            <li>Profile</li>
-            <li>Hunt Product</li>
-            <li>Log Out</li>
-          </ul>
-        </div>
+        <button className="notification-seed-button" onClick={this.showNotificaitons}>n</button>
+        <Dropdown logout={logout}/>
       </hgroup> 
       );
     }
