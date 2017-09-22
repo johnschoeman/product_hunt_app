@@ -71,7 +71,7 @@ class App extends React.Component {
 
           <SessionFormContainer formType={this.state.modalFormType} closeModal={this.closeModal} />
         </ReactModal>
-
+        
       </div>
     );
   }
