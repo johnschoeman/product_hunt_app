@@ -51,6 +51,18 @@
 	cursor: pointer;
 }
 
+.user-profile-img {
+	background-color: $gray;
+	border-radius: 16px;
+	background-size: 100%;
+	width: 32px;
+	height: 32px;
+}
+
+.user-profile-img:hover {
+	cursor: pointer;
+}
+
 @media all and (max-width: 1000px) {
   .right-nav button {
   	display: none;
