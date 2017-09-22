@@ -1,0 +1,1 @@
+json.extract! product, :id, :name, :tagline, :thumbnail_url, :link_url
