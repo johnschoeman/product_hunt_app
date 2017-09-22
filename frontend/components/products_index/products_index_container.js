@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import ProductIndex from './products_index';
+import { fetchAllProducts } from '../../actions/product_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let products = state.entities.products.byId;
   let productIds = state.entities.products.allIds;
-  console.log('state', state);
-  console.log('productIds', productIds);
+
   return {
     products,
     productIds
@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
 
   return {
-
+    fetchAllProducts: () => dispatch(fetchAllProducts())
   };
 };
 
