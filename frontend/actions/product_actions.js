@@ -27,8 +27,8 @@ export const createProduct = product => dispatch => (
   ))
 );
 
-export const fetchProduct = product => dispatch => (
-  APIUtil.getProduct(product).then(res => (
+export const fetchProduct = productId => dispatch => (
+  APIUtil.getProduct(productId).then(res => (
     dispatch(receiveProduct(res))
   ), err => (
     dispatch(receiveProductErrors(err.responseJSON))

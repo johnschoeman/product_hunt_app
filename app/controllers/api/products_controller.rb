@@ -1,9 +1,11 @@
 class Api::ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
-
+    @product.user = current_user
     if @product.save
       render :show
+    elsif @product.user.nil?
+      render json: ["Must be logged in to create a product"], status: 422
     else
       render json: @product.errors.full_messages, status: 422
     end

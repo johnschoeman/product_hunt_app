@@ -15,7 +15,7 @@ export const getProduct = (productId) => (
 export const postProduct = (product) => (
   $.ajax({
     method: "POST",
-    url: `api/products/new`,
+    url: `api/products`,
     data: { product }
   })
 );
