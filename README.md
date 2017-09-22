@@ -1,3 +1,3 @@
 # README
 
-[Product Hunt App](https://pacific-fortress-16582.herokuapp.com/#/)
+[Product Hunt App](https://productjadt.herokuapp.com/#/)
