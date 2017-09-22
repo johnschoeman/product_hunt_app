@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dekgrddbo
+  api_key: '195791778186631'
+  api_secret: N_J8h4MfvsskzBWSbNCzI3bH140
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dekgrddbo
+  api_key: '195791778186631'
+  api_secret: N_J8h4MfvsskzBWSbNCzI3bH140
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dekgrddbo
+  api_key: '195791778186631'
+  api_secret: N_J8h4MfvsskzBWSbNCzI3bH140
+  enhance_image_tag: true
+  static_image_support: false
