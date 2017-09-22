@@ -13,6 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore node_modules and webpack bundles
 node_modules/
 bundle.js
 bundle.js.map
@@ -23,3 +24,4 @@ npm-debug.log
 
 # Ignore application configuration
 /config/application.yml
+/config/cloudinary.yml

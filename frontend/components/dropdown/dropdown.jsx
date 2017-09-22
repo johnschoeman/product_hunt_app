@@ -26,7 +26,9 @@ class Dropdown extends React.Component {
     let currentUser = this.props.currentUser;
     return (
       <div className="dropdown">
-        <div className="user-profile-img" onClick={this.showDropdown}></div>
+        <div className="user-profile-img-container" onClick={this.showDropdown}>
+          <img className="user-profile-img" src="https://res.cloudinary.com/dekgrddbo/image/upload/v1506105323/ray_charles_headshot_vljkuq.jpg"/>
+        </div>
         <div className="dropdown-content hide" >
           <ul>
             <li className="dropdown-item" onClick={this.handleRedirect(`/users/${currentUser.id}`)}>Profile</li>

@@ -33,7 +33,7 @@
 }
 
 .logo-img {
-	background-image: asset_url("product-hunt-logo-orange-960.png");
+	background-image: url('https://res.cloudinary.com/dekgrddbo/image/upload/v1506108218/product-hunt-logo-orange-960_fvifwi.png');
 	background-size: 100%;
 	width: 32px;
 	height: 32px;
@@ -51,17 +51,22 @@
 	cursor: pointer;
 }
 
-.user-profile-img {
+.user-profile-img-container {
 	background-color: $gray;
 	border-radius: 16px;
-	background-size: 100%;
 	width: 32px;
 	height: 32px;
 }
 
-.user-profile-img:hover {
+.user-profile-img-container:hover {
 	cursor: pointer;
 }
+
+.user-profile-img {
+	object-fit: cover;
+	border-radius: 16px;
+}
+
 
 @media all and (max-width: 1000px) {
   .right-nav button {

@@ -25,6 +25,8 @@ class Api::UsersController < ApplicationController
         render :index
     end
 
+
+
     private
 
     def user_params
