@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
 
     return {
-        logout: () => dispatch(logout()),
+        logout: () => dispatch(logout()).then(() => { ownProps.history.push("/"); } ),
         clearErrors: dispatch(clearErrors())
     };
 };

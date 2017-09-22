@@ -1,34 +1,36 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class Dropdown extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      clickState: false
-    };
+
     this.showDropdown = this.showDropdown.bind(this);
   }
 
   showDropdown(e) {
     e.stopPropagation();
-    e.preventDefault();
-    console.log('showing dropdown');
-    this.setState({clickState: true});
     let dropdownArray = document.getElementsByClassName("dropdown-content");
     Array.prototype.forEach.call(dropdownArray, (dropdown) => {
       dropdown.className = "dropdown-content";
     });
   }
 
+  handleRedirect(path) {
+    return (e) => {
+      this.props.history.push(path);
+    };
+  }
+
   render() {
-    let dropdownClassName = (this.state.clickState) ? "dropdown-content" : "dropdown-content hide";
+    let currentUser = this.props.currentUser;
     return (
       <div className="dropdown">
         <div className="user-profile-image" onClick={this.showDropdown}> hi </div>
-        <div className={dropdownClassName} >
+        <div className="dropdown-content" >
           <ul>
-            <li className="dropdown-item">Profile</li>
-            <li className="dropdown-item">Hunt Product</li>
+            <li className="dropdown-item" onClick={this.handleRedirect(`/users/${currentUser.id}`)}>Profile</li>
+            <li className="dropdown-item" onClick={this.handleRedirect('/products/new')}>Hunt Product</li>
             <li className="dropdown-item" onClick={this.props.logout}>Log Out</li>
           </ul>
         </div>
@@ -37,4 +39,4 @@ class Dropdown extends React.Component {
   }
 }
 
-export default Dropdown;
+export default withRouter(Dropdown);
