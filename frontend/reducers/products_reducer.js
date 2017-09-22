@@ -1,7 +1,7 @@
 import { RECEIVE_PRODUCT, RECEIVE_ALL_PRODUCTS } from '../actions/product_actions';
 import { merge } from 'lodash';
 
-let defaultState = { by_id: {}, all_ids: [] };
+let defaultState = { byId: {}, allIds: [] };
 
 const productsReducer = (state = defaultState, action) => {
   Object.freeze(state);
@@ -9,7 +9,7 @@ const productsReducer = (state = defaultState, action) => {
 
   switch (action.type) {
     case RECEIVE_PRODUCT:
-      newState.by_id[action.product.id] = action.product;
+      newState.byId[action.product.id] = action.product;
       return newState;
     case RECEIVE_ALL_PRODUCTS:
       return action.products;
