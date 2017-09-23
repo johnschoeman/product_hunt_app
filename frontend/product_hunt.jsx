@@ -7,7 +7,8 @@ import Root from './components/root';
 //Start Testing
 import {signup, login, logout} from './actions/session_actions';
 import {fetchProduct, fetchAllProducts, createProduct} from './actions/product_actions';
-import { setViewedUser, setViewedProduct } from './actions/ui_actions';
+import { setViewedProduct } from './actions/ui_actions';
+import { fetchViewedUser } from './actions/user_actions';
 
 window.signup = signup;
 window.login = login;
@@ -17,8 +18,9 @@ window.fetchProduct = fetchProduct;
 window.fetchAllProducts = fetchAllProducts;
 window.createProduct = createProduct;
 
-window.setViewedUser = setViewedUser;
 window.setViewedProduct = setViewedProduct;
+
+window.fetchViewedUser = fetchViewedUser;
 //End Testing
 
 document.addEventListener("DOMContentLoaded", () => {

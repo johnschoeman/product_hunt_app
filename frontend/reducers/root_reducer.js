@@ -3,6 +3,7 @@ import errorsReducer from './errors_reducer';
 import sessionReducer from './session_reducer';
 import entitiesReducer from './entities_reducer';
 import uiReducer from './ui_reducer';
+import userReducer from './user_reducer';
 
 // {
 //   entites: {
@@ -12,6 +13,10 @@ import uiReducer from './ui_reducer';
 //       }
 //       AllIds: []
 //     }
+//   }
+
+//   user: {
+
 //   }
 
 //   ui {
@@ -30,6 +35,7 @@ import uiReducer from './ui_reducer';
 
 const rootReducer = combineReducers({
     entities: entitiesReducer,
+    user: userReducer,
     ui: uiReducer,
     session: sessionReducer,
     errors: errorsReducer
