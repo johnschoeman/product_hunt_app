@@ -16,7 +16,9 @@ class ProductIndex extends React.Component {
     let productIds = this.props.productIds;
     return (
     <div className="product-index-container">
-      <h1>Product Index</h1>
+      <div className="product-index-header">
+        <h1 className="product-index-header-text">Product Index</h1>
+      </div>
       <ul className="product-index">
         {productIds.map((id) => {
           return <ProductIndexItem product={products[id]} key={`product-index-item-${id}`}/>;
