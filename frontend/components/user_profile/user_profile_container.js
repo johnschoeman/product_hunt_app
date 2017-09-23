@@ -5,6 +5,12 @@ const mapStateToProps = (state, ownProps) => {
   let viewedUserId = 1;
 
   return {
-    viewedUser: state.users[viewedUserId]
+    viewedUser: 1
   };
 };
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserProfile);

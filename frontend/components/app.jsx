@@ -6,6 +6,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import SessionFormContainer from './session_form/session_form_container';
 import ProductIndexContainer from './products_index/products_index_container';
 import NewProductFormContainer from './new_product_form/new_product_form_container';
+import UserProfileContainer from './user_profile/user_profile_container';
 
 // import { AuthRoute } from '../util/route_util';
 
@@ -77,6 +78,7 @@ class App extends React.Component {
 
         <Switch>
           <Route path="/products/new" component={NewProductFormContainer} />
+          <Route path="/users/:userId" component={UserProfileContainer} />
           <Route path="/" component={ProductIndexContainer} />
         </Switch>
       </div>
