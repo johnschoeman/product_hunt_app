@@ -56,7 +56,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div onClick={this.hideDropdown}>
+      <div className="app" onClick={this.hideDropdown}>
         <header>
           <NavBarContainer openModal={this.openModal} />
         </header>

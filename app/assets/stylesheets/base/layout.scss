@@ -10,7 +10,12 @@ body {
 	font-size: 12px;
 }
 
+.app { 
+	background-color: $background-gray;
+}
+
 header {
+	background-color: $white;
 	width: 100%;
 	border-bottom: 1px solid $gray;
 }
