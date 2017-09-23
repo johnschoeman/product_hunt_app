@@ -32,7 +32,7 @@ export const getPosts = () => (
     "Accept": "application/json",
     "Content-Type": "application/json",
     "Authorization": "Bearer 8f2831a9bd9fee6e3d5596d43cfd4bf21c59d0426b536e022b5a40fae00e924c",
-    "Host": "api.producthunt.com",
+    "Access-Control-Allow-Origin": true
   },
 
   success: function() {
