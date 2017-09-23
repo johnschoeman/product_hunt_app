@@ -1,4 +1,5 @@
 import React from 'react';
+import UserHeader from './user_header';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class UserProfile extends React.Component {
 
     return (
       <div>
-        user profile
+        <UserHeader />
       </div>
     );
   }
