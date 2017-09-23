@@ -50,6 +50,8 @@ group :development, :test do
 
   gem 'pry-rails'
   gem 'annotate'
+
+  gem 'faker'
 end
 
 group :development do

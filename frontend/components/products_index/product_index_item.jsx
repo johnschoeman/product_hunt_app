@@ -8,11 +8,11 @@ class ProductIndexItem extends React.Component {
   
   render() {
     let product = this.props.product;
-    console.log('p-item: ', product);
+    console.log('p-item: ', product.thumbnailUrl);
     return (
       <li className="product-index-item">
         <div className="product-index-item-img">
-          <img src="https://res.cloudinary.com/dekgrddbo/image/upload/v1506100192/sample.jpg"/>
+          <img src={product.thumbnailUrl}/>
         </div>
         <div className="product-index-item-text">
           <p>{product.name}</p>
