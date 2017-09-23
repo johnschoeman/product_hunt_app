@@ -19,8 +19,11 @@ class Product < ApplicationRecord
 
   belongs_to :user
 
-  def filterByDate(date)
+  def self.filterByDate(date)
     
   end
   
+  def self.byCreatedAtLimit(limit)
+    Product.order(:created_at).last(limit).reverse
+  end
 end

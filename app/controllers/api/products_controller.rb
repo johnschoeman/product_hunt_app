@@ -12,7 +12,7 @@ class Api::ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
+    @products = Product.byCreatedAtLimit(10)
     render :index
   end
 
