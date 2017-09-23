@@ -19,13 +19,14 @@ export const receiveProductErrors = errors => ({
   errors
 });
 
-export const createProduct = product => dispatch => (
-  APIUtil.postProduct(product).then(res => (
+export const createProduct = product => dispatch => {
+  console.log(product);
+  return APIUtil.postProduct(product).then(res => (
     dispatch(receiveProduct(res))
   ), err => (
     dispatch(receiveProductErrors(err.responseJSON))
-  ))
-);
+  ));
+};
 
 export const fetchProduct = productId => dispatch => (
   APIUtil.getProduct(productId).then(res => (

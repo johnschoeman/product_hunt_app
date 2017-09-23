@@ -26,7 +26,7 @@ class App extends React.Component {
   }
 
   hideDropdown(e) {
-    e.preventDefault();
+    // e.preventDefault();
     let dropDownArray = document.getElementsByClassName("dropdown-content");
     console.log("hide dropdowns", dropDownArray);
     Array.prototype.forEach.call(dropDownArray, (dropdown) => {

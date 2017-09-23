@@ -12,10 +12,11 @@ export const getProduct = (productId) => (
   })
 );
 
-export const postProduct = (product) => (
-  $.ajax({
+export const postProduct = (product) => {
+  // console.log({product});
+  return $.ajax({
     method: "POST",
     url: `api/products`,
     data: { product }
-  })
-);
+  });
+};

@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
 
   return {
-    create_product: (product) => dispatch(createProduct())
+    createProduct: (product) => dispatch(createProduct(product))
   };
 };
 
