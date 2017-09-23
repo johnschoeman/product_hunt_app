@@ -37,6 +37,7 @@ gem 'jquery-rails'
 
 gem 'cloudinary'
 gem 'figaro'
+gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -51,7 +52,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'annotate'
 
-  gem 'faker'
 end
 
 group :development do
