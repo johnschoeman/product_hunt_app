@@ -8,6 +8,7 @@ class Dropdown extends React.Component {
 
     this.showDropdown = this.showDropdown.bind(this);
     this.handleRedirectToProfile = this.handleRedirectToProfile.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
   }
 
   showDropdown(e) {
@@ -21,6 +22,11 @@ class Dropdown extends React.Component {
   handleRedirect(path) {
     return (e) => {
     };
+  }
+
+  handleLogout() {
+    this.props.logout;
+    this.props.history.push("/");
   }
   
   handleRedirectToProfile() {

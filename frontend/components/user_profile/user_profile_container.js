@@ -8,7 +8,12 @@ const mapStateToProps = (state, ownProps) => {
   // let user = state.users[state.ui.viewedUser];
   let viewedUserId = ownProps.match.params.userId;
   let viewedUser = state.entities.viewedUser;
-  let currentUserId = state.session.currentUser.id;
+  let currentUserId = null;
+
+  if (state.session.currentUser) {
+    currentUserId = state.session.currentUser.id;
+  }
+
   return {
     viewedUserId,
     viewedUser,
