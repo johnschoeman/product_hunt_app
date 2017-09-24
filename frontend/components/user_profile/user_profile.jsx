@@ -15,7 +15,7 @@ class UserProfile extends React.Component {
         <UserHeader user={user}/>
         <div className="user-profile-content-container">
           <div className="user-profile-nav-container">
-            <UserProfileNav />
+            <UserProfileNav user={user}/>
           </div>
           <div className="user-profile-index-container">
             <ProductsIndexContainer />

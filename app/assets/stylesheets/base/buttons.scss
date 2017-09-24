@@ -1,5 +1,4 @@
 button {
-  font-weight: bold;
   margin-left: 5px;
 	padding: 0 9px;
 	border-radius: 3px;
@@ -7,8 +6,20 @@ button {
 	font-family: $sans-serif;
 	text-transform: uppercase;
   font-size: 11px;
-  font-weight: 600px;
+  font-weight: 600;
 	text-align: center;
+}
+
+.button {
+  margin-left: 5px;
+	border-radius: 3px;
+	transition: background-color 0.3s;
+	text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+	vertical-align: middle;
+
+	padding-top: 100px;
 }
 
 input[type=submit] {
@@ -21,14 +32,13 @@ input[type=submit] {
 	text-transform: uppercase;
   font-size: 11px;
   border: 0;
-  font-weight: 600px;
+  font-weight: 600;
 	text-align: center;
 }
 
 .medium-size {
   min-width: 48px;
-  height: 28px;
-  padding: 0 13px
+  padding: 8px 13px
 }
 
 .small-size {
@@ -42,19 +52,17 @@ input[type=submit] {
 	background-color: $white;
 	border: 1px solid $gray;
 	color: $black;
-	font-weight: bold;
 }
 
 .white-button:hover {
 	background-color: $gray;
-
+	text-decoration: none;
 }
 
 .orange-button {
 	background-color: $orange;
 	border-color: $orange;
 	color: white;
-	font-weight: bold;
 }
 
 .orange-button:hover {

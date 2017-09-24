@@ -99,6 +99,30 @@
   // border: 1px solid red;
 }
 
+.user-profile-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-profile-nav-item {
+  margin: 5px;
+}
+
+.user-profile-nav-item * {
+  color: $text-gray;
+  font-size: 13px;
+  padding: 5px;
+}
+
+.selected {
+  background-color: $gray;
+  border-radius: 5px;
+  color: $black;
+
+  //test
+  // border: 1px solid red;
+}
+
 //User Profile Add Bar
 .user-profile-ad-container {
   width: 230px;
