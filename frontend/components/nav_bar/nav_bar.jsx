@@ -15,8 +15,10 @@ class NavBar extends React.Component {
   render() {
     let currentUser = this.props.currentUser;
     let logout = this.props.logout;
+    let fetchUser = this.props.fetchUser;
+    
     let userSessionNav = this.props.currentUser ? (
-      <UserNav currentUser={currentUser} logout={logout}/>
+      <UserNav currentUser={currentUser} logout={logout} fetchUser={fetchUser}/>
       ) : (
       <SessionNav openModal={this.props.openModal} clearErrors={this.props.clearErrors}/> );
     return (

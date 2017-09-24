@@ -8,6 +8,14 @@ class UserHeader extends React.Component {
 
   render() {
     let user = this.props.user;
+    let UserHeaderButton = undefined;
+    if (user.id === this.props.currentUserId) {
+      UserHeaderButton = <Link to={`/users/${user.id}/edit`} className="button white-button medium-size">Edit</Link>;
+    } else {
+      UserHeaderButton = <button onClick={this.followUser} 
+                                 className="button white-button medium-size" 
+                                  >Follow</button>;
+    }
     return (
       <div className="user-header">
         <div className="user-header-info">
@@ -20,11 +28,11 @@ class UserHeader extends React.Component {
             <ul className="user-profile-main-text-contianer">
               <li>
                 <div className="user-profile-main-text">
-                  <p className="user-username">Finn The Human</p>
+                  <p className="user-username">{user.username}</p>
                 </div>
               </li>
-              <li className="user-twitter">@finn_the_human</li>
-              <li className="user-tagline">Niiiiiice</li>
+              <li className="user-twitter">{user.twitter_handle}</li>
+              <li className="user-tagline">{user.tagline}</li>
             </ul>
           </div>
         </div>
@@ -36,7 +44,7 @@ class UserHeader extends React.Component {
           <Link to={`/users/${user.id}/following`} className="user-profile-link">
             Following
           </Link>
-          <Link to={`/users/${user.id}/edit`} className="button white-button medium-size">Edit</Link>
+          {UserHeaderButton}
         </div>
       </div>
     );

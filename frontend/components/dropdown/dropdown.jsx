@@ -1,11 +1,13 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter, Redirect } from 'react-router';
+
 
 class Dropdown extends React.Component {
   constructor(props) {
     super(props);
 
     this.showDropdown = this.showDropdown.bind(this);
+    this.handleRedirectToProfile = this.handleRedirectToProfile.bind(this);
   }
 
   showDropdown(e) {
@@ -18,8 +20,13 @@ class Dropdown extends React.Component {
 
   handleRedirect(path) {
     return (e) => {
-      this.props.history.push(path);
     };
+  }
+  
+  handleRedirectToProfile() {
+    let currentUserId = this.props.currentUser.id;
+    this.props.history.push(`/users/${currentUserId}`);
+    this.props.fetchUser(currentUserId);
   }
 
   render() {
@@ -30,7 +37,7 @@ class Dropdown extends React.Component {
           <img className="user-profile-img" src="https://res.cloudinary.com/dekgrddbo/image/upload/v1506267278/finn_the_human_bokynk.jpg"/>
         <div className="dropdown-content hide" >
           <ul>
-            <li className="dropdown-item" onClick={this.handleRedirect(`/users/${currentUser.id}`)}>Profile</li>
+            <li className="dropdown-item" onClick={this.handleRedirectToProfile}>Profile</li>
             <li className="dropdown-item" onClick={this.handleRedirect('/products/new')}>Hunt Product</li>
             <li className="dropdown-item" onClick={this.props.logout}>Log Out</li>
           </ul>

@@ -6,10 +6,13 @@ import { fetchUser } from '../../actions/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
   // let user = state.users[state.ui.viewedUser];
-  let user = { id: 1, name: 'user1', tagline: 'user1-tagline'}
-  let viewedUser = state.ui.viewedUser;
+  let viewedUserId = ownProps.match.params.userId;
+  let viewedUser = state.entities.viewedUser;
+  let currentUserId = state.session.currentUser.id;
   return {
-    user
+    viewedUserId,
+    viewedUser,
+    currentUserId
   };
 };
 

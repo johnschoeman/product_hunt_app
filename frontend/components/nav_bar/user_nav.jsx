@@ -14,10 +14,11 @@ class UserNav extends React.Component {
   render()  {
     let currentUser = this.props.currentUser;
     let logout = this.props.logout;
+    let fetchUser = this.props.fetchUser;
     
     return ( 
       <hgroup className="header-group user-nav">
-        <Dropdown logout={logout} currentUser={currentUser}/>
+        <Dropdown logout={logout} currentUser={currentUser} fetchUser={fetchUser}/>
       </hgroup> 
       );
     }

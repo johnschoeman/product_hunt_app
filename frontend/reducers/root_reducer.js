@@ -3,7 +3,7 @@ import errorsReducer from './errors_reducer';
 import sessionReducer from './session_reducer';
 import entitiesReducer from './entities_reducer';
 import uiReducer from './ui_reducer';
-import viewedUserReducer from './viewed_user_reducer';
+
 
 // {
 //   entites: {
@@ -13,10 +13,10 @@ import viewedUserReducer from './viewed_user_reducer';
 //       }
 //       AllIds: []
 //     }
-//   }
 
-//   user: {
+//     viewedUser: {
 
+//     }
 //   }
 
 //   ui {
@@ -35,7 +35,6 @@ import viewedUserReducer from './viewed_user_reducer';
 
 const rootReducer = combineReducers({
     entities: entitiesReducer,
-    viewedUser: viewedUserReducer,
     ui: uiReducer,
     session: sessionReducer,
     errors: errorsReducer

@@ -8,10 +8,7 @@ class UserProfile extends React.Component {
     super(props);
 
     this.state = {
-      user: { id: 1, 
-              name: 'null_user', 
-              tagline: 'null_user-tagline', 
-              image_url: 'https://res.cloudinary.com/dekgrddbo/image/upload/v1506267278/finn_the_human_bokynk.jpg'}
+     
     };
   }
 
@@ -19,14 +16,19 @@ class UserProfile extends React.Component {
     console.log('user profile mounted');
     console.log('user profile props', this.props);
     let viewedUserId = this.props.match.params.userId;
-    
+    this.props.fetchUser(viewedUserId);
+  }
+
+  willReceiveProps(nextProps) {
+    console.log('next props: ', nextProps);
   }
 
   render() {
-    let user = this.state.user;
+    let user = this.props.viewedUser;
+    let currentUserId = this.props.currentUserId;
     return (
       <div className="user-profile">
-        <UserHeader user={user}/>
+        <UserHeader user={user} currentUserId={currentUserId}/>
         <div className="user-profile-content-container">
           <div className="user-profile-nav-container">
             <UserProfileNav user={user}/>
