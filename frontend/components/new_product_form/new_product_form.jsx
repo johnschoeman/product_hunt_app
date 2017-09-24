@@ -91,7 +91,7 @@ class NewProductForm extends React.Component {
           </div>
 
           <div className="np-form-buttons">
-            <input type="submit" className="orange-button medium-size" value="Submit"></input>
+            <input type="submit" className="white-button medium-size" value="Submit"></input>
           </div>
         </form>
       </div>

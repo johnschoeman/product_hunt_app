@@ -38,25 +38,25 @@ input[type=submit] {
   padding: 0 13px
 }
 
-.login-button {
+.white-button {
 	background-color: $white;
 	border: 1px solid $gray;
 	color: $black;
 	font-weight: bold;
 }
 
-.login-button:hover {
+.white-button:hover {
 	background-color: $gray;
 
 }
 
-.signup-button {
+.orange-button {
 	background-color: $orange;
 	border-color: $orange;
 	color: white;
 	font-weight: bold;
 }
 
-.signup-button:hover {
+.orange-button:hover {
 	background-color: $light-orange;
 }

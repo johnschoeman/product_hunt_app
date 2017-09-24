@@ -64,6 +64,18 @@
 
 }
 
+.user-profile-links {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-profile-link {
+  color: $white;
+  font-size: 14px;
+}
+
 //User Profile Content
 .user-profile-content-container {
   width: 100%;

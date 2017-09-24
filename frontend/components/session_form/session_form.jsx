@@ -32,7 +32,7 @@ class SessionForm extends React.Component {
     let demoUserBtn = null;
     if (this.props.formType === 'login') {
       btnText = "LOG IN";
-      demoUserBtn = <button className="signup-button medium-size" onClick={this.loginDemoUser} >Demo Log In</button>
+      demoUserBtn = <button className="orange-button medium-size" onClick={this.loginDemoUser} >Demo Log In</button>
     } else {
       btnText = "SIGN UP";
     }
@@ -66,7 +66,7 @@ class SessionForm extends React.Component {
             </div>
 
             <div className="session-btn-nav">
-              <input type="submit" className="signup-button medium-size" value={btnText}></input>
+              <input type="submit" className="orange-button medium-size" value={btnText}></input>
               {demoUserBtn}
             </div>
           </div>

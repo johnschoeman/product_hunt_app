@@ -30,9 +30,13 @@ class UserHeader extends React.Component {
         </div>
 
         <div className="user-profile-links">
-          <Link to={`users/${user.id}/followers`}>Followers</Link>
-          <Link to={`users/${user.id}/following`}>Following</Link>
-          <button>Edit</button>
+          <Link to={`users/${user.id}/followers`} className="user-profile-link">
+            Followers
+            </Link>
+          <Link to={`users/${user.id}/following`} className="user-profile-link">
+            Following
+          </Link>
+          <button className="white-button medium-size">Edit</button>
         </div>
       </div>
     );
