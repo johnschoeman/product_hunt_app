@@ -4,7 +4,6 @@ import { Route, Switch } from 'react-router';
 
 import NavBarContainer from './nav_bar/nav_bar_container';
 import SessionFormContainer from './session_form/session_form_container';
-import ProductFeed from './product_feed/product_feed';
 import NewProductFormContainer from './new_product_form/new_product_form_container';
 import UserProfileContainer from './user_profile/user_profile_container';
 import AppContent from './app_content';
@@ -27,9 +26,7 @@ class App extends React.Component {
   }
 
   hideDropdown(e) {
-    // e.preventDefault();
     let dropDownArray = document.getElementsByClassName("dropdown-content");
-    console.log("hide dropdowns", dropDownArray);
     Array.prototype.forEach.call(dropDownArray, (dropdown) => {
       dropdown.classList.add("hide");
     });
