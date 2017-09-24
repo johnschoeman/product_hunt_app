@@ -13,18 +13,18 @@ class UserHeader extends React.Component {
         <div className="user-header-info">
 
           <div className="user-header-profile-img-container">
-            <img className="user-header-profile-img" src="https://res.cloudinary.com/dekgrddbo/image/upload/v1506105323/ray_charles_headshot_vljkuq.jpg"/>
+            <img className="user-header-profile-img" src="https://res.cloudinary.com/dekgrddbo/image/upload/v1506267278/finn_the_human_bokynk.jpg"/>
           </div>
 
           <div className="">
             <ul className="user-profile-main-text-contianer">
               <li>
                 <div className="user-profile-main-text">
-                  <p className="user-username">Ray Charles</p>
+                  <p className="user-username">Finn The Human</p>
                 </div>
               </li>
-              <li className="user-twitter">@ray_charles</li>
-              <li className="user-tagline">The best there ever was</li>
+              <li className="user-twitter">@finn_the_human</li>
+              <li className="user-tagline">Niiiiiice</li>
             </ul>
           </div>
         </div>
