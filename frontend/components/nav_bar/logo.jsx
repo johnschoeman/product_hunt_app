@@ -24,8 +24,8 @@ class Logo extends React.Component {
       <div className="logo" onClick={this.handleClick}>
         <div className="logo-img"></div>
         <div style={styleText}>
-          <p>Product Hunt</p>
-          <p>The best new products, every day</p>
+          <p className="logo-text-main">Product Hunt</p>
+          <p className="logo-text-second">The best new products, every day</p>
         </div>
       </div>
     );

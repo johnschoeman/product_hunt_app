@@ -2,9 +2,9 @@
 	display:flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 0;
+	padding: 9px 0;
 	min-height: 50px;
-	height: 10%;
+	height: 9%;
 	max-width: 1070px;
 	width: 95%;
 	margin: 0 auto;
@@ -50,6 +50,16 @@
 
 .logo:hover {
 	cursor: pointer;
+}
+
+.logo-text-main {
+	color: $orange;
+	font-size: 15px;
+	font-weight: 800;
+}
+
+.logo-text-second {
+	color: $text-gray;
 }
 
 .user-profile-img-container {
