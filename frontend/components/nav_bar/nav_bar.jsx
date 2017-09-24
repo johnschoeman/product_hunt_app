@@ -22,7 +22,9 @@ class NavBar extends React.Component {
     return (
       <div className="main-nav">
         <Logo />
-        <SearchBarContainer />
+        <div className="search-bar-container">
+          <SearchBarContainer />
+        </div>
         <SiteNav />
         { userSessionNav }
       </div>

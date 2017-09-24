@@ -4,42 +4,45 @@
   width: 95%;
   margin: 0 auto;
 }
-.user-profile-content-container {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.user-profile-index-container {
-  width: 70%;
-}
 
 //User Profile Header
 .user-header {
   width: 100%;
-  height: 200px;
-  margin: 20px auto;
+  height: 260px;
+  margin: 25px auto;
+  padding: 0 85px;
   border-radius: 3px;
   background-color: $gray-blue;
+  
+  box-sizing: border-box;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .user-header-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .user-header-profile-img-container {
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
 }
 
 .user-header-profile-img {
-  border-radius: 50px;
+  border-radius: 100%;
+}
+
+.user-profile-main-text-contianer {
+  height: 100px;
+  margin-left: 30px;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .user-profile-main-text {
@@ -48,16 +51,63 @@
   align-items: flex-end;
 }
 
+.user-username {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.user-twitter {
+  font-size: 18px
+}
+
+.user-tagline {
+
+}
+
+//User Profile Content
+.user-profile-content-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-profile-index-container {
+  width: 625px;
+
+  //test
+  // border: 1px solid red;
+}
+
 //User Profile Nav
-.user-profile-nav {
-  width: 15%;
+.user-profile-nav-container {
+  width: 165px;
+  
+  //test
+  // border: 1px solid red;
 }
 
 //User Profile Add Bar
-.user-profile-add-bar {
-  width: 15%;
+.user-profile-ad-container {
+  width: 230px;
   height: 200px;
   background-color: $white;
   border: 1px solid $gray;
 
+  //test
+  // border: 1px solid red;
+}
+
+@media all and (max-width: 1100px) {
+  .user-profile-index-container {
+    width: 80%
+  }
+
+  .user-profile-nav-container {
+    width: 17%;
+  }
+
+  .user-profile-ad-container {
+    display: none;
+  }
 }

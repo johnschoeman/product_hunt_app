@@ -27,7 +27,21 @@
   background-color: $white;
   border: 1px solid $gray;
   border-radius: 3px;
-  
+
   //test
   // border: 1px solid red;
+}
+
+@media all and (max-width: 1100px) {
+  .product-nav-container {
+    
+  }
+
+  .product-feed-container {
+    width: 80%;
+  }
+
+  .product-ad-container {
+    display: none;
+  }
 }

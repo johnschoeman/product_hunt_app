@@ -14,11 +14,13 @@ class UserProfile extends React.Component {
       <div className="user-profile">
         <UserHeader user={user}/>
         <div className="user-profile-content-container">
-          <UserProfileNav />
-          <div className="user-profile-index">
+          <div className="user-profile-nav-container">
+            <UserProfileNav />
+          </div>
+          <div className="user-profile-index-container">
             <ProductsIndexContainer />
           </div>
-          <div className="user-profile-add-bar">add bar</div>
+          <div className="user-profile-ad-container">add bar</div>
         </div>
       </div>
     );

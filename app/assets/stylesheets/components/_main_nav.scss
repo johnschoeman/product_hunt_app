@@ -78,7 +78,15 @@
 	border-radius: 16px;
 }
 
-@media all and (max-width: 1000px) {
+.search-bar-container {
+	// width: 240px;
+}
+
+.search-bar {
+	width: 240px;
+}
+
+@media all and (max-width: 1100px) {
   .right-nav button {
   	display: none;
   }
@@ -87,5 +95,9 @@
   }
   .main-nav {
   	padding: 20px 0;
-  }
+	}
+	
+	.logo p {
+		display: none;
+	}
 }

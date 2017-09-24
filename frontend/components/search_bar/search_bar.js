@@ -13,10 +13,11 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div >
         <input type="search" 
                value={this.state.searchTerm}
                onChange={this.update}
+               className="search-bar"
                placeholder="Discover your next favorite thing">
         </input>
       </div>

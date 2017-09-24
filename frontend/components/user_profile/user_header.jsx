@@ -16,17 +16,15 @@ class UserHeader extends React.Component {
             <img className="user-header-profile-img" src="https://res.cloudinary.com/dekgrddbo/image/upload/v1506105323/ray_charles_headshot_vljkuq.jpg"/>
           </div>
 
-          <div className="user-profile-main-text-contianer">
-            <ul>
+          <div className="">
+            <ul className="user-profile-main-text-contianer">
               <li>
                 <div className="user-profile-main-text">
-                  <h2>Username</h2>
-                  <p>userId</p>
-                  <p>user stars</p>
+                  <p className="user-username">Ray Charles</p>
                 </div>
               </li>
-              <li>User twitter</li>
-              <li>User tagline</li>
+              <li className="user-twitter">@ray_charles</li>
+              <li className="user-tagline">The best there ever was</li>
             </ul>
           </div>
         </div>
