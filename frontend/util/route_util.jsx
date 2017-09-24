@@ -12,17 +12,18 @@ const Auth = ({component: Component, path, loggedIn}) => (
     )}/>
 );
 
-const Protected = ({component: Component, path, match, location, loggedIn, currentUser}) => {
-  console.log('in protected', path, match, location, loggedIn, currentUser);
-  console.log(location.pathname.split("/"));
+const Protected = ({component: Component, path, loggedIn, currentUser}) => {
   
-  return (<Route path={path} match={match} location={location} render={(props) => (
-    loggedIn && (currentUser.id === parseInt(location.pathname.split("/")[2])) ? (
-      <Component {...props} />
-    ) : (
-      <Redirect to="/" />
-    )
-    )}/>);
+  return (<Route path={path} render={(props) => {
+    return (loggedIn && (currentUser.id === parseInt(props.match.params.userId)) ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to="/" />
+        )
+      );
+      }
+    }/>
+  );
 };
 
 const mapStateToProps = state => {
@@ -33,4 +34,4 @@ const mapStateToProps = state => {
 };
 
 export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
-export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));
+export const ProtectedRoute = connect(mapStateToProps)(Protected);
