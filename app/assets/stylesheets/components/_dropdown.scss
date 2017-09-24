@@ -11,7 +11,7 @@
 .dropdown-content {
 	position: absolute;
 	top: 72px;
-	right: 400px;
+	right: calc((100% - 1070px)/2);
 	background-color: #fff;
 	border: 1px solid $gray;
 	border-radius: 3px;
@@ -38,4 +38,14 @@
 
 .dropdown-item:last-child {
   border-top: 1px solid $gray;
+}
+
+@media all and (max-width: 1100px) {
+  [class*='col-'] {
+    width: 100%;
+	}
+	
+	.dropdown-content {
+		right: 2.5%;
+	}
 }
