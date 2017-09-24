@@ -1,6 +1,8 @@
 import { RECEIVE_VIEWED_USER } from '../actions/user_actions';
 
-const userReducer = (state = {}, action) => {
+let defaultState = { }
+
+const viewedUserReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_VIEWED_USER:
@@ -10,4 +12,4 @@ const userReducer = (state = {}, action) => {
   }
 };
 
-export default userReducer;
+export default viewedUserReducer;

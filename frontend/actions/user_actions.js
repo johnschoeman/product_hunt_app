@@ -7,7 +7,7 @@ export const receiveViewedUser = (user) => ({
   user
 });
 
-export const fetchViewedUser = (userId) => (dispatch) => {
+export const fetchUser = (userId) => (dispatch) => {
   APIUtil.getUser(userId).then(
     res => (dispatch(receiveViewedUser(res)))
   );

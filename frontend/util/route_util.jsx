@@ -13,8 +13,8 @@ const Auth = ({component: Component, path, loggedIn}) => (
 );
 
 const Protected = ({component: Component, path, loggedIn, currentUser}) => {
-  
   return (<Route path={path} render={(props) => {
+    console.log('in prototected: ',  currentUser, props);
     return (loggedIn && (currentUser.id === parseInt(props.match.params.userId)) ? (
           <Component {...props} />
         ) : (
