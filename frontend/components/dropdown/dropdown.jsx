@@ -21,6 +21,7 @@ class Dropdown extends React.Component {
 
   handleRedirect(path) {
     return (e) => {
+      this.props.history.push(path);
     };
   }
 
