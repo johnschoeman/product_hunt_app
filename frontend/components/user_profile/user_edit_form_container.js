@@ -5,7 +5,7 @@ import { editUser } from '../../actions/user_actions';
 const mapStateToProps = (state, ownProps) => {
 
   return {
-    test: true
+    currentUser: state.session.currentUser
   };
 };
 

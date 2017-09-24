@@ -7,7 +7,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import NewProductFormContainer from './new_product_form/new_product_form_container';
 import UserProfileContainer from './user_profile/user_profile_container';
 import AppContent from './app_content';
-import UserEditForm from './user_profile/user_edit_form';
+import UserEditFormContainer from './user_profile/user_edit_form_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -77,7 +77,7 @@ class App extends React.Component {
 
         <Switch>
           <Route path="/products/new" component={NewProductFormContainer} />
-          <ProtectedRoute path="/users/:userId/edit" component={UserEditForm} />
+          <ProtectedRoute path="/users/:userId/edit" component={UserEditFormContainer} />
           <Route path="/users/:userId" component={UserProfileContainer} />
           <Route path="/" component={AppContent} />
         </Switch>
