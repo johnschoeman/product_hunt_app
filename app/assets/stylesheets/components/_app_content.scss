@@ -1,0 +1,32 @@
+.app-content {
+  max-width: 1070px;
+  width: 95%;
+  margin: 40px auto;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-nav-container {
+  width: 18%;
+  
+  //test
+  // border: 1px solid red;
+}
+
+.product-feed-container {
+  width: 60%;
+
+  //test
+  // border: 1px solid red;
+}
+
+.product-add-container {
+  width: 18%;
+  height: 300px;
+  background-color: $white;
+  border: 1px solid $gray;
+  border-radius: 3px;
+  //test
+  // border: 1px solid red;
+}

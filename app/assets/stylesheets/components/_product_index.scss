@@ -1,10 +1,15 @@
+//Product Feed
+.product-feed {
+  width: 100%
+}
+
+//Products Index
 .product-index-container {
   background-color: $white;
-  width: 45%;
+  width: 100%;
   margin: 0 auto;
   border: 1px solid $gray;
   border-radius: 1px;
-  margin-top: 20px;
 }
 
 .product-index {
