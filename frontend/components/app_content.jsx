@@ -13,8 +13,8 @@ class AppContent extends React.Component {
         <div className="product-feed-container">
           <ProductFeed />
         </div>
-        <div className="product-add-container"> 
-          <h3>Product Add</h3>
+        <div className="product-ad-container"> 
+          <h3>Product Ad</h3>
         </div>
       </div>
     );
