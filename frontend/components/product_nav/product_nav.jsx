@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class ProductNav extends React.Component {
 
@@ -8,17 +8,55 @@ class ProductNav extends React.Component {
       <div className="product-nav">
         <p className="product-nav-header">FEEDS</p>
         <ul className="product-nav-list">
-          <li><Link to="/" >Home</Link></li>
-          <li><Link to="/topics/tech" >Tech</Link></li>
-          <li><Link to="/topics/games" >Games</Link></li>
-          <li><Link to="/topics/books" >Books</Link></li>
-          <li><Link to="/topics/artificial_intelligence" >Artificial Intelligence</Link></li>
-          <li><Link to="/topics/developer_tools" >Developer Tools</Link></li>
-          <li><Link to="/topics/home" >Home</Link></li>
-          <li><Link to="/topics/productivity" >Productivity</Link></li>
-          <li><Link to="/topics/touch_bar_apps" >Touch Bar Apps</Link></li>
-          <li><Link to="/topics/wearables" >Wearables</Link></li>
-          <li><Link to="/topics" >All Topics</Link></li>
+          <li>
+            <NavLink exact to="/" 
+                     className="product-nav-item"
+                     activeClassName="product-nav-selected">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/topics/tech" 
+                     className="product-nav-item"
+                     activeClassName="product-nav-selected">
+              Tech
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/topics/games"
+                     className="product-nav-item"
+                     activeClassName="product-nav-selected" >
+              Games
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/topics/books" 
+                     className="product-nav-item"
+                     activeClassName="product-nav-selected">
+              Books
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/topics/artificial_intelligence"
+                     className="product-nav-item"
+                     activeClassName="product-nav-selected" >
+              Artificial Intelligence
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/topics/developer_tools" 
+                     className="product-nav-item"
+                     activeClassName="product-nav-selected">
+              Developer Tools
+            </NavLink>
+          </li>
+          <li>
+            <NavLink exact to="/topics" 
+                     className="product-nav-item"
+                     activeClassName="product-nav-selected">
+              All Topics
+            </NavLink>
+          </li>
         </ul>
       </div>
     );

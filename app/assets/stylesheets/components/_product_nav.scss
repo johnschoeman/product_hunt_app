@@ -1,0 +1,41 @@
+//Product  Nav
+
+.product-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-nav-header {
+
+  color: $text-gray;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.product-nav-item {
+  display: block;
+  width: 100%;
+  color: $text-gray;
+  font-size: 13px;
+  padding: 5px;
+  margin: 3px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid $background-gray;
+}
+
+.product-nav-item:hover {
+  border: 1px solid $gray;
+  text-decoration: none;
+}
+
+.product-nav-selected {
+  width: 100%;
+  color: $black;
+  border: 1px solid $gray;
+  background-color: $white;
+  
+  //test
+  // border: 1px solid red;
+}
