@@ -12,3 +12,7 @@ export const fetchViewedUser = (userId) => (dispatch) => {
     res => (dispatch(receiveViewedUser(res)))
   );
 };
+
+export const editUser = (user) => (dispatch) => {
+
+};
