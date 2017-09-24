@@ -1,6 +1,5 @@
 button {
   margin-left: 5px;
-	padding: 0 9px;
 	border-radius: 3px;
 	transition: background-color 0.3s;
 	font-family: $sans-serif;
@@ -18,13 +17,10 @@ button {
   font-size: 11px;
   font-weight: 600;
 	vertical-align: middle;
-
-	padding-top: 100px;
 }
 
 input[type=submit] {
   font-weight: bold;
-  padding: 0 9px;
   margin-left: 0;
 	border-radius: 3px;
 	transition: background-color 0.3s;

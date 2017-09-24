@@ -35,7 +35,7 @@ class NewProductForm extends React.Component {
 
     return (
       <div className="np-from-container">
-        <h1>Post something new</h1>
+        <h1 className="np-form-header">Post something new</h1>
         <form className="np-form" onSubmit={this.handleSubmit} >
 
           <div className="np-form-input-container" >
@@ -91,7 +91,7 @@ class NewProductForm extends React.Component {
           </div>
 
           <div className="np-form-buttons">
-            <input type="submit" className="white-button medium-size" value="Submit"></input>
+            <input type="submit" className="button orange-button medium-size" value="Submit"></input>
           </div>
         </form>
       </div>

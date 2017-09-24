@@ -1,0 +1,77 @@
+.np-from-container {
+  width: 1070px;
+  margin: 0 auto;
+}
+
+.np-form-header {
+  margin: 10px 0;
+}
+
+.np-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left; 
+
+  background-color: $white;
+  border: 1px solid $gray;
+  width: 600px;
+  padding: 20px;
+  //test
+  // border: 1px solid red;
+}
+
+.np-form p {
+  text-align: center;
+}
+
+.np-form h2 {
+  text-align: center;
+}
+
+.np-form-errors {
+  padding-top: 10px;
+  color: $orange;
+}
+
+.np-form-input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+  //test
+  // border: 1px solid red;
+}
+
+.np-form-input {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $gray;
+  margin-bottom: 10px;
+  padding: 10px;
+  //test
+  // border: 1px solid red;
+}
+
+.np-form-input label {
+  color: $text-gray;
+  font-size: 16px;
+}
+
+.np-form-input input {
+  width: 60%;
+}
+
+
+
+.np-form-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  margin: 0;
+
+  //test
+  // border: 1px solid red;
+}
