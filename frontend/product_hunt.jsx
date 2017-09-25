@@ -8,7 +8,7 @@ import Root from './components/root';
 import {signup, login, logout} from './actions/session_actions';
 import {fetchProduct, fetchAllProducts, createProduct} from './actions/product_actions';
 import { setViewedProduct } from './actions/ui_actions';
-import { fetchViewedUser } from './actions/user_actions';
+import { fetchUser, editUser } from './actions/user_actions';
 import { getPosts } from './util/ph_api_util';
 
 window.signup = signup;
@@ -21,7 +21,8 @@ window.createProduct = createProduct;
 
 window.setViewedProduct = setViewedProduct;
 
-window.fetchViewedUser = fetchViewedUser;
+window.fetchUser = fetchUser;
+window.editUser = editUser;
 
 window.getPosts = getPosts;
 //End Testing

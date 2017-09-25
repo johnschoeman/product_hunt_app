@@ -6,7 +6,7 @@ class UserEditForm extends React.Component {
 
     this.state = {
       username: "",
-      tagline: "",
+      headline: "",
       image_url: "",
       userslug: ""
     };
@@ -19,7 +19,9 @@ class UserEditForm extends React.Component {
     let currentUser = this.props.currentUser;
     e.preventDefault();
     let user = Object.assign({}, this.state);
-    this.props.editUser(user).then(this.props.history.push(`/users/${currentUser.id}`));
+    user.id = currentUser.id;
+    this.props.editUser(user);
+    // .then(this.props.history.push(`/users/${currentUser.id}`))
   }
 
   update(key) {
@@ -46,7 +48,7 @@ class UserEditForm extends React.Component {
             <div className="ue-form-input">
               <label>Headline</label>
               <input type="text"
-                     onChange={this.update('tagline')}
+                     onChange={this.update('headline')}
                      value={this.state.tagline}/>
             </div>
 

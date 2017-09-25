@@ -76,3 +76,10 @@
   // border: 1px
 
 }
+
+@media all and (max-width: 1100px) {
+  .ue-form-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

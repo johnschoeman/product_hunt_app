@@ -8,6 +8,7 @@ class UserHeader extends React.Component {
 
   render() {
     let user = this.props.user;
+    console.log(user);
     let UserHeaderButton = undefined;
     if (user.id === this.props.currentUserId) {
       UserHeaderButton = <Link to={`/users/${user.id}/edit`} className="button white-button medium-size">Edit</Link>;
@@ -21,7 +22,7 @@ class UserHeader extends React.Component {
         <div className="user-header-info">
 
           <div className="user-header-profile-img-container">
-            <img className="user-header-profile-img" src="https://res.cloudinary.com/dekgrddbo/image/upload/v1506267278/finn_the_human_bokynk.jpg"/>
+            <img className="user-header-profile-img" src={user.imageUrl}/>
           </div>
 
           <div className="">
@@ -32,7 +33,7 @@ class UserHeader extends React.Component {
                 </div>
               </li>
               <li className="user-userslug">{user.userslug}</li>
-              <li className="user-tagline">{user.tagline}</li>
+              <li className="user-headline">{user.headline}</li>
             </ul>
           </div>
         </div>

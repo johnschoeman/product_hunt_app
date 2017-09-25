@@ -14,7 +14,10 @@ export const fetchUser = (userId) => (dispatch) => {
 };
 
 export const editUser = (user) => (dispatch) => {
-  APIUtil.updateUser(user).then(
-    res => dispatch(receiveViewedUser(res))
+  APIUtil.patchUser(user).then(
+    (res) => {
+      console.log(res);
+      return dispatch(receiveViewedUser(res));
+    }
   );
 };
