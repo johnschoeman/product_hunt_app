@@ -1,7 +1,6 @@
 class Api::UsersController < ApplicationController
     def create
         @user = User.new(user_params)
-        @user.userslug = "@#{@user.username}"
 
         if @user.save
             login(@user)
@@ -13,8 +12,8 @@ class Api::UsersController < ApplicationController
 
     def update
         @user = User.find(params[:id])
+        @user.undate_slug
         @user.update_attributes(user_params)
-        @user.userslug = "@#{@user.username}"
 
         if @user.save
             render :show
