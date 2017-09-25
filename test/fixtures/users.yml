@@ -12,6 +12,7 @@
 #  updated_at      :datetime         not null
 #  password_digest :string
 #  session_token   :string           not null
+#  userslug        :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
