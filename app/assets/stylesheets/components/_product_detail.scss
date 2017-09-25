@@ -1,28 +1,76 @@
 .product-detail-container {
-  max-width: 1070px;
+  max-width: 1110px;
   width: 95%;
   margin: 20px auto;
+  background-color: $background-gray;
 }
 
+.product-detail-main-content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-detail-content-bar {
+  width: 720px;
+}
+
+.product-detail-content-bar > * {
+  margin: 0 10px 10px 10px;
+}
+
+.product-detail-aside {
+  width: 320px;
+}
 //Product Detail Header
 .product-detail-header {
-
-  //test
-  border: 1px solid red;
+  height: 81px;
+  padding: 30px 0;
+  //testå
 }
 
-//Product Detail Header 
+//Product Detail Media 
 .product-detail-media {
+  width: 720px;
+  height: 435px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: $white;
+  box-sizing: border-box;
+  border: 1px solid $dark-gray;
 
-  //test
-  border: 1px solid red;
 }
 
 //Product Detail Nav
 .product-detail-nav {
-
+  width: 320px;
   //test
-  border: 1px solid red;
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+}
+
+.product-detail-nav-upvote-container {
+  padding: 5px;
+  border-bottom: 1px solid $gray;
+}
+
+.product-detail-nav-link-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.product-detail-nav-link-container > * {
+  margin: 5px;
+}
+
+//Product Discussion
+.product-discussion {
+  width: 720px;
+  padding: 20px;
+  background-color: $white;
+  box-sizing: border-box;
+  border: 1px solid $dark-gray;
+
 }
 
 @media all and (max-width: 1100px) {

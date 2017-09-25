@@ -13,10 +13,16 @@ class ProductDetail extends React.Component {
   render() {
     return (
       <div className="product-detail-container">
-        <ProductDetailHeader />
-        <ProductDetailMedia />
-        <ProductDiscussionContainer />
-        <ProductDetailNav />
+          <ProductDetailHeader />
+        <div className="product-detail-main-content-container">
+          <div className="product-detail-content-bar">
+            <ProductDetailMedia />
+            <ProductDiscussionContainer />
+          </div>
+          <div className="product-detail-aside">
+            <ProductDetailNav />
+          </div>
+        </div>
       </div>
     );
   }
