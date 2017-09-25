@@ -11,9 +11,10 @@ class ProductDetail extends React.Component {
   }
 
   render() {
+    let product = this.props.product;
     return (
       <div className="product-detail-container">
-          <ProductDetailHeader />
+          <ProductDetailHeader product={product}/>
         <div className="product-detail-main-content-container">
           <div className="product-detail-content-bar">
             <ProductDetailMedia />
