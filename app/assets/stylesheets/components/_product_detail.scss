@@ -16,6 +16,10 @@
 
 .product-detail-content-bar > * {
   margin: 0 10px 10px 10px;
+  border-radius: 2px;
+  background-color: $white;
+  box-sizing: border-box;
+  border: 1px solid $gray;
 }
 
 .product-detail-aside {
@@ -70,10 +74,6 @@
   height: 435px;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: $white;
-  box-sizing: border-box;
-  border: 1px solid $dark-gray;
-
 }
 
 //Product Detail Nav
@@ -103,9 +103,6 @@
 .product-discussion {
   width: 720px;
   padding: 20px;
-  background-color: $white;
-  box-sizing: border-box;
-  border: 1px solid $dark-gray;
 
 }
 
