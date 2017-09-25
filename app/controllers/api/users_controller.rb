@@ -12,7 +12,7 @@ class Api::UsersController < ApplicationController
 
     def update
         @user = User.find(params[:id])
-        @user.undate_slug
+        @user.undate_slug!
         @user.update_attributes(user_params)
 
         if @user.save
