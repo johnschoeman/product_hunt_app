@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductDetailHeader from './product_detail_header'
 
 class ProductDetail extends React.Component {
   constructor(props) {
