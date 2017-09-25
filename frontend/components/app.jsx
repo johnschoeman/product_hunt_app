@@ -76,9 +76,9 @@ class App extends React.Component {
         </ReactModal>
 
         <Switch>
-          <Route path="/products/new" component={NewProductFormContainer} />
-          <ProtectedRoute path="/users/:userId/edit" component={UserEditFormContainer} />
-          <Route path="/users/:userId" component={UserProfileContainer} />
+          <Route exact path="/products/new" component={NewProductFormContainer} />
+          <ProtectedRoute exact path="/users/:userId/edit" component={UserEditFormContainer} />
+          <Route exact path="/users/:userId" component={UserProfileContainer} />
           <Route path="/" component={AppContent} />
         </Switch>
       </div>
