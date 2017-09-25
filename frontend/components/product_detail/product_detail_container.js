@@ -2,19 +2,25 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import ProductDetail from './product_detail';
 import { fetchProduct } from '../../actions/product_actions';
+import { setViewedProduct } from '../../actions/ui_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  // const product = state.entities.products[state.ui.viewedProduct];
-  let product = { thumbnailUrl: "test_url", name: "product detail test", tagline: "tagline" };
+  const viewedProductId = ownProps.match.params.productId;
+  let product = state.entities.products.byId[viewedProductId];
+  if (product === undefined) {
+    product = {};
+  }
   return {
-    product
+    product,
+    viewedProductId
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
 
   return {
-    fetchProduct: (productId) => (dispatch(fetchProduct(productId)))
+    fetchProduct: (productId) => (dispatch(fetchProduct(productId))),
+    setViewedProduct: (productId) => (dispatch(setViewedProduct(productId)))
   };
 };
 

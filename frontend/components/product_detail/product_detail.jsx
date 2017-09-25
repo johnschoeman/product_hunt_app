@@ -8,10 +8,16 @@ import ProductDetailNav from './product_detail_nav';
 class ProductDetail extends React.Component {
   constructor(props) {
     super(props);
+
+  }
+
+  componentDidMount() {
+    this.props.fetchProduct(this.props.viewedProductId);
   }
 
   render() {
     let product = this.props.product;
+
     return (
       <div className="product-detail-container">
           <ProductDetailHeader product={product}/>
@@ -21,7 +27,7 @@ class ProductDetail extends React.Component {
             <ProductDiscussionContainer />
           </div>
           <div className="product-detail-aside">
-            <ProductDetailNav />
+            <ProductDetailNav product={product} />
           </div>
         </div>
       </div>

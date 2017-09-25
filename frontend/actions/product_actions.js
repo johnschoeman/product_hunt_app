@@ -20,7 +20,6 @@ export const receiveProductErrors = errors => ({
 });
 
 export const createProduct = product => dispatch => {
-  console.log(product);
   return APIUtil.postProduct(product).then(res => (
     dispatch(receiveProduct(res))
   ), err => (
