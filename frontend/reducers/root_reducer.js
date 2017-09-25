@@ -21,7 +21,7 @@ import uiReducer from './ui_reducer';
 
 //   ui {
 //     viewedUser: 19
-//     viewedProduc: 61
+//     viewedProduct: 61
 //   }
 
 //   session: {
