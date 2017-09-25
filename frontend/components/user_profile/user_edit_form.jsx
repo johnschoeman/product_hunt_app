@@ -8,7 +8,7 @@ class UserEditForm extends React.Component {
       username: "",
       tagline: "",
       image_url: "",
-      twitter_handle: ""
+      userslug: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -48,13 +48,6 @@ class UserEditForm extends React.Component {
               <input type="text"
                      onChange={this.update('tagline')}
                      value={this.state.tagline}/>
-            </div>
-
-            <div className="ue-form-input">
-              <label>Twitter Handle</label>
-              <input type="text"
-                     onChange={this.update('twitter_handle')}
-                     value={this.state.twitter_handle}/>
             </div>
 
             <div className="ue-form-input">

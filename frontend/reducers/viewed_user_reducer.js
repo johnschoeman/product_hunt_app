@@ -1,10 +1,10 @@
 import { RECEIVE_VIEWED_USER } from '../actions/user_actions';
 
 let defaultState = { id: 1,
-                     username: "null_user",
-                     tagline: "null_user_tagline",
+                     username: "",
+                     tagline: "",
                      image_url: "https://res.cloudinary.com/dekgrddbo/image/upload/v1506267278/finn_the_human_bokynk.jpg",
-                     twitter_handle: "null_user_twitter" };
+                     userslug: "" };
 
 const viewedUserReducer = (state = defaultState, action) => {
   Object.freeze(state);

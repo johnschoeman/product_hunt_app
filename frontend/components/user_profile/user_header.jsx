@@ -31,7 +31,7 @@ class UserHeader extends React.Component {
                   <p className="user-username">{user.username}</p>
                 </div>
               </li>
-              <li className="user-twitter">{user.twitter_handle}</li>
+              <li className="user-userslug">{user.userslug}</li>
               <li className="user-tagline">{user.tagline}</li>
             </ul>
           </div>
