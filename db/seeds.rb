@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.destroy_all
+User.destroy_all
+Comment.destroy_all
 
 100.times do |i|
   p = Product.new
@@ -20,3 +22,8 @@ Product.destroy_all
     p.save
   end
 end
+
+
+# user1 = User.create(username: 'khai', password: 'password')
+# room1 = Room.create(room_name: 'cool room')
+# user1.rooms << room1
