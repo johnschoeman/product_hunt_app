@@ -14,7 +14,7 @@ const viewedUserReducer = (state = defaultState, action) => {
       let newValue = undefined;
       Object.keys(action.user).forEach((key) => {
         newValue = action.user[key];
-        if (newValue !== "") {
+        if (newValue !== "" && newValue !== null) {
           newState[key] = action.user[key];
         }
       });
