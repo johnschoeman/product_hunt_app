@@ -17,7 +17,7 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.includes(:comments).find(params[:id])
+    @product = Product.includes(:comments).includes(:user).find(params[:id])
     if @product
       render :show 
     else
