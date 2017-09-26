@@ -17,11 +17,10 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
+    @product = Product.includes(:comments).find(params[:id])
     if @product
-      @comments = @product.comments
-      @all_data = { product_details: @product, comments: @comments }
-      render :show
+      @all_data = { product_details: @product}
+      render :show 
     else
       render json: @product.errors.full_messages, status: 404
     end

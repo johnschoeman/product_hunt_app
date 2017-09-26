@@ -20,9 +20,23 @@ import uiReducer from './ui_reducer';
 
 //   comments: {
 //     byId: {
-
+//         1: {
+//             id: 1,
+//             body: 'parent text',
+//             childComments: [
+//                 {id: 2, body: 'child text'},
+//                 {id: 3, body: 'child text'}
+//             ]
+//         },
+//         4: {
+//             id: 4,
+//             body: 'parent text',
+//             childComments: [
+//                 {id: 5, body: 'child text'}
+//             ]
+//         }
 //     }
-//     allIds: []
+//     allIds: [1,4]
 //   }
 // }
 
