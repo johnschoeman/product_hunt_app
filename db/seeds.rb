@@ -43,21 +43,24 @@ end
 users = User.all
 products = Product.all
 
-5.times do
+100.times do
 
   parent_comment = Comment.new
-  parent_comment.body = Faker::HitchhikersGuideToTheGalaxy.marvin_quote
+  parent_comment.body = Faker::RickAndMorty.quote
   parent_comment.user = users.sample
   parent_comment.product = products.sample
 
   if parent_comment.save
-    3.times do
+    num = [1,2,3].sample
+    num.times do
       child_comment = Comment.new
-      parent_comment.body = Faker::HitchhikersGuideToTheGalaxy.marvin_quote
+      child_comment.body = Faker::RickAndMorty.quote
       child_comment.user = users.sample
       child_comment.parent_comment = parent_comment
       child_comment.product = parent_comment.product
-      child_comment.save
+      if child_comment.valid?
+        child_comment.save
+      end
     end
   end
 
