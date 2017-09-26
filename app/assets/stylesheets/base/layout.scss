@@ -139,14 +139,36 @@ input[type="search"] {
 	padding: 5px;
 }
 
-textarea {
+// Text Area
+.textarea-container {
+	position: relative;
 	width: 100%;
+	max-height: 400px;
+}
+
+textarea {
+	box-sizing: border-box;
+	height: 100%;
+	max-height: 500px;
+
+	// visibility: hidden;
+	width: 100%;
+	position: absolute;
+
 	padding: 7px 10px;
 	background-color: $white;
 	overflow: hidden;
 	word-wrap: break-word;
-	resize: horizontal;
-	height: 34px;
+	resize: none;
 	border: 1px solid $gray;
 	border-radius: 3px;
+}
+
+.text-copy {
+	box-sizing: border-box;
+	padding: 7px 10px;
+
+	visibility: hidden;
+	width: 100%;
+	max-height: 500px;
 }
