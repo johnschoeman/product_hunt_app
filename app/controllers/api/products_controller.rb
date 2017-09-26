@@ -20,7 +20,7 @@ class Api::ProductsController < ApplicationController
     @product = Product.find(params[:id])
     if @product
       @comments = @product.comments
-      @all_data = { product: @product, comments: @comments }
+      @all_data = { product_details: @product, comments: @comments }
       render :show
     else
       render json: @product.errors.full_messages, status: 404

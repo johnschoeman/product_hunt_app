@@ -6,18 +6,25 @@ import uiReducer from './ui_reducer';
 
 
 // {
-//   entites: {
-//     products: {
-//       byId: {
-
-//       }
-//       AllIds: []
-//     }
-
-//     viewedUser: {
+// entites: {
+//   products: {
+//     byId: {
 
 //     }
+//     allIds: []
 //   }
+
+//   viewedUser: {
+
+//   }
+
+//   comments: {
+//     byId: {
+
+//     }
+//     allIds: []
+//   }
+// }
 
 //   ui {
 //     viewedUser: 19

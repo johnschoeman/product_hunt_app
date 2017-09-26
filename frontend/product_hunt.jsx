@@ -10,6 +10,7 @@ import {fetchProduct, fetchAllProducts, createProduct} from './actions/product_a
 import { setViewedProduct } from './actions/ui_actions';
 import { fetchUser, editUser } from './actions/user_actions';
 import { getPosts } from './util/ph_api_util';
+import { getProduct } from './util/product_api_util';
 
 window.signup = signup;
 window.login = login;
@@ -25,6 +26,8 @@ window.fetchUser = fetchUser;
 window.editUser = editUser;
 
 window.getPosts = getPosts;
+
+window.getProduct = getProduct;
 //End Testing
 
 document.addEventListener("DOMContentLoaded", () => {
