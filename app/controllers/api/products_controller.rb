@@ -19,7 +19,6 @@ class Api::ProductsController < ApplicationController
   def show
     @product = Product.includes(:comments).find(params[:id])
     if @product
-      @all_data = { product_details: @product}
       render :show 
     else
       render json: @product.errors.full_messages, status: 404
