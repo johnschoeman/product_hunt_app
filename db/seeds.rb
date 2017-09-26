@@ -28,25 +28,6 @@ product1.thumbnail_url = Faker::LoremPixel.image()
 product1.user = user1
 product1.save
 
-
-comment1 = Comment.new(body: "Awesome")
-comment1.user = user2
-comment1.product = product1
-
-comment2 = Comment.new(body: "totally")
-comment2.user = user1
-comment2.product = product1
-comment2.parent_comment = comment1
-comment2.save
-
-comment3 = Comment.new(body: "Sweet!")
-comment3.user = user2
-comment3.product = product1
-comment3.parent_comment = comment1
-comment3.save
-
-
-
 10.times do |i|
   p = Product.new
   p.name = Faker::Space.star_cluster
@@ -58,6 +39,45 @@ comment3.save
     p.save
   end
 end
+
+users = User.all
+products = Product.all
+
+5.times do
+
+  parent_comment = Comment.new
+  parent_comment.body = Faker::HitchhikersGuideToTheGalaxy.marvin_quote
+  parent_comment.user = users.sample
+  parent_comment.product = products.sample
+
+  if parent_comment.save
+    3.times do
+      child_comment = Comment.new
+      parent_comment.body = Faker::HitchhikersGuideToTheGalaxy.marvin_quote
+      child_comment.user = users.sample
+      child_comment.parent_comment = parent_comment
+      child_comment.product = parent_comment.product
+      child_comment.save
+    end
+  end
+
+end
+
+# comment2 = Comment.new(body: "totally")
+# comment2.user = user1
+# comment2.product = product1
+# comment2.parent_comment = comment1
+# comment2.save
+
+# comment3 = Comment.new(body: "Sweet!")
+# comment3.user = user2
+# comment3.product = product1
+# comment3.parent_comment = comment1
+# comment3.save
+
+
+
+
 
 
 # user1 = User.create(username: 'khai', password: 'password')
