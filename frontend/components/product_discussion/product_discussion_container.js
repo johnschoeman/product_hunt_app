@@ -4,8 +4,8 @@ import ProductDiscussion from './product_discussion';
 
 const mapStateToProps = (state, ownProps) => {
   let comments = [];
-  if (state.entities.comments.byId) {
-    comments = Object.values(state.entities.comments.byId);
+  if (state.entities.comments) {
+    comments = Object.values(state.entities.comments);
   }
   return {
     comments

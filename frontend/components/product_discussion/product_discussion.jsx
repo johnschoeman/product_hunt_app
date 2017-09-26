@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductDiscussionItem from './product_discussion_item';
 
 class ProductDiscussion extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class ProductDiscussion extends React.Component {
       <div className="product-discussion">
         <ul>
           {comments.map((comment) => (
-            <li>{comment.body}</li>
+            <ProductDiscussionItem key={`discussion-item-${comment.id}`} comment={comment} />
           ))}
         </ul>
       </div>
