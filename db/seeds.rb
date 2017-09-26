@@ -10,6 +10,10 @@ User.destroy_all
 Product.destroy_all
 Comment.destroy_all
 
+demo_user = User.new(username: "product_hunt_demo", password: "password")
+demo_user.headline = "This is a headline"
+demo_user.image_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506459017/180_c80zku.png"
+
 user1 = User.new(username: "Finn The Human", password: "password")
 user1.headline = "niiiiice"
 user1.image_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506267278/finn_the_human_bokynk.jpg"
@@ -18,8 +22,14 @@ user2 = User.new(username: "Jake The Dog", password: "password")
 user2.headline = "wut."
 user2.image_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506306926/adventure-time-tshirt-jake-the-dog-face_s6ux9r.jpg"
 
+user3 = User.new(username: "Princess Bubblegum", password: "password")
+user3.headline = "It's science!"
+user3.image_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506458676/images_hzpbup.jpg"
+
+demo_user.save
 user1.save
 user2.save
+user3.save
 
 product1 = Product.new(name: "Grass Sword")
 product1.tagline = "It's grass!"
@@ -51,7 +61,7 @@ products = Product.all
   parent_comment.product = products.sample
 
   if parent_comment.save
-    num = [1,2,3].sample
+    num = [0,1,2,3].sample
     num.times do
       child_comment = Comment.new
       child_comment.body = Faker::RickAndMorty.quote
