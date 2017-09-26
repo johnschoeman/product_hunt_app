@@ -13,6 +13,7 @@ class ProductDiscussion extends React.Component {
     let childComments = this.props.childComments;
     let currentUser = this.props.currentUser;
     let commentForm = undefined;
+  
     if (currentUser) {
       commentForm = <CommentForm user={currentUser}/>;
     }
@@ -20,12 +21,17 @@ class ProductDiscussion extends React.Component {
       <div className="product-discussion">
         {commentForm}
         <div>
-          {comments.map((comment) => (
-            <Thread 
-                key={`discussion-thread-${comment.id}`} 
-                comment={comment}
-                childComments={childComments} />
-          ))}
+          {comments.map((comment) => {
+            if (!comment.parentCommentId){
+              return (
+                <Thread 
+                  key={`discussion-thread-${comment.id}`} 
+                  comment={comment}
+                  childComments={childComments[comment.id]} />
+                );
+              }
+            }
+          )}
         </div>
       </div>
     );

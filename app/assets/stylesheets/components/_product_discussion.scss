@@ -33,3 +33,27 @@
   justify-content: flex-start;
   margin: 0 0 0 42px;
 }
+
+// New Comment Form
+.new-comment-form {
+  background-color: $input-background-gray;
+  border: 1px solid $gray;
+  border-radius: 3px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.new-comment-form-input-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.new-comment-form-input-bar textarea {
+  margin-left: 10px;
+}
+
+.new-comment-form-button-container {
+  display: flex;
+  justify-content: flex-end;
+}

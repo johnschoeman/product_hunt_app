@@ -6,8 +6,6 @@ const mapStateToProps = (state, ownProps) => {
   let comments = [];
   let childComments = [];
   let currentUser = state.session.currentUser;
-  console.log('mapStateToProps: ', state);
-  console.log('mapStateToProps: ', state.entities);
   if (state.entities.comments) {
     comments = Object.values(state.entities.comments.byId);
     childComments = state.entities.comments.byParentId;

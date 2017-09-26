@@ -8,10 +8,8 @@ class Thread extends React.Component {
 
   render() {
     let comment = this.props.comment;
-    let childComments = [];
-    if (comment.childComments) {
-      childComments = Object.values(comment.childComments);
-    }
+    let childComments = this.props.childComments;
+ 
     return (
       <div className="thread">
           <CommentItem 

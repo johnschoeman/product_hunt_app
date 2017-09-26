@@ -138,3 +138,15 @@ input {
 input[type="search"] {
 	padding: 5px;
 }
+
+textarea {
+	width: 100%;
+	padding: 7px 10px;
+	background-color: $white;
+	overflow: hidden;
+	word-wrap: break-word;
+	resize: horizontal;
+	height: 34px;
+	border: 1px solid $gray;
+	border-radius: 3px;
+}
