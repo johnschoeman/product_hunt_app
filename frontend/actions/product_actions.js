@@ -10,9 +10,9 @@ export const receiveAllProducts = (products) => ({
   products
 });
 
-export const receiveProduct = (product) => ({
+export const receiveProduct = (data) => ({
   type: RECEIVE_PRODUCT,
-  product
+  data
 });
 
 export const receiveProductErrors = errors => ({

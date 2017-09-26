@@ -3,9 +3,12 @@ import { withRouter } from 'react-router';
 import ProductDiscussion from './product_discussion';
 
 const mapStateToProps = (state, ownProps) => {
-
+  let comments = [];
+  if (state.entities.comments.byId) {
+    comments = Object.values(state.entities.comments.byId);
+  }
   return {
-    discussion: { 1: "test" }
+    comments
   };
 };
 

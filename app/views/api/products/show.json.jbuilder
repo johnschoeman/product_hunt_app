@@ -2,15 +2,11 @@
 
 json.extract! @all_data, :product_details
 
-# json.product do
-#   json.extract! @all_data[:product], :id, :name
-# end
-
 json.comments do
   json.by_id do
     @all_data[:comments].each do |comment|
       json.set! comment.id do 
-        json.extract! comment, :id, :body
+        json.extract! comment, :id, :body, :parent_comment_id
       end
     end
   end

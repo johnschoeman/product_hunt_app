@@ -5,11 +5,13 @@ let defaultState = { byId: {}, allIds: [] };
 
 const productsReducer = (state = defaultState, action) => {
   Object.freeze(state);
+  console.log('state: ', state);
   let newState = merge({}, state);
 
   switch (action.type) {
     case RECEIVE_PRODUCT:
-      newState.byId[action.product.id] = action.product;
+      console.log('receive product: ', action);
+      newState.byId[action.data.productDetails.id] = action.data.productDetails;
       return newState;
     case RECEIVE_ALL_PRODUCTS:
       return action.products;

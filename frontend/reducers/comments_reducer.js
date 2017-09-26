@@ -1,14 +1,16 @@
-import { RECEIVE_PRODUCT_COMMENTS } from '../actions/product_actions';
+import { RECEIVE_PRODUCT } from '../actions/product_actions';
 
 const defaultState = {};
 
-const commentReducer = (state = defaultState, action) => {
+const commentsReducer = (state = defaultState, action) => {
   Object.freeze(state);
 
   switch (action.type) {
-    case RECEIVE_PRODUCT_COMMENTS:
-      return action.comments;
+    case RECEIVE_PRODUCT:
+      return action.data.comments;
     default:
       return state;
   }
-}
+};
+
+export default commentsReducer;
