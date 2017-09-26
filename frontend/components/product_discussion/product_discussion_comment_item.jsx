@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class CommentItem extends React.Component {
   constructor(props) {
@@ -7,23 +8,26 @@ class CommentItem extends React.Component {
     this.redirectToUser = this.redirectToUser.bind(this);
   }
 
-  redirectToUser(e) {
-    console.log('clicked on user image');
+  redirectToUser(userId) {
+    return (e) => {
+      this.props.history.push(`/users/${userId}`);
+    };
   }
 
   render() {
     let comment = this.props.comment;
-    // let imageUrl = this.comment.user.imageUrl
-    let imageUrl = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506306926/adventure-time-tshirt-jake-the-dog-face_s6ux9r.jpg"
+    let imageUrl = comment.user.imageUrl;
+    let user = comment.user;
+
     return (
       <div className={this.props.className}>
           <div className="user-spotlight">
-            <div className="user-profile-img-container" onClick={this.redirectToUser}>
+            <div className="user-profile-img-container" onClick={this.redirectToUser(user.id)}>
              <img className="user-profile-img" src={imageUrl}/>
             </div>
             <div className="user-spolight-content">
-              <div>user name</div>
-              <div>user details</div>
+              <div>{user.username}</div>
+              <div>{user.headline}</div>
             </div>
           </div>
           <div className="comment-body">
@@ -31,11 +35,13 @@ class CommentItem extends React.Component {
           </div>
           <div className="comment-actions">
             <div>upvote</div>
-            <div>reply</div>
+            <div className="comment-reply-button">
+              reply
+            </div>
           </div>
       </div>
     );
   }
 }
 
-export default CommentItem;
+export default withRouter(CommentItem);
