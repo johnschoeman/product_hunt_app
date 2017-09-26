@@ -1,0 +1,35 @@
+.thread {
+  margin-bottom: 20px;
+}
+
+.comment {
+  margin: 0 0 20px;
+  //test
+  // border: 1px solid red;
+}
+
+.child-comment {
+  margin-left: 42px;
+  border-left: 4px solid #e8e8e8;
+  margin-bottom: 0;
+  padding: 0 0 20px 20px;
+  //test
+  // border: 1px solid red;
+}
+
+.user-spotlight {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 15px;
+}
+
+.comment-body {
+  margin: 0 0 15px 42px;
+  display: block;
+}
+
+.comment-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 0 42px;
+}
