@@ -15,6 +15,7 @@ const commentsReducer = (state = defaultState, action) => {
     case RECEIVE_PRODUCT:
       newState = Object.assign({}, defaultState);
       let comments = Object.values(action.data.comments);
+
       comments.map( (comment) => {
        if (!comment.parentCommentId) {
          newState.byId[comment.id] = comment;
@@ -27,6 +28,13 @@ const commentsReducer = (state = defaultState, action) => {
           newState.byId[comment.id] = comment;
           newState.allIds.push(comment.id);
           newState.byParentId[comment.parentCommentId].push(comment);
+        }
+      });
+      newState.allIds.sort((a,b) => {
+        if (newState.byId[a].createdAt < newState.byId[b]) {
+          return -1;
+        } else {
+          return 1;
         }
       });
       return newState;
