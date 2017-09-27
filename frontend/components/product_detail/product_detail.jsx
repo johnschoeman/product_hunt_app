@@ -24,7 +24,10 @@ class ProductDetail extends React.Component {
         <div className="product-detail-main-content-container">
           <div className="product-detail-content-bar">
             <ProductDetailMedia />
-            <ProductDiscussionContainer />
+            <ProductDiscussionContainer 
+                  product={product} 
+                  viewedProductId={this.props.viewedProductId}
+                  fetchProduct={this.props.fetchProduct} />
           </div>
           <div className="product-detail-aside">
             <ProductDetailNav product={product} />

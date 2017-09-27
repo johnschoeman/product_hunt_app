@@ -34,7 +34,7 @@ const commentsReducer = (state = defaultState, action) => {
       console.log('commentsReducer: ', action);
       let comment = action.comment;
       newState.byId[comment.id] = comment;
-      newState.allIds.push(comment.id);
+      newState.allIds.unshift(comment.id);
       newState.byParentId[comment.id] = [];
       return newState;
     default:

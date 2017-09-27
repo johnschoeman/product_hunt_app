@@ -5,17 +5,20 @@ import { createComment } from '../../actions/product_actions';
 
 const mapStateToProps = (state, ownProps) => {
   console.log(ownProps);
-  let comments = [];
-  let childComments = [];
+  let commentsById = {};
+  let childComments = {};
+  let commentIds = [];
   let currentUser = state.session.currentUser;
   let productId = ownProps.match.params.productId;
   if (state.entities.comments) {
-    comments = Object.values(state.entities.comments.byId);
+    commentsById = state.entities.comments.byId;
+    commentIds = state.entities.comments.allIds;
     childComments = state.entities.comments.byParentId;
   }
 
   return {
-    comments,
+    commentsById,
+    commentIds,
     childComments,
     currentUser,
     productId
