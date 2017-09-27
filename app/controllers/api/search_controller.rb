@@ -1,9 +1,14 @@
 class Api::SearchController < ApplicationController
 
   def omnisearch
-    @users_by_name = User.where("LOWER(username) LIKE ?", "%#{params[:query].downcase}%")
-    @products_by_name = Product.where("LOWER(name) LIKE ?", "%#{params[:query].downcase}%")
+    @users_by_name = User.where("LOWER(username) LIKE ?", "%#{params[:query].downcase}%").limit(5)
+    @products_by_name = Product.where("LOWER(name) LIKE ?", "%#{params[:query].downcase}%").limit(5)
 
-    render json: [@users_by_name, @products_by_name]
+    @searchResults = {
+      userResults: @users_by_name,
+      productResults: @products_by_name
+    }
+
+    render json: @searchResults
   end
 end
