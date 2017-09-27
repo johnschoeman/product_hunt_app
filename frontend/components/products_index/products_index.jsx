@@ -7,7 +7,6 @@ class ProductIndex extends React.Component {
   }
 
   componentDidMount() {
-    console.log('did mount', this.props.fetchAllProducts);
     this.props.fetchAllProducts();
   }
 

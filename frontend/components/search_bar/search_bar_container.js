@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import SearchBar from './search_bar';
+import { omniSearch } from '../../actions/search_actions';
 
 const mapStateToProps = (state) => {
   let searchTerm = "";
@@ -10,7 +11,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-
+    omniSearch: (query) => dispatch(omniSearch(query))
   };
 };
 
