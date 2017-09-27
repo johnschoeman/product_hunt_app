@@ -4,7 +4,6 @@ import ProductDiscussion from './product_discussion';
 import { createComment } from '../../actions/product_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps);
   let commentsById = {};
   let childComments = {};
   let commentIds = [];

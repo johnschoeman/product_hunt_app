@@ -19,27 +19,18 @@ const commentsReducer = (state = defaultState, action) => {
       comments.map( (comment) => {
        if (!comment.parentCommentId) {
          newState.byId[comment.id] = comment;
-         newState.allIds.push(comment.id);
          newState.byParentId[comment.id] = [];
        }
       });
       comments.map( (comment) => {
         if (comment.parentCommentId) {
           newState.byId[comment.id] = comment;
-          newState.allIds.push(comment.id);
           newState.byParentId[comment.parentCommentId].push(comment);
         }
       });
-      newState.allIds.sort((a,b) => {
-        if (newState.byId[a].createdAt < newState.byId[b]) {
-          return -1;
-        } else {
-          return 1;
-        }
-      });
+      newState.allIds = action.data.commentIds;
       return newState;
     case RECEIVE_COMMENT:
-      console.log('commentsReducer: ', action);
       let comment = action.comment;
       newState.byId[comment.id] = comment;
       newState.allIds.unshift(comment.id);

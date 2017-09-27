@@ -8,7 +8,6 @@ class ProductDiscussion extends React.Component {
   }
 
   render() {
-    console.log('product discussion props: ', this.props);
     let commentsById = this.props.commentsById;
     let commentIds = this.props.commentIds;
     let childComments = this.props.childComments;
@@ -29,7 +28,6 @@ class ProductDiscussion extends React.Component {
         <div>
           {commentIds.map((commentId) => {
             let comment = commentsById[commentId];
-            console.log('comment', comment);
             if (!comment.parentCommentId){
               return (
                 <Thread 
