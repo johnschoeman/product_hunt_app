@@ -11,7 +11,7 @@ import UserEditFormContainer from './user_profile/user_edit_form_container';
 import ProductDetailContainer from './product_detail/product_detail_container';
 
 
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute, UserRoute } from '../util/route_util';
 
 class App extends React.Component {
   constructor() {
@@ -79,7 +79,7 @@ class App extends React.Component {
 
         <Switch>
           <ProtectedRoute exact path="/products/new" component={NewProductFormContainer} />
-          <ProtectedRoute exact path="/users/:userId/edit" component={UserEditFormContainer} />
+          <UserRoute exact path="/users/:userId/edit" component={UserEditFormContainer} />
           <Route path="/users/:userId" component={UserProfileContainer} />
           <Route path="/products/:productId" component={ProductDetailContainer} />
           <Route path="/" component={AppContent} />
@@ -89,5 +89,4 @@ class App extends React.Component {
   }
 }
 
-{/* <Route path="/search" component={SearchResultsIndexContainer} /> */}
 export default App;

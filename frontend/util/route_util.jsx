@@ -15,6 +15,20 @@ const Auth = ({component: Component, path, loggedIn}) => (
 const Protected = ({component: Component, path, loggedIn, currentUser}) => {
   return (<Route path={path} render={(props) => {
     console.log('in prototected: ',  currentUser, props);
+    return (loggedIn ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to="/" />
+        )
+      );
+      }
+    }/>
+  );
+};
+
+const UserOnly = ({component: Component, path, loggedIn, currentUser}) => {
+  return (<Route path={path} render={(props) => {
+    console.log('in prototected: ',  currentUser, props);
     return (loggedIn && (currentUser.id === parseInt(props.match.params.userId)) ? (
           <Component {...props} />
         ) : (
@@ -35,3 +49,4 @@ const mapStateToProps = state => {
 
 export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
 export const ProtectedRoute = connect(mapStateToProps)(Protected);
+export const UserRoute = withRouter(connect(mapStateToProps)(UserOnly));
