@@ -27,6 +27,10 @@ class CommentForm extends React.Component {
         })
         .then(() => {
           this.autoSize();
+        }).then(() => {
+          if (this.props.toggleReplyForm){
+            this.props.toggleReplyForm();
+          }
         });
   }
 
@@ -44,7 +48,6 @@ class CommentForm extends React.Component {
   }
   
   render() {
-    console.log(this.props);
     let user = this.props.user;
     let classProp = this.props.classProp;
     let commentId = this.props.commentId;

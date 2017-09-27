@@ -20,6 +20,7 @@ class Thread extends React.Component {
                 className={`comment`}
                 currentUser={currentUser}
                 productId={productId}
+                parentCommentId={comment.id}
                 createComment={createComment}/>
           {childComments.map((childComment) => {
             return (

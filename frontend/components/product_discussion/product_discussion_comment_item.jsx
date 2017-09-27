@@ -33,8 +33,6 @@ class CommentItem extends React.Component {
   }
 
   render() {
-
-    console.log(this.props);
     let comment = this.props.comment;
     let imageUrl = comment.user.imageUrl;
     let user = comment.user;
@@ -52,7 +50,8 @@ class CommentItem extends React.Component {
                       commentId={comment.id} 
                       productId={productId}
                       createComment={createComment}
-                      parentCommentId={parentCommentId}/>;
+                      parentCommentId={parentCommentId}
+                      toggleReplyForm={this.toggleReplyForm}/>;
     }
 
     let replyForm = undefined;
