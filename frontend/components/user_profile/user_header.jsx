@@ -8,7 +8,6 @@ class UserHeader extends React.Component {
 
   render() {
     let user = this.props.user;
-    console.log(user);
     let UserHeaderButton = undefined;
     if (user.id === this.props.currentUserId) {
       UserHeaderButton = <Link to={`/users/${user.id}/edit`} className="button white-button medium-size">Edit</Link>;

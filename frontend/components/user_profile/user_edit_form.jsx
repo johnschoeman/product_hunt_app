@@ -15,13 +15,11 @@ class UserEditForm extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log('user edit form was submitted');
     let currentUser = this.props.currentUser;
     e.preventDefault();
     let user = Object.assign({}, this.state);
     user.id = currentUser.id;
     this.props.editUser(user);
-    // .then(this.props.history.push(`/users/${currentUser.id}`))
   }
 
   update(key) {

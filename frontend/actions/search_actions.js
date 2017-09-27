@@ -9,7 +9,6 @@ export const receiveSearchResults = (searchResults) => ({
 
 export const omniSearch = (query) => dispatch => (
   search(query).then(data => {
-    console.log(data);
     dispatch(receiveSearchResults(data));
   })
 );

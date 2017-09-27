@@ -13,14 +13,12 @@ class UserProfile extends React.Component {
   }
 
   componentDidMount() {
-    console.log('user profile mounted');
-    console.log('user profile props', this.props);
     let viewedUserId = this.props.match.params.userId;
     this.props.fetchUser(viewedUserId);
   }
 
   willReceiveProps(nextProps) {
-    console.log('next props: ', nextProps);
+
   }
 
   render() {

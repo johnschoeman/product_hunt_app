@@ -8,7 +8,6 @@ class SessionNav extends React.Component {
 
   handleClick(formType) {
     return () => {
-      console.log('in handle click: ', this.props);
       this.props.clearErrors();
       this.props.openModal(formType)();
     };

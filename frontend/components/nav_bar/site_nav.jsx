@@ -8,7 +8,7 @@ class SiteNav extends React.Component {
   }
 
   showMetaMenu() {
-    console.log('clicked Meta Menu');
+
   }
 
   render() {

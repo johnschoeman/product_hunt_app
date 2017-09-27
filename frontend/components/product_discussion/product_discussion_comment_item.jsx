@@ -26,7 +26,6 @@ class CommentItem extends React.Component {
   }
 
   toggleReplyForm() {
-    console.log('show reply form');
     this.setState({
       replyFormShown: !this.state.replyFormShown
     });

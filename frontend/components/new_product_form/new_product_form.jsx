@@ -19,7 +19,6 @@ class NewProductForm extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log('new product form was submitted');
     e.preventDefault();
     let product = Object.assign({}, this.state);
     this.props.createProduct(product).then(this.props.history.push('/'));
