@@ -17,7 +17,6 @@ class ProductIndex extends React.Component {
     <div className="product-index-container">
       <div className="product-index-header">
         <p className="product-index-header-text">Product Index</p>
-        <p className="product-index-header-popular-newest">popluar | newest</p>
       </div>
       <ul className="product-index">
         {productIds.map((id) => {

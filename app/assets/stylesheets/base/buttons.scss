@@ -43,21 +43,26 @@ input[type=submit] {
 }
 
 .small-size {
-  font-size: 14px;
-  width: 48px;
-  height: 28px;
-  padding: 0 13px
+  height: 22px;
+	padding: 0 8px;
+	font-size: 11px;
+	line-height: 16px;
+	font-weight: 700;
 }
 
 .white-button {
 	background-color: $white;
 	border: 1px solid $gray;
-	color: $black;
+	// color: $black;
 }
 
 .white-button:hover {
 	background-color: $gray;
 	text-decoration: none;
+}
+
+.gray-text {
+	color: $text-gray;
 }
 
 .orange-button {

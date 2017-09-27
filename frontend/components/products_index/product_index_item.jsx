@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router';
 
 class ProductIndexItem extends React.Component {
   constructor(props) {
@@ -14,6 +14,9 @@ class ProductIndexItem extends React.Component {
 
   render() {
     let product = this.props.product;
+    console.log(product);
+    let commentCount = product.countComments;
+    let upvoteCount = 29;
     return (
       <li className="product-index-item" onClick={this.handleClick}>
         <div className="product-index-item-img">
@@ -27,9 +30,9 @@ class ProductIndexItem extends React.Component {
             <div className="product-item-tags">
               <button >Tag</button>
             </div>
-            <div className="product-item-comments-upvotes">
-              <button >Upvote</button>
-              <button >Comment</button>
+            <div className="product-item-minor-actions">
+              <button className="white-button small-size" >{`^ ${upvoteCount}`}</button>
+              <button className="white-button small-size gray-text" value={commentCount}>{`${commentCount}`}</button>
             </div>
         </div>
         
