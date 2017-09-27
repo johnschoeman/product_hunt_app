@@ -9,9 +9,12 @@ class SearchBar extends React.Component {
   }
 
   update(e) {
-    this.setState({query: e.target.value});
-    this.props.omniSearch(e.target.value);
-
+    let query = e.target.value;
+    this.setState({query}, () => {
+      if (this.state.query.length > 0) {
+        this.props.omniSearch(query);
+      }
+    });
   }
 
 
