@@ -1,11 +1,14 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.update = this.update.bind(this);
     this.state = { query: "" };
+
+    this.update = this.update.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   update(e) {
@@ -17,6 +20,14 @@ class SearchBar extends React.Component {
     });
   }
 
+  handleKeyPress(e) {
+    if (e.key === 'Enter') {
+      this.props.history.push({
+        pathname: "/search",
+        search: `?query=${this.state.query}`
+      });
+    }
+  } 
 
   render() {
     return (
@@ -24,6 +35,7 @@ class SearchBar extends React.Component {
         <input type="search" 
                value={this.state.query}
                onChange={this.update}
+               onKeyPress={this.handleKeyPress}
                className="search-bar"
                placeholder="Discover your next favorite thing">
         </input>
@@ -34,4 +46,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default SearchBar;
+export default withRouter(SearchBar);

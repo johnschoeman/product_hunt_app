@@ -9,6 +9,6 @@ class Api::SearchController < ApplicationController
       productResults: @products_by_name
     }
 
-    render json: @searchResults
+    render :index
   end
 end

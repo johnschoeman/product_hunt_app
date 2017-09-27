@@ -8,9 +8,7 @@ const mapStateToProps = (state) => {
   let productResults = state.entities.searchResults.productResults;
   
   return {
-    searchTerm,
-    userResults,
-    productResults
+    searchTerm
   };
 };
 

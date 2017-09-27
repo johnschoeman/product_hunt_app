@@ -7,6 +7,7 @@ class ProductFeed extends React.Component {
   }
 
   render() {
+    console.log('in product feed');
     return (
       <div className="product-feed">
         <ProductsIndexContainer />
