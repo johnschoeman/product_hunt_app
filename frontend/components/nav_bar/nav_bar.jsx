@@ -27,11 +27,11 @@ class NavBar extends React.Component {
         <div className="search-bar-container">
           <SearchBarContainer />
         </div>
-        <SiteNav />
         { userSessionNav }
       </div>
     );
   }
 }
 
+{/* <SiteNav /> */}
 export default NavBar;
