@@ -10,10 +10,10 @@ const defaultState = {
 
 const commentsReducer = (state = defaultState, action) => {
   Object.freeze(state);
-
+  let newState = merge({}, state);
   switch (action.type) {
     case RECEIVE_PRODUCT:
-      let newState = Object.assign({}, defaultState);
+      newState = Object.assign({}, defaultState);
       let comments = Object.values(action.data.comments);
       comments.map( (comment) => {
        if (!comment.parentCommentId) {
@@ -32,7 +32,11 @@ const commentsReducer = (state = defaultState, action) => {
       return newState;
     case RECEIVE_COMMENT:
       console.log('commentsReducer: ', action);
-      return state;
+      let comment = action.comment;
+      newState.byId[comment.id] = comment;
+      newState.allIds.push(comment.id);
+      newState.byParentId[comment.id] = [];
+      return newState;
     default:
       return state;
   }
