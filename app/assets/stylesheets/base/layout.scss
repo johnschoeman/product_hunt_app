@@ -149,6 +149,7 @@ input[type="search"] {
 textarea {
 	box-sizing: border-box;
 	height: 100%;
+	min-height: 16px;
 	max-height: 500px;
 
 	// visibility: hidden;

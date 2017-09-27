@@ -19,6 +19,8 @@ class ProductDiscussion extends React.Component {
     if (currentUser) {
       commentForm = <CommentForm 
                       user={currentUser} 
+                      showIcon={true}
+                      classProp={"new-comment-form"}
                       productId={productId}
                       createComment={createComment}/>;
     }
@@ -33,7 +35,10 @@ class ProductDiscussion extends React.Component {
                 <Thread 
                   key={`discussion-thread-${comment.id}`} 
                   comment={comment}
-                  childComments={childComments[commentId]} />
+                  childComments={childComments[commentId]}
+                  currentUser={currentUser}
+                  productId={productId}
+                  createComment={createComment} />
                 );
               }
             }

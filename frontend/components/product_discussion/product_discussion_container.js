@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   let commentIds = [];
   let currentUser = state.session.currentUser;
   let productId = ownProps.match.params.productId;
+  
   if (state.entities.comments) {
     commentsById = state.entities.comments.byId;
     commentIds = state.entities.comments.allIds;

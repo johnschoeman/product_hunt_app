@@ -58,3 +58,26 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.reply-form {
+  border: 1px solid $gray;
+  border-radius: 3px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-height: 500px
+}
+
+.reply-form-input-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.reply-form-input-bar textarea {
+  margin-left: 10px;
+}
+
+.reply-form-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
