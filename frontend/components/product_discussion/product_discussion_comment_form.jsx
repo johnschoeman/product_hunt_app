@@ -15,7 +15,12 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('submit with: ', this.state.commentText);
+    let comment = {
+      body: this.state.commentText,
+      user_id: this.props.user.id,
+      product_id: this.props.productId
+    };
+    this.props.createComment(comment).then(() => {this.setState({commentText: ""});});
   }
 
   handleChange(e) {

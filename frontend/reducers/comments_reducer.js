@@ -1,4 +1,4 @@
-import { RECEIVE_PRODUCT } from '../actions/product_actions';
+import { RECEIVE_PRODUCT, RECEIVE_COMMENT } from '../actions/product_actions';
 import { merge } from 'lodash';
 
 const defaultState = {
@@ -30,6 +30,9 @@ const commentsReducer = (state = defaultState, action) => {
         }
       });
       return newState;
+    case RECEIVE_COMMENT:
+      console.log('commentsReducer: ', action);
+      return state;
     default:
       return state;
   }

@@ -20,3 +20,11 @@ export const postProduct = (product) => {
     data: { product }
   });
 };
+
+export const postComment = (comment) => {
+  return $.ajax({
+    method: "POST",
+    url: `api/comments`,
+    data: { comment }
+  });
+};

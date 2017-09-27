@@ -8,14 +8,19 @@ class ProductDiscussion extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+
     let comments = this.props.comments;
     let childComments = this.props.childComments;
     let currentUser = this.props.currentUser;
     let commentForm = undefined;
-  
+    let productId = this.props.productId;
+    let createComment = this.props.createComment;
+    
     if (currentUser) {
-      commentForm = <CommentForm user={currentUser}/>;
+      commentForm = <CommentForm 
+                      user={currentUser} 
+                      productId={productId}
+                      createComment={createComment}/>;
     }
     return (
       <div className="product-discussion">
