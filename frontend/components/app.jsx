@@ -9,6 +9,7 @@ import UserProfileContainer from './user_profile/user_profile_container';
 import AppContent from './app_content';
 import UserEditFormContainer from './user_profile/user_edit_form_container';
 import ProductDetailContainer from './product_detail/product_detail_container';
+import SearchResultsIndexContainer from './search_results_index/search_results_index_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -77,10 +78,11 @@ class App extends React.Component {
         </ReactModal>
 
         <Switch>
-          <Route exact path="/products/new" component={NewProductFormContainer} />
+          <ProtectedRoute exact path="/products/new" component={NewProductFormContainer} />
           <ProtectedRoute exact path="/users/:userId/edit" component={UserEditFormContainer} />
-          <Route exact path="/users/:userId" component={UserProfileContainer} />
-          <Route exact path="/products/:productId" component={ProductDetailContainer} />
+          <Route path="/users/:userId" component={UserProfileContainer} />
+          <Route path="/products/:productId" component={ProductDetailContainer} />
+          <Route path="/search" component={SearchResultsIndexContainer} />
           <Route path="/" component={AppContent} />
         </Switch>
       </div>
