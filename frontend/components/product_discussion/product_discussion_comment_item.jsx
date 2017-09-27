@@ -6,9 +6,13 @@ class CommentItem extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      replyFormShown: false
+    };
+
     this.redirectToUser = this.redirectToUser.bind(this);
     this.upvote = this.upvote.bind(this);
-    this.showReplyForm = this.showReplyForm.bind(this);
+    this.toggleReplyForm = this.toggleReplyForm.bind(this);
   }
 
   redirectToUser(userId) {
@@ -21,8 +25,11 @@ class CommentItem extends React.Component {
     console.log('upvote');
   }
 
-  showReplyForm() {
+  toggleReplyForm() {
     console.log('show reply form');
+    this.setState({
+      replyFormShown: !this.state.replyFormShown
+    });
   }
 
   render() {
@@ -41,12 +48,20 @@ class CommentItem extends React.Component {
     if (currentUser) {
       commentForm = <CommentForm 
                       user={currentUser}
-                      showIcon={false}
                       classProp={"reply-form"}
                       commentId={comment.id} 
                       productId={productId}
                       createComment={createComment}
                       parentCommentId={parentCommentId}/>;
+    }
+
+    let replyForm = undefined;
+    if (this.state.replyFormShown) {
+      replyForm = (
+        <div className="reply-form" id={`reply-form-${comment.id}`}>
+          {commentForm}
+        </div>
+      )
     }
 
     return (
@@ -70,13 +85,11 @@ class CommentItem extends React.Component {
               <button onClick={this.upvote} className="link-button">Upvote</button>
             </div>
             <div className="comment-reply-button">
-              <button onClick={this.showReplyForm} className="link-button">Reply</button>
+              <button onClick={this.toggleReplyForm} className="link-button">Reply</button>
             </div>
           </div>
 
-          <div className="reply-form">
-            {commentForm}
-          </div>
+          {replyForm}
       </div>
     );
   }
