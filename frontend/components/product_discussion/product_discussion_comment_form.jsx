@@ -56,6 +56,10 @@ class CommentForm extends React.Component {
         <img className="user-profile-img" src={user.imageUrl}/>
       </div>
     );
+    let buttonText = "Comment";
+    if (classProp === "reply-form") {
+      buttonText = "Reply";
+    }
 
     return (
       <form className={classProp} onSubmit={this.handleSubmit}>
@@ -72,7 +76,7 @@ class CommentForm extends React.Component {
           </div>
         </div>
         <div className={`${classProp}-button-container`}>
-          <input type="submit" className="button orange-button medium-size" value="Comment"></input>
+          <input type="submit" className="button orange-button medium-size" value={buttonText}></input>
         </div>
       </form>
     );
