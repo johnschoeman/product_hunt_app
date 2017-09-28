@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170925205614) do
+ActiveRecord::Schema.define(version: 20170928041536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,16 @@ ActiveRecord::Schema.define(version: 20170925205614) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_products_on_name", unique: true
+  end
+
+  create_table "upvotes", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "upvoteable_id", null: false
+    t.string "upvoteable_type", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["upvoteable_id", "upvoteable_type"], name: "index_upvotes_on_upvoteable_id_and_upvoteable_type"
+    t.index ["user_id", "upvoteable_type", "upvoteable_id"], name: "index_upvotes_on_user_id_and_upvoteable_type_and_upvoteable_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|

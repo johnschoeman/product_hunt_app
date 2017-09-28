@@ -30,6 +30,8 @@ class Comment < ApplicationRecord
     foreign_key: :parent_comment_id,
     primary_key: :id
 
+  has_many :upvotes, as: :upvoteable
+
   def parent_comment_is_top_level
     if parent_comment && parent_comment.parent_comment_id != nil
       errors.add(:parent_comment_id, "Can't have deeply nested comments")

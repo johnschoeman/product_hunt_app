@@ -21,6 +21,8 @@ class Product < ApplicationRecord
 
   has_many :comments
 
+  has_many :upvotes, as: :upvoteable
+
   def self.filterByDate(date)
     
   end
