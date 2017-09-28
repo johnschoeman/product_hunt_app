@@ -24,6 +24,7 @@ class ProductIndex extends React.Component {
       <div className="product-index-header">
         <p className="product-index-header-text">Product Index</p>
       </div>
+        <div className="product-index-header-border"></div>
       <div className="loading-container">
         <div className="sweet-loading">
           <GridLoader

@@ -13,19 +13,20 @@
   border-radius: 1px;
 }
 
-.product-index {
-
-}
-
 .product-index-header {
-  border-bottom: 1px solid $gray;
   height: 21px;
-  padding: 15px 0;
-  width: 90%;
+  padding: 15px 15px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.product-index-header-border {
+  border-bottom: 1px solid $gray;
+  height: 1px;
+  margin: 0 15px;
 }
 
 .product-index-header-text {
