@@ -3,8 +3,8 @@ json.by_id do
     json.set! product.id do 
       json.partial! "api/products/product", product: product
       if current_user
-        json.currentUserUpvotedProducts current_user.upvoted_products
-        json.currentUserUpvoted current_user.upvoted_products_by_id.include?(product.id)
+        json.currentUserUpvoted current_user.upvoted_products_cache.include?(product.id)
+        # json.currentUserUpvoted current_user.upvoted_products.include?(product)
       end
     end
   end

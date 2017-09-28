@@ -48,6 +48,14 @@ class User < ApplicationRecord
     def upvoted_products_cache
         @upvoted_product_ids ||= upvoted_products_by_id
     end
+
+    def upvoted_comments_by_id
+        self.upvoted_comments.map { |comment| comment.id }
+    end
+
+    def upvoted_comments_cache
+        @upvoted_comment_ids ||= upvoted_comments_by_id
+    end
     
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)

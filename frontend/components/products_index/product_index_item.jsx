@@ -17,9 +17,9 @@ class ProductIndexItem extends React.Component {
   toggleUpvote(e) {
     console.log('upvote');
     e.stopPropagation();
-    let upvoteId = this.props.userUpvotes[this.props.product.id];
-    if (upvoteId) {
-      this.props.destroyUpvote(upvoteId);
+    let product = this.props.product;
+    if (product.currentUserUpvoted) {
+      this.props.destroyUpvote("product", this.props.productId);
     } else {
       this.props.createUpvote("Product", this.props.product.id);
     }
@@ -29,8 +29,6 @@ class ProductIndexItem extends React.Component {
     let product = this.props.product;
     let commentCount = product.countComments;
     let upvoteCount = product.countUpvotes;
-    // let userUpvotes = this.props.userUpvotes;
-    // let upvoteButtonClass = "orange-button";
     let upvoteButtonClass = (product.currentUserUpvoted) ? "orange-button" : "white-button";
 
     return (

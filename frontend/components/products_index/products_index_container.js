@@ -23,7 +23,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     fetchAllProducts: () => dispatch(fetchAllProducts()),
     fetchUpvotes: (userId, upvoteableType) => dispatch(fetchUpvotes(userId, upvoteableType)),
     createUpvote: (upvoteableType, upvoteableId) => dispatch(createUpvote(upvoteableType, upvoteableId)),
-    destroyUpvote: (upvoteId) => dispatch(destroyUpvote(upvoteId))
+    destroyUpvote: (upvoteableType, upvoteableId) => dispatch(destroyUpvote(upvoteableType, upvoteableId))
   };
 };
 

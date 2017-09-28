@@ -50,6 +50,8 @@ class CommentItem extends React.Component {
     let createComment = this.props.createComment;
     let parentCommentId = this.props.parentCommentId;
 
+    let upvotedClass = (comment.currentUserUpvoted) ? "orange-link-button" : "";
+
     if (currentUser) {
       commentForm = <CommentForm 
                       user={currentUser}
@@ -63,14 +65,14 @@ class CommentItem extends React.Component {
       commentActions = (
           <div className="comment-actions">
           <div className="comment-upvote-button">
-            <button onClick={this.upvote} className="link-button upvotes">
+            <button onClick={this.upvote} className={`link-button upvotes  ${upvotedClass}`}>
               <i className="fa fa-thumbs-up" aria-hidden="true"/> 
               <a>Upvote</a>
               <p>{`(${countUpvotes})`}</p>
             </button>
           </div>
           <div className="comment-reply-button">
-            <button onClick={this.toggleReplyForm} className="link-button">
+            <button onClick={this.toggleReplyForm} className={`link-button`}>
               <i className="fa fa-reply" aria-hidden="true"/> 
               <a>Reply</a>
             </button>
