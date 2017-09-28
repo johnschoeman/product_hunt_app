@@ -41,8 +41,8 @@ export const createUpvote = (upvoteableType, upvoteableId) => (dispatch) => {
   );
 };
 
-export const destroyUpvote = (upvoteId) => (dispatch) => {
-  return APIUtil.deleteUpvote(upvoteId).then(
+export const destroyUpvote = (upvoteableType, upvoteableId) => (dispatch) => {
+  return APIUtil.deleteUpvote(upvoteableType, upvoteableId).then(
     res => (dispatch(removeUpvote(res)))
   );
 };

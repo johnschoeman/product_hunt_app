@@ -6,13 +6,11 @@ import { fetchUpvotes, createUpvote, destroyUpvote } from '../../actions/upvote_
 const mapStateToProps = (state, ownProps) => {
   let products = state.entities.products.byId;
   let productIds = state.entities.products.allIds;
-  // let userUpvotes = state.entities.upvotes.byProductIds;
   let currentUser = state.session.currentUser;
 
   return {
     products,
     productIds,
-    // userUpvotes,
     currentUser
   };
 };

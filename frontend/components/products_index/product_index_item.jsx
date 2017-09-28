@@ -19,7 +19,7 @@ class ProductIndexItem extends React.Component {
     e.stopPropagation();
     let product = this.props.product;
     if (product.currentUserUpvoted) {
-      this.props.destroyUpvote("product", this.props.productId);
+      this.props.destroyUpvote("Product", this.props.product.id);
     } else {
       this.props.createUpvote("Product", this.props.product.id);
     }

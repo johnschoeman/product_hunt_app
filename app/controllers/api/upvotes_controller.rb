@@ -35,7 +35,13 @@ class Api::UpvotesController < ApplicationController
   end
 
   def destroy
-    @upvote = Upvote.find(params[:id])
+    puts params
+    @upvote = Upvote.find_by(
+                        upvoteable_type: params[:upvote][:upvoteable_type],
+                        upvoteable_id: params[:upvote][:upvoteable_id],
+                        user_id: current_user.id
+                        )
+
     if @upvote.destroy
       render :show
     else
@@ -46,6 +52,6 @@ class Api::UpvotesController < ApplicationController
   private
   
   def upvote_params
-    params.require(:upvote).permit(:upvoteable_id, :upvoteable_type, :user_id, :product_id)
+    params.require(:upvote).permit(:upvoteable_id, :upvoteable_type)
   end
 end

@@ -7,10 +7,12 @@ export const postUpvote = (upvoteableType, upvoteableId) => {
   });
 };
 
-export const deleteUpvote = (upvoteId) => {
+export const deleteUpvote = (upvoteableType, upvoteableId) => {
   return $.ajax({
     method: 'DELETE',
-    url: `api/upvotes/${upvoteId}`
+    url: `api/upvotes/`,
+    data: { upvote: { upvoteable_type: upvoteableType,
+                      upvoteable_id: upvoteableId } }
   });
 };
 
