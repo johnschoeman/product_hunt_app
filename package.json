@@ -46,5 +46,9 @@
   "homepage": "https://github.com/johnschoeman/product_hunt_app#readme",
   "devDependencies": {
     "redux-devtools-extension": "^2.13.2"
+  },
+  "babel": {
+    "presets": ["react", "es2015"],
+    "plugins": ["emotion"]
   }
 }
