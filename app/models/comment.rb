@@ -37,4 +37,8 @@ class Comment < ApplicationRecord
       errors.add(:parent_comment_id, "Can't have deeply nested comments")
     end
   end
+
+  def current_user_upvoted?
+    self.upvotes.any? { |upvote| upvote.user_id == current_user.id }
+  end
 end

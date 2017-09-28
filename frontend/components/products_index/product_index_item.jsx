@@ -7,23 +7,32 @@ class ProductIndexItem extends React.Component {
     super(props);
 
     this.handleClick = this.handleClick.bind(this);
-    this.upvote = this.upvote.bind(this);
+    this.toggleUpvote = this.toggleUpvote.bind(this);
   }
   
   handleClick(e) {
     this.props.history.push(`/products/${this.props.product.id}`);
   }
 
-  upvote(e) {
+  toggleUpvote(e) {
     console.log('upvote');
     e.stopPropagation();
-
+    let upvoteId = this.props.userUpvotes[this.props.product.id];
+    if (upvoteId) {
+      this.props.destroyUpvote(upvoteId);
+    } else {
+      this.props.createUpvote("Product", this.props.product.id);
+    }
   }
 
   render() {
     let product = this.props.product;
     let commentCount = product.countComments;
     let upvoteCount = product.countUpvotes;
+    // let userUpvotes = this.props.userUpvotes;
+    let upvoteButtonClass = "orange-button";
+    // let upvoteButtonClass = (userUpvotes[product.id]) ? "orange-button" : "white-button";
+
     return (
       <li className="product-index-item" onClick={this.handleClick}>
         <div className="product-index-item-img">
@@ -38,8 +47,8 @@ class ProductIndexItem extends React.Component {
               <button >Tag</button>
             </div>
             <div className="product-item-minor-actions">
-              <button className="white-button small-size"
-                      onClick={this.upvote} >
+              <button className={`${upvoteButtonClass} small-size`}
+                      onClick={this.toggleUpvote} >
                 <i className="fa fa-thumbs-up" size='3x'/> {`${upvoteCount}`}
               </button>
               <button className="white-button small-size gray-text" 

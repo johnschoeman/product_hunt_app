@@ -19,9 +19,13 @@ class Product < ApplicationRecord
 
   belongs_to :user
 
-  has_many :comments
+  has_many :comments, counter_cache: true
 
   has_many :upvotes, as: :upvoteable
+
+  def current_user_upvoted=(bool)
+    self.current_user_upvoted = bool
+  end
 
   def self.filterByDate(date)
     
@@ -29,5 +33,9 @@ class Product < ApplicationRecord
   
   def self.byCreatedAtLimit(limit)
     Product.order(:created_at).last(limit).reverse
+  end
+
+  def current_user_upvoted?
+    self.upvotes.any? { |upvote| upvote.user_id == current_user.id }
   end
 end

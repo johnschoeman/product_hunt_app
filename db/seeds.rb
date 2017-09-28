@@ -111,6 +111,17 @@ end
   end
 end
 
+50.times do 
+  v = Upvote.new
+  v.user = demo_user
+  v.upvoteable_type = "Product"
+  v.upvoteable_id = products.sample.id
+
+  if v.valid? && !v.upvote_exists?
+    v.save!
+  end
+end
+
 
 
 # user1 = User.create(username: 'khai', password: 'password')

@@ -11,8 +11,10 @@ class Api::ProductsController < ApplicationController
     end
   end
 
-  def index
-    @products = Product.includes(:comments).byCreatedAtLimit(20)
+  def index 
+    @products = Product.includes(:comments)
+                       .byCreatedAtLimit(50)
+    # @products = Product.byCreatedAtLimit(50)
     render :index
   end
 

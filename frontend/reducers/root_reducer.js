@@ -15,6 +15,15 @@ import uiReducer from './ui_reducer';
 
 //   viewedUser: {
 
+//   },
+
+//   upvotes: {
+//       byProductId: {
+//           productId: upvoteId
+//       },
+//       byCommentId: {
+//           commentId: upvoteId
+//       },
 //   }
 
 //   comments: {

@@ -14,12 +14,17 @@ class CommentItem extends React.Component {
     this.redirectToUser = this.redirectToUser.bind(this);
     this.upvote = this.upvote.bind(this);
     this.toggleReplyForm = this.toggleReplyForm.bind(this);
+    this.openLogin = this.openLogin.bind(this);
   }
 
   redirectToUser(userId) {
     return (e) => {
       this.props.history.push(`/users/${userId}`);
     };
+  }
+
+  openLogin(e) {
+    console.log('open login');
   }
 
   upvote() {
@@ -34,6 +39,7 @@ class CommentItem extends React.Component {
 
   render() {
     let comment = this.props.comment;
+    let countUpvotes = comment.countUpvotes;
     let imageUrl = comment.user.imageUrl;
     let user = comment.user;
 
@@ -57,9 +63,10 @@ class CommentItem extends React.Component {
       commentActions = (
           <div className="comment-actions">
           <div className="comment-upvote-button">
-            <button onClick={this.upvote} className="link-button">
+            <button onClick={this.upvote} className="link-button upvotes">
               <i className="fa fa-thumbs-up" aria-hidden="true"/> 
               <a>Upvote</a>
+              <p>{`(${countUpvotes})`}</p>
             </button>
           </div>
           <div className="comment-reply-button">
@@ -69,6 +76,18 @@ class CommentItem extends React.Component {
             </button>
           </div>
           </div>
+      );
+    } else {
+      commentActions = (
+        <div className="comment-actions">
+          <div className="comment-upvote-button">
+            <button onClick={this.openLogin} className="link-button upvotes">
+              <i className="fa fa-thumbs-up" aria-hidden="true"/> 
+              <a>Upvote</a>
+              <p>{`(${countUpvotes})`}</p>
+            </button>
+          </div>
+        </div>
       );
     }
 

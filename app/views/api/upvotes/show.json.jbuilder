@@ -1,0 +1,1 @@
+json.extract! @upvote, :id, :upvoteable_type, :upvoteable_id

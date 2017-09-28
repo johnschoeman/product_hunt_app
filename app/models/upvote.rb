@@ -14,7 +14,7 @@ class Upvote < ApplicationRecord
   validates :upvoteable_type, inclusion: {in: ["Product", "Comment"], 
                               message: "Can only upvote products and comments"}
 
-  belongs_to :upvoteable, polymorphic: true
+  belongs_to :upvoteable, polymorphic: true, counter_cache: true
 
   belongs_to :user
 

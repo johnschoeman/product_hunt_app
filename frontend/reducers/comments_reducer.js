@@ -1,4 +1,5 @@
 import { RECEIVE_PRODUCT, RECEIVE_COMMENT } from '../actions/product_actions';
+import { RECEIVE_UPVOTE, REMOVE_UPVOTE } from '../actions/upvote_actions';
 import { merge } from 'lodash';
 
 const defaultState = {
@@ -11,6 +12,7 @@ const defaultState = {
 const commentsReducer = (state = defaultState, action) => {
   Object.freeze(state);
   let newState = merge({}, state);
+  let upvote = undefined;
   switch (action.type) {
     case RECEIVE_PRODUCT:
       newState = Object.assign({}, defaultState);
@@ -38,6 +40,18 @@ const commentsReducer = (state = defaultState, action) => {
         newState.byParentId[comment.id] = [];
       } else {
         newState.byParentId[comment.parentCommentId].unshift(comment);
+      }
+      return newState;
+    case RECEIVE_UPVOTE: 
+      upvote = action.upvote;
+      if (upvote.upvoteableType === "Comment") {
+        newState.byId[upvote.upvoteableId].countUpvotes--;
+      }
+      return newState;
+    case REMOVE_UPVOTE:
+      upvote = action.upvote;
+      if (upvote.upvoteableType === "Comment") {
+        newState.byId[upvote.upvoteableId].countUpvotes--;
       }
       return newState;
     default:

@@ -28,6 +28,16 @@ class User < ApplicationRecord
 
     has_many :upvotes
 
+    has_many :upvoted_products,
+      through: :upvotes,
+      source: :upvoteable,
+      source_type: "Product"
+
+    has_many :upvoted_comments,
+      through: :upvotes,
+      source: :upvoteable,
+      source_type: "Comment"
+
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
         return nil unless user
