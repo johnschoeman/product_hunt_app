@@ -30,8 +30,8 @@ class ProductIndexItem extends React.Component {
     let commentCount = product.countComments;
     let upvoteCount = product.countUpvotes;
     // let userUpvotes = this.props.userUpvotes;
-    let upvoteButtonClass = "orange-button";
-    // let upvoteButtonClass = (userUpvotes[product.id]) ? "orange-button" : "white-button";
+    // let upvoteButtonClass = "orange-button";
+    let upvoteButtonClass = (product.currentUserUpvoted) ? "orange-button" : "white-button";
 
     return (
       <li className="product-index-item" onClick={this.handleClick}>

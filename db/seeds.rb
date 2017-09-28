@@ -111,7 +111,7 @@ end
   end
 end
 
-50.times do 
+10.times do 
   v = Upvote.new
   v.user = demo_user
   v.upvoteable_type = "Product"

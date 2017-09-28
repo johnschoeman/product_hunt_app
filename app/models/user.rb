@@ -26,7 +26,10 @@ class User < ApplicationRecord
 
     has_many :comments
 
-    has_many :upvotes
+    has_many :upvotes,
+      foreign_key: :user_id,
+      primary_key: :id,
+      class_name: :Upvote
 
     has_many :upvoted_products,
       through: :upvotes,
@@ -37,7 +40,15 @@ class User < ApplicationRecord
       through: :upvotes,
       source: :upvoteable,
       source_type: "Comment"
+      
+    def upvoted_products_by_id
+        self.upvoted_products.map { |product| product.id }
+    end
 
+    def upvoted_products_cache
+        @upvoted_product_ids ||= upvoted_products_by_id
+    end
+    
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
         return nil unless user

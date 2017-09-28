@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import SessionForm from './session_form';
 import { login, signup } from '../../actions/session_actions';
 import { withRouter } from 'react-router';
+import { fetchAllProducts } from '../../actions/product_actions';
 
 const mapStateToProps = (state, {formType}) => {
     let errors = Object.values(state.errors.session);
@@ -16,7 +17,8 @@ const mapDispatchToProps = (dispatch, {formType, closeModal}) => {
     let processForm = (formType === 'login') ? login : signup;
     return {
         processForm: (user) => dispatch(processForm(user)),
-        closeModal
+        closeModal,
+        fetchAllProducts: () => dispatch(fetchAllProducts())
     };
 };
 
