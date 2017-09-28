@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import CommentForm from './product_discussion_comment_form';
+import i from 'react-fontawesome';
 
 class CommentItem extends React.Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class CommentItem extends React.Component {
 
     let currentUser = this.props.currentUser;
     let commentForm = undefined;
+    let commentActions = undefined;
     let productId = this.props.productId;
     let createComment = this.props.createComment;
     let parentCommentId = this.props.parentCommentId;
@@ -51,6 +53,23 @@ class CommentItem extends React.Component {
                       createComment={createComment}
                       parentCommentId={parentCommentId}
                       toggleReplyForm={this.toggleReplyForm}/>;
+
+      commentActions = (
+          <div className="comment-actions">
+          <div className="comment-upvote-button">
+            <button onClick={this.upvote} className="link-button">
+              <i className="fa fa-thumbs-up" aria-hidden="true"/> 
+              <a>Upvote</a>
+            </button>
+          </div>
+          <div className="comment-reply-button">
+            <button onClick={this.toggleReplyForm} className="link-button">
+              <i className="fa fa-reply" aria-hidden="true"/> 
+              <a>Reply</a>
+            </button>
+          </div>
+          </div>
+      );
     }
 
     let replyForm = undefined;
@@ -59,8 +78,10 @@ class CommentItem extends React.Component {
         <div className="reply-form" id={`reply-form-${comment.id}`}>
           {commentForm}
         </div>
-      )
+      );
     }
+
+
 
     return (
       <div className={this.props.className}>
@@ -68,9 +89,9 @@ class CommentItem extends React.Component {
             <div className="user-profile-img-container" onClick={this.redirectToUser(user.id)}>
              <img className="user-profile-img" src={imageUrl}/>
             </div>
-            <div className="user-spolight-content">
-              <div>{user.username}</div>
-              <div>{user.headline}</div>
+            <div className="user-spotlight-content">
+              <div className="user-spotlight-username" onClick={this.redirectToUser(user.id)}>{user.username}</div>
+              <div className="user-spotlight-headline">{user.headline}</div>
             </div>
           </div>
 
@@ -78,14 +99,7 @@ class CommentItem extends React.Component {
             {comment.body}
           </div>
 
-          <div className="comment-actions">
-            <div className="comment-upvote-button">
-              <button onClick={this.upvote} className="link-button">Upvote</button>
-            </div>
-            <div className="comment-reply-button">
-              <button onClick={this.toggleReplyForm} className="link-button">Reply</button>
-            </div>
-          </div>
+          {commentActions}
 
           {replyForm}
       </div>

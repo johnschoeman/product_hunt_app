@@ -151,12 +151,12 @@ textarea {
 	height: 100%;
 	min-height: 16px;
 	max-height: 500px;
-
+	text-justify: center;
 	// visibility: hidden;
-	width: 100%;
+	width: calc(100% - 10px);
 	position: absolute;
 
-	padding: 7px 10px;
+	padding: 7px 0 7px 10px;
 	background-color: $white;
 	overflow: hidden;
 	word-wrap: break-word;

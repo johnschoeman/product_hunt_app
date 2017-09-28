@@ -17,15 +17,44 @@
   // border: 1px solid red;
 }
 
+//User Spotlight
 .user-spotlight {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   margin: 0 0 15px;
+  height: 40px;
 }
 
+.user-spotlight-content {
+  margin-left: 10px;
+  font-size: 13px;
+  line-height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 44px;
+}
+
+.user-spotlight-username {
+  font-weight: 600;
+}
+
+.user-spotlight-username:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.user-spotlight-headline {
+  color: $text-gray;
+}
+
+//Comment Body
 .comment-body {
   margin: 0 0 15px 42px;
   display: block;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .comment-actions {

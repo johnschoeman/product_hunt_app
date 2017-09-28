@@ -48,6 +48,7 @@ input[type=submit] {
 	font-size: 11px;
 	line-height: 16px;
 	font-weight: 700;
+	margin-left: 10px;
 }
 
 .white-button {
@@ -73,4 +74,17 @@ input[type=submit] {
 
 .orange-button:hover {
 	background-color: $light-orange;
+}
+
+.link-button {
+	color: $text-gray;
+	margin-right: 5px;
+}
+
+.link-button a {
+	margin-left: 3px;
+}
+
+.link-button a:hover {
+	text-decoration: underline;
 }
