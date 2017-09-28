@@ -19,7 +19,7 @@ class Product < ApplicationRecord
 
   belongs_to :user
 
-  has_many :comments, counter_cache: true
+  has_many :comments
 
   has_many :upvotes, as: :upvoteable
 

@@ -17,7 +17,7 @@ class Comment < ApplicationRecord
 
   belongs_to :user
 
-  belongs_to :product
+  belongs_to :product, counter_cache: true
 
   belongs_to :parent_comment,
     class_name: :Comment,
