@@ -9,6 +9,7 @@
 User.destroy_all
 Product.destroy_all
 Comment.destroy_all
+Upvote.destroy_all
 
 demo_user = User.new(username: "product_hunt_demo", password: "password")
 demo_user.headline = "This is a headline"
@@ -38,19 +39,30 @@ product1.thumbnail_url = Faker::LoremPixel.image()
 product1.user = user1
 product1.save
 
-10.times do |i|
+20.times do |i|
+  u = User.new
+  u.username = Faker::App.author
+  u.password = "password"
+  u.headline = Faker::App.name
+  u.image_url = Faker::LoremPixel.image()
+  u.save
+end
+
+
+users = User.all
+
+50.times do |i|
   p = Product.new
   p.name = Faker::Space.star_cluster
-  p.tagline = Faker::HitchhikersGuideToTheGalaxy.marvin_quote
+  p.tagline = Faker::Lorem.sentence(3)
   p.thumbnail_url = Faker::LoremPixel.image()
   p.link_url = Faker::Internet.url
-  p.user = [user1, user2].sample
+  p.user = users.sample
   if p.valid?
     p.save
   end
 end
 
-users = User.all
 products = Product.all
 
 100.times do
@@ -73,23 +85,31 @@ products = Product.all
       end
     end
   end
-
 end
 
-# comment2 = Comment.new(body: "totally")
-# comment2.user = user1
-# comment2.product = product1
-# comment2.parent_comment = comment1
-# comment2.save
+comments = Comment.all
 
-# comment3 = Comment.new(body: "Sweet!")
-# comment3.user = user2
-# comment3.product = product1
-# comment3.parent_comment = comment1
-# comment3.save
+100.times do 
+  v = Upvote.new
+  v.user = users.sample
+  v.upvoteable_type = "Product"
+  v.upvoteable_id = products.sample.id
 
+  if v.valid? && !v.upvote_exists?
+    v.save!
+  end
+end
 
+1000.times do
+  v = Upvote.new
+  v.user = users.sample
+  v.upvoteable_type = "Comment"
+  v.upvoteable_id = comments.sample.id
 
+  if v.valid? && !v.upvote_exists?
+    v.save!
+  end
+end
 
 
 

@@ -17,7 +17,11 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.includes(:comments).order('comments.created_at DESC').includes(:user).find(params[:id])
+    @product = Product.includes(:comments)
+                      .includes(:user)
+                      .includes(:upvotes)
+                      .order('comments.created_at DESC')
+                      .find(params[:id])
     if @product
       render :show 
     else

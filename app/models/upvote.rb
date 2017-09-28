@@ -17,4 +17,11 @@ class Upvote < ApplicationRecord
   belongs_to :upvoteable, polymorphic: true
 
   belongs_to :user
+
+  def upvote_exists?
+    u = Upvote.find_by(user_id: self.user_id, 
+                       upvoteable_id: self.upvoteable_id,
+                       upvoteable_type: self.upvoteable_type)
+    !!u
+  end
 end

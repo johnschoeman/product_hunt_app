@@ -17,13 +17,13 @@ class ProductIndexItem extends React.Component {
   upvote(e) {
     console.log('upvote');
     e.stopPropagation();
-    this.props
+
   }
 
   render() {
     let product = this.props.product;
     let commentCount = product.countComments;
-    let upvoteCount = 29;
+    let upvoteCount = product.countUpvotes;
     return (
       <li className="product-index-item" onClick={this.handleClick}>
         <div className="product-index-item-img">

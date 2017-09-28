@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :new, :destroy]
     resources :products, only: [:index, :show, :create]
     resources :comments, only: [:create, :update, :destroy]
+    resources :upvotes, only: [:create, :destroy]
 
     get '/omnisearch', to: 'search#omnisearch'
   end
