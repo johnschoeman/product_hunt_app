@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import i from 'react-fontawesome';
+
 
 
 class SearchBar extends React.Component {
@@ -32,12 +34,14 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-        <input type="search" 
+        <i className="fa fa-search" />
+        <input type="search"
+               className="search-bar" 
                value={this.state.query}
                onChange={this.update}
                onKeyPress={this.handleKeyPress}
                className="search-bar"
-               placeholder="Discover your next favorite thing">
+               placeholder="Discover your next favorite thing...">
         </input>
 
         
