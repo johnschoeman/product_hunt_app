@@ -142,6 +142,8 @@ product_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/1d2d11c4-ced6-4f40-96c5-a2ccea450f67_avyvtw.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722094/a3242a9a-3ae5-47f4-8037-0f51e0cfdc62_wnfodf.gif",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722094/1fad0f8f-e269-4d5f-8125-892aa47f6046_mwfhdy.gif",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722094/591d7519-f8d6-42d6-b8b9-e535cc453d73_difdev.gif",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/cc0bb423-8aff-48fd-b125-0c45a57e3cf7_ivxvsm.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723290/patch_r2mi9v.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723291/tic-tac-toe-slack_vlaasc.gif",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723290/iWall_dhdw2f.jpg",
