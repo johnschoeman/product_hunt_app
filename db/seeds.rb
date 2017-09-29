@@ -56,7 +56,12 @@ usernames = [
   "Victoria Coleman",
   "Pascal Claisse",
   "Thiago de Carvalho",
-  "Racheal Bossanova"
+  "Racheal Bossanova",
+  "Dmitry Kaigorodov",
+  "Bryan Helmkamp",
+  "Yvonne",
+  "Niv Dror",
+  "Braxton Huff"
 ]
 
 user_headlines = [
@@ -74,7 +79,17 @@ user_headlines = [
   "CEO, Toby",
   "full-stack web developer",
   "Commercial Design Lead, MailOnline",
-  "CTO @ digidesk - media solutions"
+  "CTO @ digidesk - media solutions",
+  "CEO, Code Climate",
+  "Android Developer @ Undabot",
+  "ceo/founder, www.kuoll.com",
+  "Sr. Software Engineer at Fearlex Group",
+  "Creator of Unsplash",
+  "internet words",
+  "making ideas happen at feathrd",
+  "Space, Tech, Nutrition, Fitness",
+  "Words @ProductHunt & @AngelList",
+  "Bay Area Made"
 ]
 
 user_images = [

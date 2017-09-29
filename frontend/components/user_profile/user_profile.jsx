@@ -2,6 +2,7 @@ import React from 'react';
 import UserHeader from './user_header';
 import UserProfileNav from './user_profile_nav';
 import ProductsIndexContainer from '../products_index/products_index_container';
+import ProductAd from '../product_ad/product_ad';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -34,7 +35,9 @@ class UserProfile extends React.Component {
           <div className="user-profile-index-container">
             <ProductsIndexContainer />
           </div>
-          <div className="user-profile-ad-container">add bar</div>
+          <div className="user-profile-ad-container">
+            <ProductAd />
+          </div>
         </div>
       </div>
     );
