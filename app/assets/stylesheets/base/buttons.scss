@@ -44,11 +44,15 @@ input[type=submit] {
 
 .small-size {
   height: 22px;
-	padding: 0 8px;
+	padding: 0 5px;
+	min-width: 30px;
 	font-size: 11px;
 	line-height: 16px;
 	font-weight: 700;
 	margin-left: 10px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .white-button {
