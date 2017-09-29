@@ -11,34 +11,93 @@ Product.destroy_all
 Comment.destroy_all
 Upvote.destroy_all
 
-demo_user = User.new(username: "product_hunt_demo", password: "password")
-demo_user.headline = "This is a headline"
-demo_user.image_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506459017/180_c80zku.png"
+main_user_images = [
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/user_profile6_yi9s5b.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/user_profile5_tghmqn.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/user_profile4_ifumcz.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/user_profile2_ugrsjt.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/user_profile1_y8nbfe.jpg"
+]
 
-user1 = User.new(username: "Finn The Human", password: "password")
-user1.headline = "niiiiice"
-user1.image_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506267278/finn_the_human_bokynk.jpg"
+demo_user = User.new(username: "Product Hunt", password: "password")
+demo_user.headline = "Founder & Designer, Product Hunt"
+demo_user.image_url = main_user_images.sample
 
-user2 = User.new(username: "Jake The Dog", password: "password")
-user2.headline = "wut."
-user2.image_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506306926/adventure-time-tshirt-jake-the-dog-face_s6ux9r.jpg"
+user1 = User.new(username: "Kate", password: "password")
+user1.headline = "Community + Product @ Product Hunt"
+user1.image_url = main_user_images.sample
 
-user3 = User.new(username: "Princess Bubblegum", password: "password")
-user3.headline = "It's science!"
-user3.image_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506458676/images_hzpbup.jpg"
+user2 = User.new(username: "Alexey Sekachov", password: "password")
+user2.headline = "Cofounder & Head of Product @drop-box"
+user2.image_url = main_user_images.sample
+
+user3 = User.new(username: "Samuel Goudie", password: "password")
+user3.headline = "Product Programme Manager"
+user3.image_url = main_user_images.sample
 
 demo_user.save
 user1.save
 user2.save
 user3.save
 
+usernames = [
+  "Steven Diffey",
+  "Alexander Lange",
+  "John Todd",
+  "Ben Tossell",
+  "Zach Segal",
+  "Natalia Kharchenko",
+  "Lisa Dziuba",
+  "Meng To",
+  "Muege Cevik",
+  "Dana Loberg",
+  "Muhammet Dilek",
+  "Beth Summers",
+  "Victoria Coleman",
+  "Pascal Claisse",
+  "Thiago de Carvalho",
+  "Racheal Bossanova"
+]
 
-20.times do |i|
+user_headlines = [
+  "Developer || Traveler || Entrepreneur",
+  "CoFouner, Surreal",
+  "Founder and CEO, Lean On",
+  "I build products and companies",
+  "Web Designer at Squareflair",
+  "Co-Founder, Sidekix",
+  "Product / Technology @ Whire",
+  "Co-founder of Graphcool",
+  "Founder @ Laylo",
+  "President & CEO, CyberBytes Inc.",
+  "Growth/Product Marketer",
+  "CEO, Toby",
+  "full-stack web developer",
+  "Commercial Design Lead, MailOnline",
+  "CTO @ digidesk - media solutions"
+]
+
+user_images = [
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710179/Mike_Brinkman_2_opuawp.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710179/Jose_Moreno_1_a9fkfw.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710180/John_Schoeman_2_lm7zkl.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710210/Tyler_Wood_1_oboxvb.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710329/Rachel_Jacobson_1_icxloh.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/Thomas_Kilmer_1_m7h4dk.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/Alexander_Happ_1_mhhdev.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710819/Jesse_Wong_1_utxdro.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710873/Peter_Ludlum_2_t6faat.jpg",
+  "https://cloudinary.com/console/media_library#/dialog/image/upload/Eric_Tung_2_sl6orr",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711275/Adrian_Jewell_1_x7bzwr.jpg"
+
+]
+
+50.times do |i|
   u = User.new
-  u.username = Faker::App.author
+  u.username = usernames.sample
   u.password = "password"
-  u.headline = Faker::Lorem.sentence(3, true, 3)
-  u.image_url = Faker::LoremPixel.image()
+  u.headline = user_headlines.sample
+  u.image_url = user_images.sample
   u.save
 end
 
@@ -52,7 +111,9 @@ product_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/trailer_g0caus.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/kannatopia_l1u4o0.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/koder_bonderies_ofs9dw.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/humbot_cweubk.jpg"
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/humbot_cweubk.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711401/elliot_uwno7c.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711452/aaron_zxa3hx.jpg"
 ]
 
 25.times do |i|
