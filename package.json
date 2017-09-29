@@ -1,5 +1,8 @@
 {
   "name": "product_hunt_app",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
   "private": true,
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -14,13 +17,12 @@
     "react-router-dom": "^4.2.2",
     "react-spinners": "^0.1.4",
     "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "webpack": "^3.6.0"
   },
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
-  "version": "1.0.0",
-  "main": "index.js",
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
+  },
   "directories": {
     "doc": "docs",
     "test": "test"
