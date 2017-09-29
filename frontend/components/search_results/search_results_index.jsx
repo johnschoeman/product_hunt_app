@@ -14,11 +14,10 @@ class SearchResultsIndex extends React.Component {
      <div className="search-feed">
       <div className="search-index-container">
 
-        <div className="search-index-header">
+        <div className="product-index-header">
           <p className="search-index-header-text">Search Index</p>
-          <p className="search-index-header-popular-newest">popluar | newest</p>
         </div>
-
+        <div className="product-index-header-border"></div>
         <ul className="search-index">
           {productIds.map((id) => {
             return <ProductIndexItem product={products[id]} key={`product-index-item-${id}`}/>;
