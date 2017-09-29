@@ -17,6 +17,8 @@ class ProductDetail extends React.Component {
 
   render() {
     let product = this.props.product;
+    let createUpvote = this.props.createUpvote;
+    let destroyUpvote = this.props.destroyUpvote;
 
     return (
       <div className="product-detail-container">
@@ -30,7 +32,9 @@ class ProductDetail extends React.Component {
                   fetchProduct={this.props.fetchProduct} />
           </div>
           <div className="product-detail-aside">
-            <ProductDetailNav product={product} />
+            <ProductDetailNav product={product}
+                              createUpvote={createUpvote}
+                              destroyUpvote={destroyUpvote} />
           </div>
         </div>
       </div>

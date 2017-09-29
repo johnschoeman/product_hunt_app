@@ -8,7 +8,6 @@ import { fetchProductDetailUpvotes, createUpvote, destroyUpvote } from '../../ac
 const mapStateToProps = (state, ownProps) => {
   const viewedProductId = ownProps.match.params.productId;
   let product = state.entities.products.byId[viewedProductId];
-  let userUpvotes = state.entities.upvotes.byCommentIds;
   let currentUser = state.session.currentUser;
   if (product === undefined) {
     product = {};
@@ -16,7 +15,6 @@ const mapStateToProps = (state, ownProps) => {
   return {
     product,
     viewedProductId,
-    userUpvotes,
     currentUser
   };
 
@@ -31,7 +29,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     setViewedProduct: (productId) => (dispatch(setViewedProduct(productId))),
     fetchProductDetailUpvotes: (userId, upvoteableType) => dispatch(fetchProductDetailUpvotes(userId, upvoteableType)),
     createUpvote: (upvoteableType, upvoteableId) => dispatch(createUpvote(upvoteableType, upvoteableId)),
-    destroyUpvote: (upvoteId) => dispatch(destroyUpvote(upvoteId))
+    destroyUpvote: (upvoteableType, upvoteableId) => dispatch(destroyUpvote(upvoteableType, upvoteableId))
   };
 };
 

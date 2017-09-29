@@ -66,14 +66,27 @@ input[type=submit] {
 	color: $text-gray;
 }
 
+.orange-border-button {
+	background-color: $white;
+	border-color: $orange;
+	border: 1px solid $orange;
+	color: $orange;
+	display: flex;
+	justify-content: space-around;
+}
+
 .orange-button {
 	background-color: $orange;
 	border-color: $orange;
+	border: 1px solid $orange;
 	color: white;
+	display: flex;
+	justify-content: space-around;
 }
 
 .orange-button:hover {
 	background-color: $light-orange;
+	border-color: $orange;
 }
 
 .link-button {

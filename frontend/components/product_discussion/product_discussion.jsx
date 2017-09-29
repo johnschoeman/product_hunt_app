@@ -15,6 +15,8 @@ class ProductDiscussion extends React.Component {
     let commentForm = undefined;
     let productId = this.props.productId;
     let createComment = this.props.createComment;
+    let createUpvote = this.props.createUpvote;
+    let destroyUpvote = this.props.destroyUpvote;
 
     if (currentUser) {
       commentForm = <CommentForm 
@@ -38,7 +40,9 @@ class ProductDiscussion extends React.Component {
                   childComments={childComments[commentId]}
                   currentUser={currentUser}
                   productId={productId}
-                  createComment={createComment} />
+                  createComment={createComment}
+                  createUpvote={createUpvote}
+                  destroyUpvote={destroyUpvote} />
                 );
               }
             }

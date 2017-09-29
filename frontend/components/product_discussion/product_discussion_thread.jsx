@@ -8,10 +8,13 @@ class Thread extends React.Component {
 
   render() {
     let comment = this.props.comment;
-    let childComments = this.props.childComments;
+    let childCommentsAllIds = this.props.childComments.allIds;
+    let childCommentsById = this.props.childComments.byId;
     let currentUser = this.props.currentUser;
     let productId = this.props.productId;
     let createComment = this.props.createComment;
+    let createUpvote = this.props.createUpvote;
+    let destroyUpvote = this.props.destroyUpvote;
  
     return (
       <div className="thread">
@@ -21,17 +24,21 @@ class Thread extends React.Component {
                 currentUser={currentUser}
                 productId={productId}
                 parentCommentId={comment.id}
-                createComment={createComment}/>
-          {childComments.map((childComment) => {
+                createComment={createComment}
+                createUpvote={createUpvote}
+                destroyUpvote={destroyUpvote}/>
+          {childCommentsAllIds.map((childCommentId) => {
             return (
               <CommentItem 
-                    comment={childComment}
-                    key={`child-comment-${childComment.id}`}
+                    comment={childCommentsById[childCommentId]}
+                    key={`child-comment-${childCommentId}`}
                     className={`child-comment`} 
                     currentUser={currentUser}
                     productId={productId}
                     parentCommentId={comment.id}
-                    createComment={createComment}/>
+                    createComment={createComment}
+                    createUpvote={createUpvote}
+                    destroyUpvote={destroyUpvote}/>
             );
           })}
       </div>

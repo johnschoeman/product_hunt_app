@@ -12,7 +12,7 @@ class CommentItem extends React.Component {
     };
 
     this.redirectToUser = this.redirectToUser.bind(this);
-    this.upvote = this.upvote.bind(this);
+    this.toggleUpvote = this.toggleUpvote.bind(this);
     this.toggleReplyForm = this.toggleReplyForm.bind(this);
     this.openLogin = this.openLogin.bind(this);
   }
@@ -27,8 +27,15 @@ class CommentItem extends React.Component {
     console.log('open login');
   }
 
-  upvote() {
+  toggleUpvote(e) {
     console.log('upvote');
+    e.stopPropagation();
+    let comment = this.props.comment;
+    if (comment.currentUserUpvoted) {
+      this.props.destroyUpvote("Comment", this.props.comment.id);
+    } else {
+      this.props.createUpvote("Comment", this.props.comment.id);
+    }
   }
 
   toggleReplyForm() {
@@ -65,7 +72,7 @@ class CommentItem extends React.Component {
       commentActions = (
           <div className="comment-actions">
           <div className="comment-upvote-button">
-            <button onClick={this.upvote} className={`link-button upvotes  ${upvotedClass}`}>
+            <button onClick={this.toggleUpvote} className={`link-button upvotes  ${upvotedClass}`}>
               <i className="fa fa-thumbs-up" aria-hidden="true"/> 
               <a>Upvote</a>
               <p>{`(${countUpvotes})`}</p>
