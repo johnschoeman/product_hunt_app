@@ -119,7 +119,6 @@ product_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/kannatopia_l1u4o0.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/koder_bonderies_ofs9dw.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/humbot_cweubk.jpg"
-
 ]
 
 25.times do |i|
