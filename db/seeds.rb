@@ -100,7 +100,6 @@ user_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710329/Rachel_Jacobson_1_icxloh.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/Thomas_Kilmer_1_m7h4dk.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/Alexander_Happ_1_mhhdev.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710819/Jesse_Wong_1_utxdro.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710873/Peter_Ludlum_2_t6faat.jpg",
   "https://res.cloudinary.com/console/media_library#/dialog/image/upload/Eric_Tung_2_sl6orr",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711275/Adrian_Jewell_1_x7bzwr.jpg",
@@ -111,7 +110,8 @@ user_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713804/Harsh_Kumar_2_otoh4l.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713804/Porfirio_Matias_1_frjr2a.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506714702/Chu_-David-_Jang_2_wlldxy.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506714702/Andrew_Ansel_1_fwm761.jpg"
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506714702/Andrew_Ansel_1_fwm761.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506717980/Justin_Shieh_1_b2oyut.jpg"
 ]
 
 50.times do |i|
