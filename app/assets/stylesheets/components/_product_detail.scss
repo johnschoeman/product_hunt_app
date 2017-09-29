@@ -15,15 +15,23 @@
 }
 
 .product-detail-content-bar > * {
-  margin: 0 10px 10px 10px;
-  border-radius: 2px;
-  background-color: $white;
-  box-sizing: border-box;
-  border: 1px solid $gray;
+  // margin: 0 10px 10px 10px;
+  // border-radius: 2px;
+  // background-color: $white;
+  // box-sizing: border-box;
+  // border: 1px solid $gray;
 }
 
 .product-detail-aside {
   width: 320px;
+}
+
+.product-detail-content-header {
+  line-height: 16px;
+  font-size: 10px;
+  color: $text-gray;
+  font-weight: 700;
+  margin-left: 10px;
 }
 
 //Product Detail Header

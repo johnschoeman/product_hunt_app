@@ -25,7 +25,9 @@ class ProductDetail extends React.Component {
           <ProductDetailHeader product={product}/>
         <div className="product-detail-main-content-container">
           <div className="product-detail-content-bar">
-            <ProductDetailMedia />
+            <div className="product-detail-content-header">
+              <h3>DISCUSSION</h3>
+            </div>
             <ProductDiscussionContainer 
                   product={product} 
                   viewedProductId={this.props.viewedProductId}
@@ -42,4 +44,5 @@ class ProductDetail extends React.Component {
   }
 }
 
+{/* <ProductDetailMedia /> */}
 export default ProductDetail;
