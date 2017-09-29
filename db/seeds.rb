@@ -32,30 +32,34 @@ user1.save
 user2.save
 user3.save
 
-product1 = Product.new(name: "Grass Sword")
-product1.tagline = "It's grass!"
-product1.link_url = Faker::Internet.url
-product1.thumbnail_url = Faker::LoremPixel.image()
-product1.user = user1
-product1.save
 
 20.times do |i|
   u = User.new
   u.username = Faker::App.author
   u.password = "password"
-  u.headline = Faker::App.name
+  u.headline = Faker::Lorem.sentence(3, true, 3)
   u.image_url = Faker::LoremPixel.image()
   u.save
 end
 
-
 users = User.all
 
-50.times do |i|
+product_images = [
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705947/bendmentors_ppnqoy.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705947/mixboard_ace5zg.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/captioned_kf4clp.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/placenote_dxrdav.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/trailer_g0caus.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/kannatopia_l1u4o0.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/koder_bonderies_ofs9dw.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/humbot_cweubk.jpg"
+]
+
+25.times do |i|
   p = Product.new
-  p.name = Faker::Space.star_cluster
-  p.tagline = Faker::Lorem.sentence(3)
-  p.thumbnail_url = Faker::LoremPixel.image()
+  p.name = Faker::App.name
+  p.tagline = Faker::Lorem.sentence(3, false, 3)
+  p.thumbnail_url = product_images.sample
   p.link_url = Faker::Internet.url
   p.user = users.sample
   if p.valid?
@@ -63,12 +67,34 @@ users = User.all
   end
 end
 
+
+product1 = Product.new(name: "Sublime Text 3.0")
+product1.tagline = "The long awaited version 3 of the popular code editor"
+product1.link_url = "https://sublimetext.com/3"
+product1.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705160/sublime_thumbnail_vwvpqr.jpg"
+product1.user = user1
+product1.save
+
+product2 = Product.new(name: "iPhone X")
+product2.tagline = "Apple's most advanced iPhone yet with a 5.8\" OLED display"
+product2.link_url = "https://apple.com/iphone-x"
+product2.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705160/iphoneX_thumbnail_y1crfd.jpg"
+product2.user = user2
+product2.save
+
+product2 = Product.new(name: "Ship by Product Hunt")
+product2.tagline = "A toolkit for makers to ship awesome products"
+product2.link_url = "https://producthunt.com/ship"
+product2.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705160/shipbyproducthunt_thumbnail_qllk2q.jpg"
+product2.user = user3
+product2.save
+
 products = Product.all
 
 100.times do
 
   parent_comment = Comment.new
-  parent_comment.body = Faker::RickAndMorty.quote
+  parent_comment.body = Faker::Lorem.paragraph(3, true, 6)
   parent_comment.user = users.sample
   parent_comment.product = products.sample
 
@@ -76,7 +102,7 @@ products = Product.all
     num = [0,1,2,3].sample
     num.times do
       child_comment = Comment.new
-      child_comment.body = Faker::RickAndMorty.quote
+      child_comment.body = Faker::Lorem.paragraph(1, true, 6)
       child_comment.user = users.sample
       child_comment.parent_comment = parent_comment
       child_comment.product = parent_comment.product

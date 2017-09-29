@@ -21,12 +21,14 @@ class ProductDetailNav extends React.Component {
 
   render() {
     let product = this.props.product;
-    let linkUrl = product.linkUrl;
+    console.log(product);
+    let linkUrl = product.link_url;
+    console.log(linkUrl);
     let upvoteButtonClass = (product.currentUserUpvoted) ? "orange-button" : "orange-border-button";
     let upvoteButtonText = (product.currentUserUpvoted) ? "UPVOTED" : "UPVOTE";
-    if (!product.linkUrl) {
-      linkUrl = "/";
-    }
+    // if (!product.linkUrl) {
+    //   linkUrl = "/";
+    // }
     return (
       <div className="product-detail-nav">
         <div className="product-detail-nav-upvote-container">
