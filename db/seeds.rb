@@ -111,7 +111,9 @@ user_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713804/Porfirio_Matias_1_frjr2a.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506714702/Chu_-David-_Jang_2_wlldxy.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506714702/Andrew_Ansel_1_fwm761.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506717980/Justin_Shieh_1_b2oyut.jpg"
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506717980/Justin_Shieh_1_b2oyut.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/user_profile6_yi9s5b.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710819/Jesse_Wong_1_utxdro.jpg"
 ]
 
 50.times do |i|
