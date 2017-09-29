@@ -41,7 +41,6 @@ class ProductIndexItem extends React.Component {
           <p className="product-tagline">{product.tagline}</p>
           <div className="product-item-buttons">
             <div className="product-item-tags">
-              <button >Tag</button>
             </div>
             <div className="product-item-minor-actions">
               <button className={`${upvoteButtonClass} small-size`}
