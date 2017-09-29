@@ -1,6 +1,6 @@
 # Backend Technologies
 
-## Ruby on Rails 5.0
+## Ruby on Rails 5.1.2
 Ruby on Rails is a popular MVC framework for web applications
 
 ### ActiveRecord

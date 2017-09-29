@@ -34,8 +34,8 @@ The proposal included
 
 Product Hunt App is a full stack application built on Rails and React.js with a Postgresql Database
 
-* [Frontend Technologies](https://github.com/johnschoeman/product_hunt_app/docs/frontend.md)
-* [Backend Technologies](https://github.com/johnschoeman/product_hunt_app/docs/backend.md)
+* [Frontend Technologies](https://github.com/johnschoeman/product_hunt_app/blob/master/docs/frontend.md)
+* [Backend Technologies](https://github.com/johnschoeman/product_hunt_app/blob/master/docs/backend.md)
 
 
 ## Technical Challenges

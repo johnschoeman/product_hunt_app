@@ -133,10 +133,22 @@ product_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/trailer_g0caus.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/kannatopia_l1u4o0.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/koder_bonderies_ofs9dw.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/humbot_cweubk.jpg"
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/humbot_cweubk.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722092/653d6d6d-00b3-4f3c-9219-cc8ed9f4ac0c_f2aavb.png",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/21c19882-37f6-4f95-b10d-1231b2051a41_eh1eze.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/3c9ffc01-11fd-40b8-8a36-dc3406f6fbb3_zo7jrm.jpg",
+  "https://cloudinary.com/console/media_library#/dialog/image/upload/591d7519-f8d6-42d6-b8b9-e535cc453d73_difdev",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/80b8508a-64b8-490a-ac40-c36df383c549_oafm7y.gif",
+  "https://cloudinary.com/console/media_library#/dialog/image/upload/cc0bb423-8aff-48fd-b125-0c45a57e3cf7_ivxvsm",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/c4479feb-f591-4111-90b2-9e650f9a8355_smszgc.png",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/1d2d11c4-ced6-4f40-96c5-a2ccea450f67_avyvtw.jpg",
+  "https://cloudinary.com/console/media_library#/dialog/image/upload/b6454701-9275-4405-b8d3-c1161ee5dddb_dqrsvq",
+  "https://cloudinary.com/console/media_library#/dialog/image/upload/591d7519-f8d6-42d6-b8b9-e535cc453d73_difdev",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722094/a3242a9a-3ae5-47f4-8037-0f51e0cfdc62_wnfodf.gif",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722094/1fad0f8f-e269-4d5f-8125-892aa47f6046_mwfhdy.gif"
 ]
 
-25.times do |i|
+30.times do |i|
   p = Product.new
   p.name = Faker::App.name
   p.tagline = Faker::Lorem.sentence(3, false, 3)
@@ -148,6 +160,54 @@ product_images = [
   end
 end
 
+product10 = Product.new(name: "Pi Charging")
+product10.tagline = "The world's first contactless, wireless charger."
+product10.link_url = "ipicharging.com"
+product10.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506721898/pi_charging_lqw2qg.gif"
+product10.user = users.sample
+product10.save
+
+product9 = Product.new(name: "Live Chat for Sales by Intercom")
+product9.tagline = "The quickest way to get more qualified leads"
+product9.link_url = "intercom.com/live-chat"
+product9.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506721637/intercom_vu1drz.gif"
+product9.user = users.sample
+product9.save
+
+product8 = Product.new(name: "Notion for iOS")
+product8.tagline = "A collaborative editor for notes, tasks, and wikis"
+product8.link_url = "notion.so/mobile"
+product8.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506721492/notion_rmy18g.jpg"
+product8.user = users.sample
+product8.save
+
+product7 = Product.new(name: "How to grow like Dropbox")
+product7.tagline = "Build a Dropbox-style referral with this useful tool"
+product7.link_url = "dropboxreferralprogram.com"
+product7.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506721376/dropbox_yxdify.gif"
+product7.user = users.sample
+product7.save
+
+product6 = Product.new(name: "wits.io")
+product6.tagline = "Weekly book summaries recommended by founders and makers"
+product6.link_url = "https://wits.io"
+product6.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506721237/wits-io_r8fdma.png"
+product6.user = users.sample
+product6.save
+
+product4 = Product.new(name: "How to Build a Career in Tech, by Product Hunt")
+product4.tagline = "A toolkit for makers to ship awesome products"
+product4.link_url = "https://books.producthunt.com/careers"
+product4.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506720972/build_a_career_in_tech_gf3dvv.jpg"
+product4.user = users.sample
+product4.save
+
+product5 = Product.new(name: "Pod")
+product5.tagline = "Pod helps you manage your people, not just your schedule"
+product5.link_url = "https://pod.io/blog/introducing-pod.html"
+product5.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506721097/pod_mdam3o.gif"
+product5.user = users.sample
+product5.save
 
 product1 = Product.new(name: "Sublime Text 3.0")
 product1.tagline = "The long awaited version 3 of the popular code editor"
@@ -163,16 +223,17 @@ product2.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v150
 product2.user = user2
 product2.save
 
-product2 = Product.new(name: "Ship by Product Hunt")
-product2.tagline = "A toolkit for makers to ship awesome products"
-product2.link_url = "https://producthunt.com/ship"
-product2.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705160/shipbyproducthunt_thumbnail_qllk2q.jpg"
-product2.user = user3
-product2.save
+product3 = Product.new(name: "Ship by Product Hunt")
+product3.tagline = "A toolkit for makers to ship awesome products"
+product3.link_url = "https://producthunt.com/ship"
+product3.thumbnail_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705160/shipbyproducthunt_thumbnail_qllk2q.jpg"
+product3.user = user3
+product3.save
+
 
 products = Product.all
 
-100.times do
+200.times do
 
   parent_comment = Comment.new
   parent_comment.body = Faker::Lorem.paragraph(3, true, 6)
@@ -196,7 +257,7 @@ end
 
 comments = Comment.all
 
-100.times do 
+500.times do 
   v = Upvote.new
   v.user = users.sample
   v.upvoteable_type = "Product"
@@ -218,7 +279,7 @@ end
   end
 end
 
-10.times do 
+20.times do 
   v = Upvote.new
   v.user = demo_user
   v.upvoteable_type = "Product"
