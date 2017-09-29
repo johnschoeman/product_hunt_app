@@ -74,7 +74,7 @@ class App extends React.Component {
           <SessionFormContainer formType={this.state.modalFormType} closeModal={this.closeModal} />
         </ReactModal>
         
-        <AuthRoute exact path="/" component={HeroBanner} openModal={this.openModal}/>
+        <Route exact path="/" component={HeroBanner} openModal={this.openModal}/>
         <Switch>
           <ProtectedRoute exact path="/products/new" component={NewProductFormContainer} />
           <UserRoute exact path="/users/:userId/edit" component={UserEditFormContainer} />

@@ -1,0 +1,47 @@
+.product-ad {
+  width: 85%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.product-ad-title {
+  padding: 10px 5px;
+  font-size: 16px;
+}
+
+.product-ad-border {
+  border-bottom: 1px solid $gray;
+}
+
+.product-ad-text {
+  padding: 6px;
+  margin: 5px;
+  line-height: 20px;
+  color: $text-gray;
+}
+
+.product-ad-text a {
+  color: $dark-gray;
+}
+
+.product-ad-text a:hover {
+  color: $orange;
+  text-decoration: none;
+}
+
+.product-ad-nav {
+  display: flex;
+  justify-content: space-around;
+  color: $dark-gray;
+}
+
+.product-ad-nav > * {
+
+}
+
+.product-ad-nav > *:hover {
+  color: $orange;
+  // background-color: $orange;
+  // color: white;
+  text-decoration: none;
+}

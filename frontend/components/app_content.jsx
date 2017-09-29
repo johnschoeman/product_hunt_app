@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch, withRouter } from 'react-router';
 import ProductFeed from './product_feed/product_feed';
 import ProductNav from './product_nav/product_nav';
+import ProductAd from './product_ad/product_ad';
 
 
 import SearchResultsIndexContainer from './search_results/search_results_index_container';
@@ -26,7 +27,7 @@ class AppContent extends React.Component {
           </Switch>
         </div>
         <div className="product-ad-container"> 
-          <h3>Product Ad</h3>
+          <ProductAd />
         </div>
       </div>
     );
