@@ -26,8 +26,12 @@ class Dropdown extends React.Component {
   }
 
   handleLogout() {
-    this.props.logout;
-    this.props.history.push("/");
+    this.props.logout()
+              .then(() => (
+                this.props.fetchAllProducts())
+              )
+              .then(() => (this.props.history.push("/"))
+              );
   }
   
   handleRedirectToProfile() {

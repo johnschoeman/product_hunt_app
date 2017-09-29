@@ -113,7 +113,11 @@ product_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/koder_bonderies_ofs9dw.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/humbot_cweubk.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711401/elliot_uwno7c.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711452/aaron_zxa3hx.jpg"
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711452/aaron_zxa3hx.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711787/Brian_Sohn_1_w1plny.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713308/Michael_Quint_2_rdk6jo.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713804/Harsh_Kumar_2_otoh4l.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713804/Porfirio_Matias_1_frjr2a.jpg"
 ]
 
 25.times do |i|

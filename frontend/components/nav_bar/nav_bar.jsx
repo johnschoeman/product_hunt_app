@@ -16,9 +16,13 @@ class NavBar extends React.Component {
     let currentUser = this.props.currentUser;
     let logout = this.props.logout;
     let fetchUser = this.props.fetchUser;
+    let fetchAllProducts = this.props.fetchAllProducts;
     
     let userSessionNav = this.props.currentUser ? (
-      <UserNav currentUser={currentUser} logout={logout} fetchUser={fetchUser}/>
+      <UserNav currentUser={currentUser} 
+               logout={logout} 
+               fetchUser={fetchUser}
+               fetchAllProducts={fetchAllProducts}/>
       ) : (
       <SessionNav openModal={this.props.openModal} 
                   clearErrors={this.props.clearErrors}/> );
