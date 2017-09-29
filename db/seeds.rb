@@ -21,7 +21,7 @@ main_user_images = [
 
 demo_user = User.new(username: "Product Hunt", password: "password")
 demo_user.headline = "Founder & Designer, Product Hunt"
-demo_user.image_url = main_user_images.sample
+demo_user.image_url = "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/user_profile6_yi9s5b.jpg"
 
 user1 = User.new(username: "Kate", password: "password")
 user1.headline = "Community + Product @ Product Hunt"
@@ -101,7 +101,7 @@ user_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/Thomas_Kilmer_1_m7h4dk.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/Alexander_Happ_1_mhhdev.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710873/Peter_Ludlum_2_t6faat.jpg",
-  "https://res.cloudinary.com/console/media_library#/dialog/image/upload/Eric_Tung_2_sl6orr.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711018/Eric_Tung_2_sl6orr.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711275/Adrian_Jewell_1_x7bzwr.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711401/elliot_uwno7c.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711452/aaron_zxa3hx.jpg",
