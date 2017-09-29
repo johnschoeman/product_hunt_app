@@ -58,6 +58,7 @@ input[type=submit] {
 .white-button {
 	background-color: $white;
 	border: 1px solid $gray;
+;
 	// color: $black;
 }
 
@@ -77,6 +78,7 @@ input[type=submit] {
 	color: $orange;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 }
 
 .orange-button {
@@ -86,6 +88,7 @@ input[type=submit] {
 	color: white;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 }
 
 .orange-button:hover {
