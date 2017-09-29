@@ -138,13 +138,23 @@ product_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/21c19882-37f6-4f95-b10d-1231b2051a41_eh1eze.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/3c9ffc01-11fd-40b8-8a36-dc3406f6fbb3_zo7jrm.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/80b8508a-64b8-490a-ac40-c36df383c549_oafm7y.gif",
-  "https://cloudinary.com/console/media_library#/dialog/image/upload/cc0bb423-8aff-48fd-b125-0c45a57e3cf7_ivxvsm.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/c4479feb-f591-4111-90b2-9e650f9a8355_smszgc.png",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722093/1d2d11c4-ced6-4f40-96c5-a2ccea450f67_avyvtw.jpg",
-  "https://cloudinary.com/console/media_library#/dialog/image/upload/b6454701-9275-4405-b8d3-c1161ee5dddb_dqrsvq.jpg",
-  "https://cloudinary.com/console/media_library#/dialog/image/upload/591d7519-f8d6-42d6-b8b9-e535cc453d73_difdev.gif",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722094/a3242a9a-3ae5-47f4-8037-0f51e0cfdc62_wnfodf.gif",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722094/1fad0f8f-e269-4d5f-8125-892aa47f6046_mwfhdy.gif"
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506722094/1fad0f8f-e269-4d5f-8125-892aa47f6046_mwfhdy.gif",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723290/patch_r2mi9v.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723291/tic-tac-toe-slack_vlaasc.gif",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723290/iWall_dhdw2f.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723290/Burst_tkancc.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723290/ghost_it_nbb5qs.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723514/yc_world_od4ww4.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723514/asana_lvdobi.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723514/you_team_tjxsmq.gif",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723515/shopcodes_ohdsg6.gif",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723514/dark_room3_ros4ue.png",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723515/game_of_coins_bzwkzc.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506723515/on_deck_e5eyub.jpg"
+
 ]
 
 30.times do |i|
