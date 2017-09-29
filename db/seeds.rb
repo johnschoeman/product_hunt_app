@@ -87,9 +87,16 @@ user_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710583/Alexander_Happ_1_mhhdev.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710819/Jesse_Wong_1_utxdro.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506710873/Peter_Ludlum_2_t6faat.jpg",
-  "https://cloudinary.com/console/media_library#/dialog/image/upload/Eric_Tung_2_sl6orr",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711275/Adrian_Jewell_1_x7bzwr.jpg"
-
+  "https://res.cloudinary.com/console/media_library#/dialog/image/upload/Eric_Tung_2_sl6orr",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711275/Adrian_Jewell_1_x7bzwr.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711401/elliot_uwno7c.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711452/aaron_zxa3hx.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711787/Brian_Sohn_1_w1plny.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713308/Michael_Quint_2_rdk6jo.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713804/Harsh_Kumar_2_otoh4l.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713804/Porfirio_Matias_1_frjr2a.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506714702/Chu_-David-_Jang_2_wlldxy.jpg",
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506714702/Andrew_Ansel_1_fwm761.jpg"
 ]
 
 50.times do |i|
@@ -111,13 +118,8 @@ product_images = [
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/trailer_g0caus.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/kannatopia_l1u4o0.jpg",
   "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/koder_bonderies_ofs9dw.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/humbot_cweubk.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711401/elliot_uwno7c.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711452/aaron_zxa3hx.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506711787/Brian_Sohn_1_w1plny.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713308/Michael_Quint_2_rdk6jo.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713804/Harsh_Kumar_2_otoh4l.jpg",
-  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506713804/Porfirio_Matias_1_frjr2a.jpg"
+  "https://res.cloudinary.com/dekgrddbo/image/upload/v1506705946/humbot_cweubk.jpg"
+
 ]
 
 25.times do |i|
