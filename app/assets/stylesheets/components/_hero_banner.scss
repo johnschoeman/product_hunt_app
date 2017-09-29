@@ -1,0 +1,49 @@
+.hero-banner {
+  width: 100%;
+  background-color: $white;
+}
+
+.hero-banner-container {
+  width: 1070px;
+  padding: 60px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero-banner-content {
+  width: 460px;
+  margin-right: 260px;
+}
+
+.hero-banner-title {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.hero-banner-text {
+  font-size: 15px;
+  line-height: 25px;
+  color: #999;
+  font-weight: 200;
+  margin: 10px 0 20px 5px;
+}
+
+.hero-banner-img {
+  min-width: 240px;
+  min-height: 220px;
+  background-image: url('https://res.cloudinary.com/dekgrddbo/image/upload/v1506108319/ph_kitty_nobg_g9mblw.webp');
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: 100%;
+}
+
+@media all and (max-width: 1100px) {
+  .hero-banner {
+    display: none;
+  }
+}

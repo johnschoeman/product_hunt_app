@@ -93,6 +93,25 @@ input[type=submit] {
 	border-color: $orange;
 }
 
+.hero-button {
+  background-color: $orange;
+	border-color: $orange;
+	border: 1px solid $orange;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+	font-weight: 700;
+	height: 42px;
+	width: 54px;
+	padding: 0 30px;
+	font-size: 13px;
+}
+
+.hero-button:hover {
+	background-color: $light-orange;
+	border-color: $orange;
+}
+ 
 .link-button {
 	color: $text-gray;
 	margin-right: 5px;

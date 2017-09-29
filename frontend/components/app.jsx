@@ -9,6 +9,7 @@ import UserProfileContainer from './user_profile/user_profile_container';
 import AppContent from './app_content';
 import UserEditFormContainer from './user_profile/user_edit_form_container';
 import ProductDetailContainer from './product_detail/product_detail_container';
+import HeroBanner from './hero_banner/hero_banner';
 
 
 import { AuthRoute, ProtectedRoute, UserRoute } from '../util/route_util';
@@ -72,7 +73,8 @@ class App extends React.Component {
 
           <SessionFormContainer formType={this.state.modalFormType} closeModal={this.closeModal} />
         </ReactModal>
-
+        
+        <AuthRoute exact path="/" component={HeroBanner} openModal={this.openModal}/>
         <Switch>
           <ProtectedRoute exact path="/products/new" component={NewProductFormContainer} />
           <UserRoute exact path="/users/:userId/edit" component={UserEditFormContainer} />
