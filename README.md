@@ -4,7 +4,7 @@
 
 Product Hunt App is personal project by John Schoeman
 
-![https://github.com/johnschoeman/product_hunt_app/blob/master/main-page.png][home page]
+![home page](https://github.com/johnschoeman/product_hunt_app/blob/master/main-page.png)
 
 It is built with a Ruby on Rails backend, a React-Redux frontend and a Postgresql database.
 
