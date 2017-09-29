@@ -17,14 +17,6 @@ import uiReducer from './ui_reducer';
 
 //   },
 
-//   upvotes: {
-//       byProductId: {
-//           productId: upvoteId
-//       },
-//       byCommentId: {
-//           commentId: upvoteId
-//       },
-//   }
 
 //   comments: {
 //     byId: {
@@ -40,7 +32,14 @@ import uiReducer from './ui_reducer';
 //     }
 //     allIds: [1,4]
 //     byParentId: {
-//         1: [child1, child2]
+//         1: {
+//             byId: {
+//                 2: { id:2, body: "child comment"},
+//                 3: { id:2, body: "child comment"}
+//             },
+//             allIds: [2,3]
+//         },
+//         4: {}
 //     }
 //   }
 // }
