@@ -38,12 +38,17 @@ const commentsReducer = (state = defaultState, action) => {
       return newState;
     case RECEIVE_COMMENT:
       comment = action.comment;
+      comment.currentUserUpvoted = false;
+      comment.countUpvotes = 0;
       newState.byId[comment.id] = comment;
       newState.allIds.unshift(comment.id);
       if (!comment.parentCommentId) {
-        newState.byParentId[comment.id] = [];
+        newState.byParentId[comment.id] = {};
+        newState.byParentId[comment.id].byId = {};
+        newState.byParentId[comment.id].allIds = [];
       } else {
-        newState.byParentId[comment.parentCommentId].unshift(comment);
+        newState.byParentId[comment.parentCommentId].byId[comment.id] = comment;
+        newState.byParentId[comment.parentCommentId].allIds.push(comment.id);
       }
       return newState;
     case RECEIVE_UPVOTE: 

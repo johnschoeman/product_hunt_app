@@ -9,6 +9,7 @@ class Thread extends React.Component {
   render() {
     let comment = this.props.comment;
     let childCommentsAllIds = this.props.childComments.allIds;
+    console.log(childCommentsAllIds);
     let childCommentsById = this.props.childComments.byId;
     let currentUser = this.props.currentUser;
     let productId = this.props.productId;
