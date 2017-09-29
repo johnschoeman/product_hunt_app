@@ -14,7 +14,6 @@ class CommentItem extends React.Component {
     this.redirectToUser = this.redirectToUser.bind(this);
     this.toggleUpvote = this.toggleUpvote.bind(this);
     this.toggleReplyForm = this.toggleReplyForm.bind(this);
-    this.openLogin = this.openLogin.bind(this);
   }
 
   redirectToUser(userId) {
@@ -23,12 +22,7 @@ class CommentItem extends React.Component {
     };
   }
 
-  openLogin(e) {
-    console.log('open login');
-  }
-
   toggleUpvote(e) {
-    console.log('upvote');
     e.stopPropagation();
     let comment = this.props.comment;
     if (comment.currentUserUpvoted) {

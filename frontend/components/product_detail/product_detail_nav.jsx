@@ -10,7 +10,6 @@ class ProductDetailNav extends React.Component {
   }
 
   toggleUpvote(e) {
-    console.log('upvote');
     e.stopPropagation();
     let product = this.props.product;
     if (product.currentUserUpvoted) {

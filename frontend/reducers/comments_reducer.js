@@ -55,7 +55,6 @@ const commentsReducer = (state = defaultState, action) => {
       upvote = action.upvote;
       comment = action.upvote.upvoteable;
       if (upvote.upvoteableType === "Comment") {
-        console.log(newState.byId[upvote.upvoteableId]);
         if (!comment.parentCommentId) {
           newState.byId[upvote.upvoteableId].currentUserUpvoted = true;
           newState.byId[upvote.upvoteableId].countUpvotes++;
@@ -68,9 +67,7 @@ const commentsReducer = (state = defaultState, action) => {
     case REMOVE_UPVOTE:
       upvote = action.upvote;
       comment = action.upvote.upvoteable;
-      console.log('comment', comment);
       if (upvote.upvoteableType === "Comment") {
-        console.log(newState.byId[upvote.upvoteableId]);
         if (!comment.parentCommentId) {
           newState.byId[upvote.upvoteableId].currentUserUpvoted = false;
           newState.byId[upvote.upvoteableId].countUpvotes--;
