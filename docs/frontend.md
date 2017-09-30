@@ -17,12 +17,12 @@ Node package manager (npm) is used to maintain frontend dependencies and webpack
 
 Commenting:
 
-![commenting]()
+![commenting](https://github.com/johnschoeman/product_hunt_app/blob/master/docs/img/production_readme/commenting.gif)
 
 Upvoting:
 
-![upvoting]()
+![upvoting](https://github.com/johnschoeman/product_hunt_app/blob/master/docs/img/production_readme/upvoting.gif)
 
 Responsive TextArea
 
-![responsive textarea]()
+![responsive textarea](https://github.com/johnschoeman/product_hunt_app/blob/master/docs/img/production_readme/responsive-textarea.gif)
