@@ -1,17 +1,19 @@
 # Frontend Technologies
 
-## React.js
+Product Hunt App is a single page application and uses the React.js framework and uses Redux to implement a Flux architecture.
 
-### React
+Node package manager (npm) is used to maintain frontend dependencies and webpack is used bundle assets for deployment
 
-### React-Redux
+### Frontend Dependencies
 
-### React-Router 4
+* React Dom
+* React Router 4
+* React Redux
+* Bable
+* React Modal
+* Redux Thunk
 
-* Creation of routing utilitis to handle normal, protected and authentiction based routes.
+## Feature Highlights
 
-### React-Modal
+Commenting:
 
-### Middleware
-
-### React-Spinners

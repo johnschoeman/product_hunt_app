@@ -45,6 +45,7 @@ class CommentItem extends React.Component {
 
   render() {
     let comment = this.props.comment;
+    let commentBody = comment.body.replace(/\n/g, '<br/>');
     let countUpvotes = comment.countUpvotes;
     let imageUrl = comment.user.imageUrl;
     let user = comment.user;
@@ -136,7 +137,12 @@ class CommentItem extends React.Component {
           </div>
 
           <div className="comment-body">
-            {comment.body}
+            {comment.body.split("\n").map((line, idx) => (
+              <span key={`comment-line-${comment.id}-${idx}`}>
+                {line}
+                <br/>
+              </span>
+            ))}
           </div>
 
           {commentActions}

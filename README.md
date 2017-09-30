@@ -4,7 +4,7 @@
 
 Product Hunt App is personal project by John Schoeman
 
-![home page](https://github.com/johnschoeman/product_hunt_app/blob/master/main-page.png)
+![home page](https://github.com/johnschoeman/product_hunt_app/blob/master/docs/img/production_readme/main-page.png)
 
 
 ## Features
@@ -17,7 +17,7 @@ Product Hunt App is personal project by John Schoeman
 * Searching for products
 * Upvoting of products and comments
 
-![home page logged in](https://github.com/johnschoeman/product_hunt_app/blob/master/main-page-loggedin.png)
+![home page logged in](https://github.com/johnschoeman/product_hunt_app/blob/master/docs/img/production_readme/main-page-loggedin.png)
 
 ## Project Design
 
@@ -36,10 +36,3 @@ Product Hunt App is a full stack application built on Rails and React.js with a 
 
 * [Frontend Technologies](https://github.com/johnschoeman/product_hunt_app/blob/master/docs/frontend.md)
 * [Backend Technologies](https://github.com/johnschoeman/product_hunt_app/blob/master/docs/backend.md)
-
-
-## Technical Challenges
-* single modal/popover react component with redux cycle.
-
-
-
