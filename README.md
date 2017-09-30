@@ -1,9 +1,10 @@
 # Product Hunt App
 
-[Product Hunt App](https://productjadt.herokuapp.com/#/) is a full stack implementaion of producthunt.com.  Product Hunt App allows users to upload, discover, like, and discuss interesting projects.
+[Product Hunt App](https://productjadt.herokuapp.com/#/) is a full stack implementaion of producthunt.com.  The application allows users to upload, discover, like, and discuss interesting projects.
 
 Product Hunt App is personal project by John Schoeman
 
+### Landing Page
 ![home page](https://github.com/johnschoeman/product_hunt_app/blob/master/docs/img/production_readme/main-page.png)
 
 
@@ -16,6 +17,8 @@ Product Hunt App is personal project by John Schoeman
 * Discussion board allowing top level comments and replys
 * Searching for products
 * Upvoting of products and comments
+
+### Main Page
 
 ![home page logged in](https://github.com/johnschoeman/product_hunt_app/blob/master/docs/img/production_readme/main-page-loggedin.png)
 
