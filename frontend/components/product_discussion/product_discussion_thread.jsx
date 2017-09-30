@@ -13,6 +13,8 @@ class Thread extends React.Component {
     let currentUser = this.props.currentUser;
     let productId = this.props.productId;
     let createComment = this.props.createComment;
+    let destroyComment = this.props.destroyComment;
+    console.log(destroyComment);
     let createUpvote = this.props.createUpvote;
     let destroyUpvote = this.props.destroyUpvote;
  
@@ -25,6 +27,7 @@ class Thread extends React.Component {
                 productId={productId}
                 parentCommentId={comment.id}
                 createComment={createComment}
+                destroyComment={destroyComment}
                 createUpvote={createUpvote}
                 destroyUpvote={destroyUpvote}/>
           {childCommentsAllIds.map((childCommentId) => {
@@ -37,6 +40,7 @@ class Thread extends React.Component {
                     productId={productId}
                     parentCommentId={comment.id}
                     createComment={createComment}
+                    destroyComment={destroyComment}
                     createUpvote={createUpvote}
                     destroyUpvote={destroyUpvote}/>
             );

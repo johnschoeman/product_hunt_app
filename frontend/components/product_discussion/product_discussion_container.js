@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import ProductDiscussion from './product_discussion';
-import { createComment } from '../../actions/product_actions';
+import { createComment, destroyComment } from '../../actions/product_actions';
 import { createUpvote, destroyUpvote } from '../../actions/upvote_actions'; 
 
 const mapStateToProps = (state, ownProps) => {
@@ -30,6 +30,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
   return {
     createComment: (comment) => dispatch(createComment(comment)),
+    destroyComment: (commentId) => dispatch(destroyComment(commentId)),
     createUpvote: (upvoteableType, upvoteableId) => dispatch(createUpvote(upvoteableType, upvoteableId)),
     destroyUpvote: (upvoteableType, upvoteableId) => dispatch(destroyUpvote(upvoteableType, upvoteableId))
   };

@@ -15,6 +15,7 @@ class ProductDiscussion extends React.Component {
     let commentForm = undefined;
     let productId = this.props.productId;
     let createComment = this.props.createComment;
+    let destroyComment = this.props.destroyComment;
     let createUpvote = this.props.createUpvote;
     let destroyUpvote = this.props.destroyUpvote;
 
@@ -41,6 +42,7 @@ class ProductDiscussion extends React.Component {
                   currentUser={currentUser}
                   productId={productId}
                   createComment={createComment}
+                  destroyComment={destroyComment}
                   createUpvote={createUpvote}
                   destroyUpvote={destroyUpvote} />
                 );

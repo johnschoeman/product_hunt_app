@@ -14,6 +14,7 @@ class CommentItem extends React.Component {
     this.redirectToUser = this.redirectToUser.bind(this);
     this.toggleUpvote = this.toggleUpvote.bind(this);
     this.toggleReplyForm = this.toggleReplyForm.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   redirectToUser(userId) {
@@ -38,18 +39,25 @@ class CommentItem extends React.Component {
     });
   }
 
+  handleDelete() {
+    this.props.destroyComment(this.props.comment.id);
+  }
+
   render() {
     let comment = this.props.comment;
     let countUpvotes = comment.countUpvotes;
     let imageUrl = comment.user.imageUrl;
     let user = comment.user;
-
     let currentUser = this.props.currentUser;
+
     let commentForm = undefined;
     let commentActions = undefined;
-    let productId = this.props.productId;
+    let deleteButton = undefined;
+
     let createComment = this.props.createComment;
+
     let parentCommentId = this.props.parentCommentId;
+    let productId = this.props.productId;
 
     let upvotedClass = (comment.currentUserUpvoted) ? "orange-link-button" : "";
 
@@ -62,6 +70,13 @@ class CommentItem extends React.Component {
                       createComment={createComment}
                       parentCommentId={parentCommentId}
                       toggleReplyForm={this.toggleReplyForm}/>;
+      
+      if (currentUser.id === user.id) {
+        deleteButton = (
+          <button className="comment-delete-button"
+                  onClick={this.handleDelete}>Delete</button>
+        );
+      }
 
       commentActions = (
           <div className="comment-actions">
@@ -77,6 +92,7 @@ class CommentItem extends React.Component {
               <i className="fa fa-reply" aria-hidden="true"/> 
               <a>Reply</a>
             </button>
+            {deleteButton}
           </div>
           </div>
       );

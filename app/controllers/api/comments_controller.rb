@@ -14,6 +14,14 @@ class Api::CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
+
+    if @comment && @comment.user_id == current_user.id
+      @comment.destroy
+      render :show
+    else
+      render json: ["comment was not found or user is not owner of comment"]
+    end
   end
 
   private
