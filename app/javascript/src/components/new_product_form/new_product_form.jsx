@@ -1,101 +1,104 @@
-import React from 'react';
+import React, { useState } from "react"
 
-class NewProductForm extends React.Component {
-  constructor(props) {
-    super(props);
+const NewProductForm = ({ history, createProduct }) => {
+  const [linkUrl, setLinkUrl] = useState("")
+  const [name, setName] = useState("")
+  const [tagline, setTagline] = useState("")
+  const [thumbnailUrl, setThumbnailUrl] = useState("")
+  const [galleryUrl, setGalleryUrl] = useState("")
 
-    this.state = {
-      link_url: "",
-      name: "",
-      tagline: "",
-      topics: [],
-      availableStatus: true,
-      thumbnail_url: "",
-      gallery_url: "",
-      makers: []
-    };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
+  const handleOnSubmit = (e) => {
+    e.preventDefault()
+    const product = {
+      link_url: linkUrl,
+      name,
+      tagline,
+      topics,
+      thumbnail_url: thumbnailUrl,
+      gallery_url: galleryUrl,
+      makers,
+    }
+    createProduct(product).then(history.push("/"))
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    let product = Object.assign({}, this.state);
-    this.props.createProduct(product).then(this.props.history.push('/'));
+  const handleOnUpdateLinkUrl = (e) => {
+    setLinkUrl(e.target.value)
   }
 
-  update(key) {
-    return (e) => {
-      this.setState({ [key]: e.target.value });
-    };
+  const handleOnUpdateName = (e) => {
+    setName(e.target.value)
   }
 
-  render() {
+  const handleOnUpdateTagline = (e) => {
+    setTagline(e.target.value)
+  }
 
-    return (
-      <div className="np-form-container">
-        <h1 className="np-form-header">Post something new</h1>
-        <form className="np-form" onSubmit={this.handleSubmit} >
+  const handleOnUpdateThumbnailUrl = (e) => {
+    setThumbnailUrl(e.target.value)
+  }
 
-          <div className="np-form-input-container" >
-            <div className="np-form-input">
-              <label>Link</label>
-              <input type="text"
-                     onChange={this.update('link_url')}
-                     value={this.state.link_url}/>
-            </div>
+  const handleOnUpdateGalleryUrl = (e) => {
+    setGalleryUrl(e.target.value)
+  }
 
-            <div className="np-form-input">
-              <label>Name</label>
-              <input type="text"
-                     onChange={this.update('name')}
-                     value={this.state.name}/>
-            </div>
-
-            <div className="np-form-input">
-              <label>Tagline</label>
-              <input type="text"
-                     onChange={this.update('tagline')}
-                     value={this.state.tagline}/>
-            </div>
-
-            <div className="np-form-input">
-              <label>Topics</label>
-              
-            </div>
-
-            <div className="np-form-input">
-              <label>Status</label>
-            
-            </div>
-
-            <div className="np-form-input">
-              <label>Thumbnail</label>
-              <input type="text"
-                     onChange={this.update('thumbnail_url')}
-                     value={this.state.thumbnail_url}/>
-            </div>
-
-            <div className="np-form-input">
-              <label>Gallery</label>
-              <input type="text"
-                     onChange={this.update('gallery_url')}
-                     value={this.state.gallery_url}/>
-            </div>
-
-            <div className="np-form-input">
-              <label>Makers</label>
-        
-            </div>
+  return (
+    <div className="np-form-container">
+      <h1 className="np-form-header">Post something new</h1>
+      <form className="np-form" onSubmit={handleOnSubmit}>
+        <div className="np-form-input-container">
+          <div className="np-form-input">
+            <label>Link</label>
+            <input
+              type="text"
+              onChange={handleOnUpdateLinkUrl}
+              value={linkUrl}
+            />
           </div>
 
-          <div className="np-form-buttons">
-            <input type="submit" className="button orange-button medium-size" value="Submit"></input>
+          <div className="np-form-input">
+            <label>Name</label>
+            <input type="text" onChange={handleOnUpdateName} value={name} />
           </div>
-        </form>
-      </div>
-    );
-  }
+
+          <div className="np-form-input">
+            <label>Tagline</label>
+            <input
+              type="text"
+              onChange={handleOnUpdateTagline}
+              value={tagline}
+            />
+          </div>
+
+          <div className="np-form-input">
+            <label>Thumbnail</label>
+            <input
+              type="text"
+              onChange={handleOnUpdateThumbnailUrl}
+              value={thumbnailUrl}
+            />
+          </div>
+
+          <div className="np-form-input">
+            <label>Gallery</label>
+            <input
+              type="text"
+              onChange={handleOnUpdateGalleryUrl}
+              value={galleryUrl}
+            />
+          </div>
+        </div>
+
+        <div className="np-form-buttons">
+          <input
+            type="submit"
+            className="button orange-button medium-size"
+            value="Submit"
+          ></input>
+        </div>
+      </form>
+    </div>
+  )
 }
 
-export default NewProductForm;
+export default NewProductForm
+
