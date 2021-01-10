@@ -21,6 +21,7 @@
     "webpack": "^3.6.0"
   },
   "devDependencies": {
+    "redux-devtools-extension": "^2.13.2",
     "redux-logger": "^3.0.6"
   },
   "directories": {
@@ -46,11 +47,13 @@
     "url": "https://github.com/johnschoeman/product_hunt_app/issues"
   },
   "homepage": "https://github.com/johnschoeman/product_hunt_app#readme",
-  "devDependencies": {
-    "redux-devtools-extension": "^2.13.2"
-  },
   "babel": {
-    "presets": ["react", "es2015"],
-    "plugins": ["emotion"]
+    "presets": [
+      "react",
+      "es2015"
+    ],
+    "plugins": [
+      "emotion"
+    ]
   }
 }
