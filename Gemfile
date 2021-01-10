@@ -8,15 +8,16 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'rails', '~> 5.2'
+gem 'rails', '~> 6.1'
 gem 'bootsnap', '~> 1.5'
-gem 'pg', '~> 0.18'
+gem 'pg', '~> 1.2.3'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'webpacker', '6.0.0.pre2'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
