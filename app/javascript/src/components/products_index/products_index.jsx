@@ -21,7 +21,7 @@ const ProductIndex = ({
     if (currentUser) {
       fetchUpvotes(currentUser.id, "Product")
     }
-  })
+  }, [])
 
   return (
     <div className="product-index-container">

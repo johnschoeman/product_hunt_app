@@ -8,8 +8,8 @@ import {
 } from "../../actions/upvote_actions"
 
 const mapStateToProps = (state, ownProps) => {
-  let products = state.entities.products.byId
-  let productIds = state.entities.products.allIds
+  let products = state.entities.products.by_id
+  let productIds = state.entities.products.all_ids
   let currentUser = state.session.currentUser
 
   return {
