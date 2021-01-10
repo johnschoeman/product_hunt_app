@@ -13,7 +13,7 @@ class Api::UsersController < ApplicationController
     def update
         @user = User.find(params[:id])
         @user.update_slug!
-        @user.update_attributes(user_params)
+        @user.update(user_params)
 
         if @user.save
             render :show
@@ -42,6 +42,6 @@ class Api::UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :password, :headline, :image_url)
+        params.require(:user).permit(:username, :password, :headline, :image_url, :userslug, :id)
     end
 end

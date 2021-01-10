@@ -27,10 +27,6 @@ class Product < ApplicationRecord
     self.current_user_upvoted = bool
   end
 
-  def self.filterByDate(date)
-    
-  end
-  
   def self.byCreatedAtLimit(limit)
     Product.order(:created_at).last(limit).reverse
   end

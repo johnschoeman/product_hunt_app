@@ -6,6 +6,6 @@ if @upvote.upvoteable_type == "Comment"
     json.body @upvote.upvoteable.body
     json.userId @upvote.upvoteable.user_id
     json.productId @upvote.upvoteable.product_id
-    json.parentCommentId @upvote.upvoteable.parent_comment_id
+    json.parent_comment_id @upvote.upvoteable.parent_comment_id
   end
 end
