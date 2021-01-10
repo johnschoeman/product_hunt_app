@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@webpack-cli/serve": "^1.2.1",
+    "prettier": "^2.2.1",
     "redux-devtools-extension": "^2.13.2",
     "redux-logger": "^3.0.6",
     "webpack-cli": "^4.3.1",

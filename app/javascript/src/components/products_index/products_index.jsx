@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import ProductIndexItem from "./product_index_item";
-import { GridLoader } from "react-spinners";
+import React, { useState, useEffect } from "react"
+import ProductIndexItem from "./product_index_item"
+import { GridLoader } from "react-spinners"
 
 const ProductIndex = ({
   userUpvotes,
@@ -12,16 +12,16 @@ const ProductIndex = ({
   fetchAllProducts,
   fetchUpvotes,
 }) => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     fetchAllProducts().then(() => {
-      setLoading(false);
-    });
+      setLoading(false)
+    })
     if (currentUser) {
-      fetchUpvotes(currentUser.id, "Product");
+      fetchUpvotes(currentUser.id, "Product")
     }
-  });
+  })
 
   return (
     <div className="product-index-container">
@@ -45,11 +45,11 @@ const ProductIndex = ({
               createUpvote={createUpvote}
               destroyUpvote={destroyUpvote}
             />
-          );
+          )
         })}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default ProductIndex;
+export default ProductIndex
