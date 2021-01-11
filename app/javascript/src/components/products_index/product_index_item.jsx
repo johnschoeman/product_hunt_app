@@ -8,6 +8,10 @@ const ProductIndexItem = ({
   createUpvote,
   destroyUpvote,
 }) => {
+  if (product === undefined) {
+    return
+  }
+
   const [upvoteCount, setUpvoteCount] = useState(product.count_upvotes)
   const [userHasUpvoted, setUserHasUpvoted] = useState(
     Boolean(product.currentUserUpvoted)

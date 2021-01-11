@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 
 import ProductDetailHeader from "./product_detail_header"
 import ProductDiscussionContainer from "../product_discussion/product_discussion_container"

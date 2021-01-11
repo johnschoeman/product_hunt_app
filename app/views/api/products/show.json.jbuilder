@@ -1,5 +1,6 @@
 json.productDetails do
   json.merge! @product.attributes
+  json.count_comments @product.comments_count
   json.countUpvotes @product.upvotes_count
   if current_user
     json.currentUserUpvoted current_user.upvoted_products_cache.include?(@product.id)
