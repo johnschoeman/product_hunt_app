@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { withRouter } from "react-router"
 import CommentForm from "./product_discussion_comment_form"
-import i from "react-fontawesome"
 
 const CommentItem = ({
   history,
@@ -16,18 +15,26 @@ const CommentItem = ({
   destroyUpvote,
 }) => {
   const [replyFormShown, setReplyFormShown] = useState(false)
+  const [userHasUpvoted, setUserHasUpvoted] = useState(
+    comment.currentUserUpvoted
+  )
+  const [countUpvotes, setCountUpvotes] = useState(comment.count_upvotes || 0)
 
   const redirectToUser = (userId) => {
-    return (e) => {
+    return () => {
       history.push(`/users/${userId}`)
     }
   }
 
   const toggleUpvote = (e) => {
     e.stopPropagation()
-    if (comment.currentUserUpvoted) {
+    if (userHasUpvoted) {
+      setUserHasUpvoted(false)
+      setCountUpvotes(countUpvotes - 1)
       destroyUpvote("Comment", comment.id)
     } else {
+      setUserHasUpvoted(true)
+      setCountUpvotes(countUpvotes + 1)
       createUpvote("Comment", comment.id)
     }
   }
@@ -40,8 +47,6 @@ const CommentItem = ({
     destroyComment(comment.id)
   }
 
-  let commentBody = comment.body.replace(/\n/g, "<br/>")
-  let countUpvotes = comment.count_upvotes
   let imageUrl = comment.user.imageUrl
   let user = comment.user
 
@@ -49,7 +54,7 @@ const CommentItem = ({
   let commentActions = undefined
   let deleteButton = undefined
 
-  let upvotedClass = comment.currentUserUpvoted ? "orange-link-button" : ""
+  let upvotedClass = userHasUpvoted ? "orange-link-button" : ""
 
   if (currentUser) {
     commentForm = (
