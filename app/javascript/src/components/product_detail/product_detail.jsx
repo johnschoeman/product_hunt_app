@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
 import ProductDetailHeader from "./product_detail_header"
 import ProductDiscussionContainer from "../product_discussion/product_discussion_container"
@@ -15,7 +15,7 @@ const ProductDetail = ({
     fetchProduct(viewedProductId)
   }, [])
 
-  return (
+  return product ? (
     <div className="product-detail-container">
       <ProductDetailHeader product={product} />
       <div className="product-detail-main-content-container">
@@ -38,6 +38,8 @@ const ProductDetail = ({
         </div>
       </div>
     </div>
+  ) : (
+    <div>Loading...</div>
   )
 }
 

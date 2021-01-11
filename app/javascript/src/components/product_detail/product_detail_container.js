@@ -6,7 +6,7 @@ import { createUpvote, destroyUpvote } from "../../actions/upvote_actions"
 
 const mapStateToProps = (state, ownProps) => {
   const viewedProductId = ownProps.match.params.productId
-  let product = state.entities.products.by_id[viewedProductId]
+  let product = state.entities.products.byId[viewedProductId]
   if (product === undefined) {
     product = {}
   }
