@@ -1,6 +1,11 @@
 import React, { useState } from "react"
 
-const ProductDetailNav = ({ product, createUpvote, destroyUpvote }) => {
+const ProductDetailNav = ({
+  product,
+  viewedProductId,
+  createUpvote,
+  destroyUpvote,
+}) => {
   const [userHasUpvoted, setUserHasUpvoted] = useState(
     product.currentUserUpvoted
   )
@@ -11,11 +16,11 @@ const ProductDetailNav = ({ product, createUpvote, destroyUpvote }) => {
     if (userHasUpvoted) {
       setUserHasUpvoted(false)
       setCountUpvotes(countUpvotes - 1)
-      destroyUpvote("Product", product.id)
+      destroyUpvote("Product", viewedProductId)
     } else {
       setUserHasUpvoted(true)
       setCountUpvotes(countUpvotes + 1)
-      createUpvote("Product", product.id)
+      createUpvote("Product", viewedProductId)
     }
   }
 
@@ -48,4 +53,3 @@ const ProductDetailNav = ({ product, createUpvote, destroyUpvote }) => {
 }
 
 export default ProductDetailNav
-

@@ -32,6 +32,7 @@ const ProductDetail = ({
         <div className="product-detail-aside">
           <ProductDetailNav
             product={product}
+            viewedProductId={viewedProductId}
             createUpvote={createUpvote}
             destroyUpvote={destroyUpvote}
           />

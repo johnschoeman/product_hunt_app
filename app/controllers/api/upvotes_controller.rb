@@ -20,16 +20,18 @@ class Api::UpvotesController < ApplicationController
     if @upvote
       render :show
     else
-    
+
     end
   end
-  
+
   def create
+    p upvote_params
     @upvote = Upvote.new(upvote_params)
     @upvote.user_id = current_user.id
     if @upvote.save
       render :show
     else
+      p @upvote.errors.full_messages
       render json: @upvote.errors.full_messages, status: 404
     end
   end
