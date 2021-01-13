@@ -13,10 +13,8 @@ const NewProductForm = ({ history, createProduct }) => {
       link_url: linkUrl,
       name,
       tagline,
-      topics,
       thumbnail_url: thumbnailUrl,
       gallery_url: galleryUrl,
-      makers,
     }
     createProduct(product).then(history.push("/"))
   }
