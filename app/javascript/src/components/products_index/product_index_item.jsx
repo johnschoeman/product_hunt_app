@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { withRouter } from "react-router"
 import i from "react-fontawesome"
 
@@ -12,10 +12,7 @@ const ProductIndexItem = ({
     return
   }
 
-  const [upvoteCount, setUpvoteCount] = useState(product.count_upvotes)
-  const [userHasUpvoted, setUserHasUpvoted] = useState(
-    Boolean(product.currentUserUpvoted)
-  )
+  const { currentUserUpvoted, upvotes_count: countUpvotes } = product
 
   const handleOnClickListItem = () => {
     history.push(`/products/${product.id}`)
@@ -23,19 +20,15 @@ const ProductIndexItem = ({
 
   const toggleUpvote = (e) => {
     e.stopPropagation()
-    if (userHasUpvoted) {
-      setUpvoteCount(upvoteCount - 1)
-      setUserHasUpvoted(false)
+    if (currentUserUpvoted) {
       destroyUpvote("Product", product.id)
     } else {
-      setUpvoteCount(upvoteCount + 1)
-      setUserHasUpvoted(true)
       createUpvote("Product", product.id)
     }
   }
 
-  const commentCount = product.count_comments.toString()
-  const upvoteButtonClass = userHasUpvoted
+  const commentCount = product.comments_count.toString()
+  const upvoteButtonClass = currentUserUpvoted
     ? "orange-button small-size"
     : "white-button small-size"
 
@@ -52,7 +45,7 @@ const ProductIndexItem = ({
           <div className="product-item-tags"></div>
           <div className="product-item-minor-actions">
             <button className={upvoteButtonClass} onClick={toggleUpvote}>
-              <i className="fa fa-thumbs-up" size="3x" /> {upvoteCount}
+              <i className="fa fa-thumbs-up" size="3x" /> {countUpvotes}
             </button>
             <button
               className="white-button small-size gray-text"

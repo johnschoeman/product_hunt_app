@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 const ProductDetailNav = ({
   product,
@@ -6,29 +6,21 @@ const ProductDetailNav = ({
   createUpvote,
   destroyUpvote,
 }) => {
-  const [userHasUpvoted, setUserHasUpvoted] = useState(
-    product.currentUserUpvoted
-  )
-  const [countUpvotes, setCountUpvotes] = useState(product.countUpvotes || 0)
-
+  const { currentUserUpvoted, upvotes_count: countUpvotes } = product
   const toggleUpvote = (e) => {
     e.stopPropagation()
-    if (userHasUpvoted) {
-      setUserHasUpvoted(false)
-      setCountUpvotes(countUpvotes - 1)
+    if (currentUserUpvoted) {
       destroyUpvote("Product", viewedProductId)
     } else {
-      setUserHasUpvoted(true)
-      setCountUpvotes(countUpvotes + 1)
       createUpvote("Product", viewedProductId)
     }
   }
 
   let linkUrl = product.link_url
-  let upvoteButtonClass = userHasUpvoted
+  let upvoteButtonClass = currentUserUpvoted
     ? "orange-button"
     : "orange-border-button"
-  let upvoteButtonText = userHasUpvoted ? "UPVOTED" : "UPVOTE"
+  let upvoteButtonText = currentUserUpvoted ? "UPVOTED" : "UPVOTE"
   return (
     <div className="product-detail-nav">
       <div className="product-detail-nav-upvote-container">

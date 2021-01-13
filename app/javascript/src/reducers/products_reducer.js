@@ -19,16 +19,16 @@ const productsReducer = (state = defaultState, action) => {
       return action.products
     case RECEIVE_UPVOTE:
       upvote = action.upvote
-      if (upvote.upvoteableType === "Product") {
-        newState.by_id[upvote.upvoteableId].currentUserUpvoted = true
-        newState.by_id[upvote.upvoteableId].countUpvotes++
+      if (upvote.upvoteable_type === "Product") {
+        newState.by_id[upvote.upvoteable_id].currentUserUpvoted = true
+        newState.by_id[upvote.upvoteable_id].upvotes_count++
       }
       return newState
     case REMOVE_UPVOTE:
       upvote = action.upvote
-      if (upvote.upvoteableType === "Product") {
-        newState.by_id[upvote.upvoteableId].currentUserUpvoted = false
-        newState.by_id[upvote.upvoteableId].countUpvotes--
+      if (upvote.upvoteable_type === "Product") {
+        newState.by_id[upvote.upvoteable_id].currentUserUpvoted = false
+        newState.by_id[upvote.upvoteable_id].upvotes_count--
       }
       return newState
     default:

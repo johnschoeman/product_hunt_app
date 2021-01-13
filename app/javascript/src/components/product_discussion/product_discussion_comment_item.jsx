@@ -15,10 +15,8 @@ const CommentItem = ({
   destroyUpvote,
 }) => {
   const [replyFormShown, setReplyFormShown] = useState(false)
-  const [userHasUpvoted, setUserHasUpvoted] = useState(
-    comment.currentUserUpvoted
-  )
-  const [countUpvotes, setCountUpvotes] = useState(comment.count_upvotes || 0)
+
+  const { currentUserUpvoted, upvotes_count: countUpvotes } = comment
 
   const redirectToUser = (userId) => {
     return () => {
@@ -28,13 +26,9 @@ const CommentItem = ({
 
   const toggleUpvote = (e) => {
     e.stopPropagation()
-    if (userHasUpvoted) {
-      setUserHasUpvoted(false)
-      setCountUpvotes(countUpvotes - 1)
+    if (currentUserUpvoted) {
       destroyUpvote("Comment", comment.id)
     } else {
-      setUserHasUpvoted(true)
-      setCountUpvotes(countUpvotes + 1)
       createUpvote("Comment", comment.id)
     }
   }
@@ -54,7 +48,7 @@ const CommentItem = ({
   let commentActions = undefined
   let deleteButton = undefined
 
-  let upvotedClass = userHasUpvoted ? "orange-link-button" : ""
+  let upvotedClass = currentUserUpvoted ? "orange-link-button" : ""
 
   if (currentUser) {
     commentForm = (
