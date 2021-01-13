@@ -29,6 +29,7 @@ const commentsReducer = (state = defaultState, action) => {
       }
       comments.map((komment) => {
         if (!komment.parent_comment_id) {
+          console.log("no parent", komment.id)
           newState.by_id[komment.id] = komment
           newState.by_parent_id[komment.id] = {}
           newState.by_parent_id[komment.id].by_id = {}
@@ -37,13 +38,13 @@ const commentsReducer = (state = defaultState, action) => {
       })
       comments.map((komment) => {
         if (komment.parent_comment_id) {
+          console.log("has parent", komment)
           newState.by_id[komment.id] = komment
-          newState.by_parent_id[komment.parent_comment_id].by_id[
-            komment.id
-          ] = komment
-          newState.by_parent_id[komment.parent_comment_id].all_ids.push(
-            komment.id
-          )
+          const parentComment = newState.by_parent_id[komment.parent_comment_id]
+          if (parentComment) {
+            parentComment.by_id[komment.id] = komment
+            parentComment.all_ids.push(komment.id)
+          }
         }
       })
       newState.all_ids = action.data.commentIds
