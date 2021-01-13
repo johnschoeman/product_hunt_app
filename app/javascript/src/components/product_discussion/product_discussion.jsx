@@ -27,7 +27,7 @@ const ProductDiscussion = ({
       <div>
         {commentIds.map((commentId) => {
           let comment = commentsById[commentId]
-          if (!comment.parentCommentId) {
+          if (!comment.parent_comment_id) {
             return (
               <Thread
                 key={`discussion-thread-${comment.id}`}

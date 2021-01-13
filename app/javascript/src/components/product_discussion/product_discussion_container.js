@@ -12,9 +12,9 @@ const mapStateToProps = (state, ownProps) => {
   let productId = ownProps.match.params.productId
 
   if (state.entities.comments) {
-    commentsById = state.entities.comments.byId
-    commentIds = state.entities.comments.allIds
-    childComments = state.entities.comments.byParentId
+    commentsById = state.entities.comments.by_id
+    commentIds = state.entities.comments.all_ids
+    childComments = state.entities.comments.by_parent_id
   }
 
   return {

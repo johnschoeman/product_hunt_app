@@ -11,8 +11,8 @@ const Thread = ({
   createUpvote,
   destroyUpvote,
 }) => {
-  const childCommentsAllIds = childComments.allIds
-  const childCommentsById = childComments.byId
+  const childCommentsAllIds = childComments.all_ids
+  const childCommentsById = childComments.by_id
 
   return (
     <div className="thread">

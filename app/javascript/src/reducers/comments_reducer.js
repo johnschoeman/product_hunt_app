@@ -7,9 +7,9 @@ import { RECEIVE_UPVOTE, REMOVE_UPVOTE } from "../actions/upvote_actions"
 import { merge } from "lodash"
 
 const defaultState = {
-  byId: {},
-  allIds: [],
-  byParentId: {},
+  by_id: {},
+  all_ids: [],
+  by_parent_id: {},
 }
 
 const commentsReducer = (state = defaultState, action) => {
@@ -28,55 +28,63 @@ const commentsReducer = (state = defaultState, action) => {
         comments = []
       }
       comments.map((komment) => {
-        if (!komment.parentCommentId) {
-          newState.byId[komment.id] = komment
-          newState.byParentId[komment.id] = {}
-          newState.byParentId[komment.id].byId = {}
-          newState.byParentId[komment.id].allIds = []
+        if (!komment.parent_comment_id) {
+          newState.by_id[komment.id] = komment
+          newState.by_parent_id[komment.id] = {}
+          newState.by_parent_id[komment.id].by_id = {}
+          newState.by_parent_id[komment.id].all_ids = []
         }
       })
       comments.map((komment) => {
-        if (komment.parentCommentId) {
-          newState.byId[komment.id] = komment
-          newState.byParentId[komment.parentCommentId].byId[
+        if (komment.parent_comment_id) {
+          newState.by_id[komment.id] = komment
+          newState.by_parent_id[komment.parent_comment_id].by_id[
             komment.id
           ] = komment
-          newState.byParentId[komment.parentCommentId].allIds.push(komment.id)
+          newState.by_parent_id[komment.parent_comment_id].all_ids.push(
+            komment.id
+          )
         }
       })
-      newState.allIds = action.data.commentIds
+      newState.all_ids = action.data.commentIds
       return newState
     case RECEIVE_COMMENT:
       comment = action.comment
       comment.currentUserUpvoted = false
       comment.upvotes_count = 0
-      newState.byId[comment.id] = comment
-      newState.allIds.unshift(comment.id)
-      if (!comment.parentCommentId) {
-        newState.byParentId[comment.id] = {}
-        newState.byParentId[comment.id].byId = {}
-        newState.byParentId[comment.id].allIds = []
+      newState.by_id[comment.id] = comment
+      newState.all_ids.unshift(comment.id)
+      if (!comment.parent_comment_id) {
+        newState.by_parent_id[comment.id] = {}
+        newState.by_parent_id[comment.id].by_id = {}
+        newState.by_parent_id[comment.id].all_ids = []
       } else {
-        newState.byParentId[comment.parentCommentId].byId[comment.id] = comment
-        newState.byParentId[comment.parentCommentId].allIds.push(comment.id)
+        newState.by_parent_id[comment.parent_comment_id].by_id[
+          comment.id
+        ] = comment
+        newState.by_parent_id[comment.parent_comment_id].all_ids.push(
+          comment.id
+        )
       }
       return newState
     case REMOVE_COMMENT:
       comment = action.comment
-      delete newState.byId[comment.id]
-      let commentIndex = newState.allIds.indexOf(comment.id)
+      delete newState.by_id[comment.id]
+      let commentIndex = newState.all_ids.indexOf(comment.id)
       if (commentIndex > -1) {
-        newState.allIds.splice(commentIndex, 1)
+        newState.all_ids.splice(commentIndex, 1)
       }
-      if (!comment.parentCommentId) {
-        delete newState.byParentId[comment.id]
+      if (!comment.parent_comment_id) {
+        delete newState.by_parent_id[comment.id]
       } else {
-        delete newState.byParentId[comment.parentCommentId].byId[comment.id]
-        commentIndex = newState.byParentId[
-          comment.parentCommentId
-        ].allIds.indexOf(comment.id)
+        delete newState.by_parent_id[comment.parent_comment_id].by_id[
+          comment.id
+        ]
+        commentIndex = newState.by_parent_id[
+          comment.parent_comment_id
+        ].all_ids.indexOf(comment.id)
         if (commentIndex > -1) {
-          newState.byParentId[comment.parentCommentId].allIds.splice(
+          newState.by_parent_id[comment.parent_comment_id].all_ids.splice(
             commentIndex,
             1
           )
@@ -86,32 +94,34 @@ const commentsReducer = (state = defaultState, action) => {
     case RECEIVE_UPVOTE:
       upvote = action.upvote
       comment = action.upvote.upvoteable
-      if (upvote.upvoteableType === "Comment") {
-        if (!comment.parentCommentId) {
-          newState.byId[upvote.upvoteableId].currentUserUpvoted = true
-          newState.byId[upvote.upvoteableId].upvotes_count++
+      if (upvote.upvoteable_type === "Comment") {
+        if (!comment.parent_comment_id) {
+          newState.by_id[upvote.upvoteable_id].currentUserUpvoted = true
+          newState.by_id[upvote.upvoteable_id].upvotes_count++
         } else {
-          newState.byParentId[comment.parentCommentId].byId[
-            upvote.upvoteableId
+          newState.by_parent_id[comment.parent_comment_id].by_id[
+            upvote.upvoteable_id
           ].currentUserUpvoted = true
-          newState.byParentId[comment.parentCommentId].byId[upvote.upvoteableId]
-            .upvotes_count++
+          newState.by_parent_id[comment.parent_comment_id].by_id[
+            upvote.upvoteable_id
+          ].upvotes_count++
         }
       }
       return newState
     case REMOVE_UPVOTE:
       upvote = action.upvote
       comment = action.upvote.upvoteable
-      if (upvote.upvoteableType === "Comment") {
-        if (!comment.parentCommentId) {
-          newState.byId[upvote.upvoteableId].currentUserUpvoted = false
-          newState.byId[upvote.upvoteableId].upvotes_count--
+      if (upvote.upvoteable_type === "Comment") {
+        if (!comment.parent_comment_id) {
+          newState.by_id[upvote.upvoteable_id].currentUserUpvoted = false
+          newState.by_id[upvote.upvoteable_id].upvotes_count--
         } else {
-          newState.byParentId[comment.parentCommentId].byId[
-            upvote.upvoteableId
+          newState.by_parent_id[comment.parent_comment_id].by_id[
+            upvote.upvoteable_id
           ].currentUserUpvoted = false
-          newState.byParentId[comment.parentCommentId].byId[upvote.upvoteableId]
-            .upvotes_count--
+          newState.by_parent_id[comment.parent_comment_id].by_id[
+            upvote.upvoteable_id
+          ].upvotes_count--
         }
       }
       return newState
