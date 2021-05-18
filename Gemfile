@@ -11,7 +11,7 @@ end
 gem 'rails', '~> 6.1'
 gem 'bootsnap', '~> 1.5'
 gem 'pg', '~> 1.2.3'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
